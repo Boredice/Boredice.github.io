@@ -10,6 +10,13 @@ body {
 	color: #00ABFF;
     background: #E9F2FF;
 }
+img {
+	opacity:1;
+	 transition: opacity 0.2s ease-in-out;
+}
+img:hover {
+	opacity:0.6;
+}
 /* Container */
 .container {
 	width: 90%;
