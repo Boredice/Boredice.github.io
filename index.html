@@ -7,13 +7,6 @@
 <title>Boredice</title>
 <link href="css/simpleGridTemplate.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="icon.ico">
-<script type="text/javascript">
-$('#objs li').each(function(index,e){
-    window.setTimeout(function() {
-        $(e).fadeOut('slow');
-      }, 1000*index);
-}); 
-</script>
 </head>
 <body>
 <!-- Main Container -->
@@ -23,8 +16,8 @@ $('#objs li').each(function(index,e){
   <!-- Stats Gallery Section -->
   <div class="gallery">
     <header>
-      <p><span style="font-family: '微软雅黑'; color: #00ABFF; font-size: 32px;"><strong>&nbsp;Boredice</strong></span><span style="font-family: '微软雅黑'; color: #BBBBBB; font-size: 17px;">&nbsp;&nbsp; 冰天雪地新世界</span>    </p>
-    </header>
+      <p><span style="font-family: '微软雅黑'; color: #00ABFF; font-size: 32px;"><strong>&nbsp;Boredice</strong></span><span style="font-family: '微软雅黑'; color: #BBBBBB; font-size: 17px;">&nbsp;&nbsp; 冰天雪地新世界</span></p>
+</header>
     <div class="thumbnail"> <a href="files/Color.zip"><img src="images/Color.jpg" alt="" width="1250" class="cards"/></a>
       <h4>Color 2.8.9</h4>
       <p class="tag">简色</p>
@@ -55,5 +48,10 @@ $('#objs li').each(function(index,e){
   <div class="copyright">Boredice - <strong>逗逼小骚年</strong></div>
 </div>
 <!-- Main Container Ends -->
+<script type="text/javascript">
+$(function() {
+	$( "#Button1" ).button(); 
+});
+</script>
 </body>
 </html>
