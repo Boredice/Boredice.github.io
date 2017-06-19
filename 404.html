@@ -7,27 +7,29 @@ permalink: 404.html
 <meta charset="utf-8">
 <title>Boredice - 404</title>
 <style>
+	/*防止404文件标识可见*/
 	body
 	{
 		margin-top: 80px;
 		color: white;
+		font-size: 0px;
 	}
-	@media (max-width: 320px) {
-		body{
-			margin-top: 60px;
-			color:white;
-			font-size: 50px;
-		}
-		img{
-			width: auto;
-			height: auto;
-		}
+	::selection{
+	color: #00ABFF;
+    background: #E9F2FF;
+	}
+	img {
+		transition: opacity 0.2s ease-in-out;
+	}
+	img:hover {
+		opacity:0.6;
 	}
 </style>
 <link rel="shortcut icon" href="icon.ico">
 </head>
 <body>
-<p style="text-align: center; font-family: '微软雅黑'; color: #28ABFF;"><a href="https://boredice.github.io"><img src="images/404.gif" width="510" height="266" alt=""/></a></p>
+<p style="text-align: center; font-family: '微软雅黑'; color: #28ABFF;">
+<a href="https://boredice.github.io"><img src="images/404.gif" width="510" height="266" alt=""/></a></p>
 <p style="text-align: center; font-family: '微软雅黑'; color: #28ABFF; font-size: 24px;">额，页面貌似找不到了呢。。。</p>
 </body>
 </html>
