@@ -10,7 +10,7 @@ body {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	background-color: #FFFFFF;
 	margin: 0;
-	margin-top: 10px;
+	margin-top: 15px;
 }
 ::selection{
 	color: #00ABFF;
@@ -108,6 +108,7 @@ header {
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
+	font-family: "微软雅黑";
 }
 .gallery .thumbnail p {
 	margin: 0;
@@ -202,12 +203,13 @@ footer {
 	width: 50%;
 }
 .gallery .thumbnail .tag {
-	color: #5D5E5D;
+	color: #909090;
 	padding-bottom: 4px;
 	padding-top: 4px;
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
+	font-size: 15px;
 }
 
 /* Mobile */
