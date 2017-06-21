@@ -1,9 +1,16 @@
-﻿/* Body */
+﻿@font-face{
+	font-family: 'IceFlatRound';
+	src: url('../fonts/Ice Flat Round.ttf');
+}
+.ifr{
+	font-family:'IceFlatRound';
+}
+/* Body */
 body {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	background-color: #FFFFFF;
 	margin: 0;
-	margin-top: -20px;
+	margin-top: 10px;
 }
 ::selection{
 	color: #00ABFF;
@@ -88,9 +95,11 @@ header {
 }
 .thumbnail:hover{
 	box-shadow: 0px 0px 32.5px #DDDDDD;
+	background-color: #FDFDFD;
 }
 .thumbnail:active{
 	box-shadow: 0px 0px 35px #BFBFBF;
+	background-color: #FEFEFE;
 }
 .gallery .thumbnail h4 {
 	margin-top: 5px;
