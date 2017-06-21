@@ -2,6 +2,10 @@
 	font-family: 'IceFlatRound';
 	src: url('../fonts/Ice Flat Round.ttf');
 }
+@font-face{
+	font-family: 'Sintony';
+	src: url('../fonts/Sintony.ttf');
+}
 .ifr{
 	font-family:'IceFlatRound';
 }
@@ -102,13 +106,14 @@ header {
 	background-color: #FEFEFE;
 }
 .gallery .thumbnail h4 {
+	font-weight: 400;
 	margin-top: 5px;
 	margin-bottom: 5px;
 	color: #77BDFF;
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
-	font-family: "微软雅黑";
+	font-family: "Sintony";
 }
 .gallery .thumbnail p {
 	margin: 0;
