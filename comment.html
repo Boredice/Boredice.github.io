@@ -3,10 +3,42 @@
 <head>
 <meta charset="utf-8">
 <title>Boredice - 评论</title>
+<style>
+	.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+}
+	body {
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	background-color: #FFFFFF;
+	margin: 0;
+	margin-top: 26px;
+}
+	@font-face{
+	font-family: 'IceFlatRound';
+	src: url('fonts/Ice Flat Round.ttf');
+}
+.ifr{
+	font-family:'IceFlatRound';
+}
+	header {
+	width: 100%;
+	height: 8%;
+	background-color: #FFFFFF;
+	border-bottom: 2px solid #77BDFF;
+}
+	a{text-decoration : none} 
+	</style>
 </head>
 <body>
+   <div class="container">
+    <header>
+      <p class="ifr"><a href="https://boredice.github.io"><span style="color: #00ABFF; font-size: 35px;">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px;">&nbsp;&nbsp;&nbsp;评论</span></p>
+</header>
 <!--PC版-->
-<p>评论</p><hr>
 <div id="SOHUCS" ></div>
 <script charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
@@ -15,5 +47,6 @@ appid: 'cyt4MjMTF',
 conf: 'prod_874e3e15698f8e9e7deec66b7ecf889b'
 });
 </script>
+</div>
 </body>
 </html>

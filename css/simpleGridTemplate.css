@@ -7,7 +7,7 @@
 	src: url('../fonts/Sintony.ttf');
 }
 .ifr{
-	font-family:'IceFlatRound';
+	font-family:'IceFlatRound','微软雅黑';
 }
 ::-webkit-scrollbar {
     width: 12px;
