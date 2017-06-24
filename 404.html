@@ -1,60 +1,120 @@
-﻿---
+﻿<!doctype html>
+---
 permalink: 404.html
 ---
-<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Boredice - 404</title>
+<link rel="shortcut icon" href="icon.ico">
 <style>
-	/*防止404文件标识可见*/
-	body
-	{
-		margin-top: 80px;
-		color: white;
-		font-size: 0px;
-	}
-	::selection{
-	color: #00ABFF;
-    background: #E9F2FF;
-	}
 	img {
 		transition: opacity 0.2s ease-in-out;
 	}
 	img:hover {
-		opacity:0.6;
+	opacity: 0.6;
+	}
+	img:active {
+	opacity: 0.45;
+	}
+	::selection {
+		color: #00ABFF;    
+		background: #E9F2FF;
 	}
 	::-webkit-scrollbar {
-    width: 12px;
-	background: rgba(0,0,0,0);
-}
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(0,0,0,0.1);
-}
-::-webkit-scrollbar-thumb:hover
-{
-	background: rgba(0,0,0,0.2);
-}
-::-webkit-scrollbar-thumb:active
-{
-	background: rgba(0,0,0,0.3);
-}
-HTML {   
-	scrollbar-base-color: #D9D9D9;
-	scrollbar-track-color: #FFFFFF;
-	scrollbar-arrow-color: #D9D9D9;
-	scrollbar-shadow-color: #D9D9D9;
-}
+		width: 12px;
+		background: rgba(0,0,0,0);
+	}
+	::-webkit-scrollbar-track {
+		border-radius: 10px;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: 10px;
+		background: rgba(0,0,0,0.1);
+	}
+	::-webkit-scrollbar-thumb:hover {
+		background: rgba(0,0,0,0.2);
+	}
+	::-webkit-scrollbar-thumb:active {
+		background: rgba(0,0,0,0.3);
+	}
+	HTML {   
+		scrollbar-base-color: #D9D9D9;
+		scrollbar-track-color: #FFFFFF;
+		scrollbar-arrow-color: #D9D9D9;
+		scrollbar-shadow-color: #D9D9D9;
+	}
+	.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+	text-align: center;
+	}
+	body {
+		font-family: 'Empty';
+		line-height: 0;
+		background-color: #FFFFFF;
+		margin: 0;
+		margin-top: 10px;
+	}
+	@font-face {
+		font-family: 'IceFlatRound';
+		src: url('fonts/Ice Flat Round.ttf');
+	}
+	@font-face {
+		font-family: 'Empty';
+		src: url('fonts/Empty.ttf');
+	}
+	.ifr {
+		font-family:'IceFlatRound';
+	}
+	@font-face {
+		font-family: 'Sintony';
+		src: url('fonts/Sintony.ttf');
+	}
+	header {
+		width: 100%;
+		height: 8%;
+		background-color: #FFFFFF;
+		border-bottom: 2px solid #77BDFF;
+		text-align: left;
+		line-height: normal;
+	}
+	a {
+		text-decoration : none;
+		transition: opacity 0.15s ease-in-out;
+	}
+	a:hover {
+		opacity: 0.7;
+	}
+	a:active {
+		opacity: 0.5;
+	}
+	.hgt {
+		padding-top: 30px;
+	}
+	.text {
+		transition: all 0.1s linear;
+	}
+	.text:hover {
+		text-shadow: 2.5px 2.5px 10px #BFBFBF;
+	}
+	.text:active {
+		text-shadow: 5px 5px 15px #AAAAAA;
+	}
 </style>
-<link rel="shortcut icon" href="icon.ico">
 </head>
 <body>
-<p style="text-align: center; font-family: '微软雅黑'; color: #28ABFF;">
-<a href="https://boredice.github.io"><img src="images/404.gif" width="510" height="266" alt=""/></a></p>
-<p style="text-align: center; font-family: '微软雅黑'; color: #28ABFF; font-size: 24px;">额，页面貌似找不到了呢。。。</p>
+<div class="container">
+    <header>
+      <p class="ifr"><a href=".."><span style="color: #00ABFF; font-size: 35px;">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px;font-family: 'Sintony'">&nbsp;&nbsp;&nbsp;404</span></p>
+</header>
+<div class="hgt">
+<a href=".."><img src="images/404.gif" width="510" height="266" alt=""/></a>
+<p class="text" style="text-align: center; font-family: '微软雅黑'; color: #28ABFF; font-size: 24px;">额，页面貌似找不到了呢。。。</p>
+</div>
+</div>
 </body>
 </html>

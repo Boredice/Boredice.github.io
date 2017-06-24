@@ -38,6 +38,39 @@ HTML {
 	color: #00ABFF;
     background: #E9F2FF;
 }
+a {	
+	text-decoration : none;
+	transition: opacity 0.15s ease-in-out;
+}
+a:hover {
+	opacity: 0.7;
+}
+a:active {
+	opacity: 0.5;
+}
+.ctbutton {
+	display: inline;
+	width: 30px;
+	height: 30px;
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-left: 5px;
+	padding-right: 5px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 30px;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: #000000;
+	transition: all 0.3s linear;
+}
+.ctbutton:hover {
+	opacity: 0.7;
+	cursor: pointer;
+}
 /* Body */
 body {
 	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
@@ -50,6 +83,9 @@ img {
 }
 img:hover {
 	opacity:0.6;
+}
+img:active {
+	opacity: 0.45;
 }
 /* Container */
 .container {
