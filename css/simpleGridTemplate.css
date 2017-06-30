@@ -174,7 +174,7 @@ header {
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
-	font-family: "Sintony";
+	font-family: Sintony, "微软雅黑";
 }
 .gallery .thumbnail h2{
 	font-weight: 400;
