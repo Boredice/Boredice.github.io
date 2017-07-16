@@ -144,6 +144,7 @@ header {
 	margin-bottom: 0px;
 }
 .thumbnail {
+	height: 350px;
 	width: 23%;
 	text-align: center;
 	float: left;
@@ -259,8 +260,7 @@ header {
 	padding-top: 20px;
 	padding-bottom: 20px;
 	background-color: #FFFFFF;
-	color: #B3B3B3;
-	text-transform: uppercase;
+	color: #C3C3C3;
 	font-weight: lighter;
 	letter-spacing: 2px;
 	border-top-width: 2px;
