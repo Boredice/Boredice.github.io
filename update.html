@@ -9,10 +9,10 @@
 		transition: opacity 0.2s ease-in-out;
 	}
 	img:hover {
-	opacity: 0.6;
+		opacity: 0.6;
 	}
 	img:active {
-	opacity: 0.45;
+		opacity: 0.45;
 	}
 	::selection {
 		color: #00ABFF;    
@@ -42,12 +42,12 @@
 		scrollbar-shadow-color: #D9D9D9;
 	}
 	.container {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #FFFFFF;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	text-align: center;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #FFFFFF;
+		font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
+		text-align: center;
 	}
 	body {
 		font-family: 'Empty';
@@ -55,6 +55,7 @@
 		background-color: #FFFFFF;
 		margin: 0;
 		margin-top: 10%;
+		text-align: center;
 	}
 	@font-face {
 		font-family: 'Sintony';
@@ -63,21 +64,71 @@
 	.hgt {
 		padding-top: 30px;
 	}
+	.title {
+		line-height: 12px;
+		font-weight: lighter;
+		transition: all 0.1s linear;
+		text-align: center;
+		font-family: 'Sintony', '微软雅黑';
+		color: #28ABFF;
+		font-size: 70px;
+		cursor: default;
+	}
+	.title:active {
+		font-size: 75px;
+		line-height: 5px;
+	}
 	.text {
+		line-height: 15px;
 		font-weight: lighter;
 		transition: all 0.1s linear;
 		text-align: center;
 		font-family: '微软雅黑';
 		color: #28ABFF;
 		font-size: 24px;
+		cursor: default;
+	}
+	.text:active {
+		font-size: 27px;
+	}
+	.button {
+		display: inline-block;
+		margin: 20px 5px 20px 5px;
+		width: 80px;
+		padding: 20px 15px 20px 15px;
+		border-radius: 30px;
+		border: 2px solid #00ABFF;
+		color: #28ABFF;
+		transition: all 0.2s linear;
+		font-size: 18px;
+		box-shadow: 0px 0px 20px #DDD;
+		cursor: pointer;
+		font-family: '微软雅黑';
+	}
+	.button:hover {
+		background-color: #00ABFF;
+		color: white;
+	}
+	.button:active {
+		border-radius: 15px;
+		color: rgba(255,255,255,0.7);
+		border: 2px solid #2BB9FF;
+		background: rgba(0,171,255,0.7)
+	}
+	a {
+		text-decoration: none;
+		cursor: default;
 	}
 </style>
 </head>
 <body>
 <div class="container">
 <div class="hgt">
-<p class="text" style="font-size: 70px; font-family: 'Sintony', '微软雅黑';">Update</p>
+<p class="title">Update</p>
 <p class="text">Boredice正更新维护中</p>
+<p class="text">预计在8月4日左右完成</p>
+<a href="javascript:window.history.back()"><div class="button" align="center">返回</div></a>
+<a href="javascript:window.close();"><div class="button" align="center">关闭</div></a>
 </div>
 </div>
 </body>
