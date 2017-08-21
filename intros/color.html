@@ -1,23 +1,55 @@
-﻿<!doctype html>
+﻿<input type="button"><!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Color</title>
 <link rel="shortcut icon" href="../icon.ico">
-<link href="css/contentIntroText.css" rel="stylesheet" type="text/css">
+<link href="css/contentIntroCSS.css" rel="stylesheet" type="text/css">
+<style>
+.background {
+	background-image: url(images/bgimages/blue.png);
+}
+.title {
+	color: deepskyblue;
+}
+.subtitle {
+	color: deepskyblue;
+}
+.version {
+	color: deepskyblue;
+}
+h2 {
+	color: deepskyblue;
+	border: 1.3px solid deepskyblue;
+}
+.btn {
+	color: deepskyblue;
+	border: 2px solid deepskyblue;
+}
+.btn:hover {
+	background-color: deepskyblue;
+}
+.sextitem {
+	font-family: 'Calibri';
+	font-size: 25px;
+}
+</style>
 </head>
 <body>
+<div class="background">
+<p class="title">Color</p>
+<p class="subtitle">简约的取色器</p>
+<p class="version">2.10.1</p>
+<a href="../files/Color.zip">
+  <div id="btn_download" class="btn" onMouseOver="this.innerHTML='79.5KB'" onMouseOut="this.innerHTML='下载'">下载</div>
+</a>
+</div>
 <div class="container">
-  <header>
-    <p class="ifr"><a href=".."><span style="color: #00ABFF; font-size: 35px; font-family: IceFlatRound, '微软雅黑';">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px; font-family: Sintony, '微软雅黑';">&nbsp;&nbsp;&nbsp;Color</span></p>
-  </header>
-  <div class="text"> <span style= "color: #00ABFF; font-size: 22px; font-family: 'Sintony','微软雅黑'">Color 2.10.1</span> <a href="../files/Color.zip">
-    <div class="btn">下载</div>
-    </a>
-    <p>这是一款方便、快捷的拾色器，提供拾色、放大镜、色值转换、取色等诸多功能，支持RGB、HSB、HEX等多种色值。（Win7/8/10）</p>
-    <img src="images/Color-1.jpg" width="40%">
+  <div class="text">
     <h2>功能</h2>
-    <p>Color的放大镜可以将当前鼠标区域放大1000%，色值转换可以根据RGB或HEX值转换为HSB、CMYK、VB色值，下面是几个常用的快捷键：</p>
+    <p>这是一款简约、方便的拾色器，提供拾色、放大镜、色值转换、取色等诸多功能，支持RGB、HSB、HEX等多种色值。（需.NetFramework3.5及以上，Win7及以上自带）</p>
+    <p><img src="images/screenshots/color-1.png" style="max-width: 374px" width="100%" alt=""/></p>
+    <p>下面是几个常用的快捷键：</p>
     <p>按下 Ctrl+Shift+Z 以在窗体外锁定色值<br>
       按下 Space 以在窗体内锁定色值<br>
       按下 Ctrl++以使用放大镜<br>
@@ -29,18 +61,57 @@
       按下 Ctrl+X 以复制 HEX 色值<br>
       按下 F1 以查看帮助<br>
       按下 Esc 以退出</p>
-      <p>举个栗子，比如我做网页时发现一个漂亮的配色，只需打开Color，把鼠标移上去，Ctrl+X复制HEX色值，Esc关闭，再Ctrl+V粘贴到代码里，就这么简单~</p>
     <h2>评论</h2>
-    <!--畅言-->
-        <!--PC和WAP自适应畅言-->
+    <!--畅言--> 
+    <!--PC和WAP自适应畅言-->
 <div id="SOHUCS"></div> 
 <script type="text/javascript"> 
-(function(){ 
-var appid = 'cyt4MjMTF'; 
-var conf = 'prod_874e3e15698f8e9e7deec66b7ecf889b'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 1000) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script> 
+(function()
+ { 
+	var appid = 'cyt4MjMTF'; 
+	var conf = 'prod_874e3e15698f8e9e7deec66b7ecf889b'; 
+	var width = window.innerWidth || document.documentElement.clientWidth; 
+	if (width < 1000)
+	{ 
+		window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+	}
+	else
+	{
+		var loadJs = function(d, a)
+		{
+			var c = document.getElementsByTagName("head")[0]||document.head||document.documentElement;
+			var b = document.createElement("script");
+			b.setAttribute("type", "text/javascript");
+			b.setAttribute("charset", "UTF-8");
+			b.setAttribute("src", d);
+			if(typeof a === "function")
+			{
+				if(window.attachEvent)
+				{
+					b.onreadystatechange = function()
+					{
+						var e = b.readyState;
+						if(e === "loaded"||e === "complete")
+						{
+							b.onreadystatechange = null;
+							a();
+						}
+					}
+				}
+				else
+				{
+					b.onload = a;
+				}
+			}
+			c.appendChild(b)
+		};
+		loadJs("https://changyan.sohu.com/upload/changyan.js", function()
+		{
+			window.changyan.api.config({appid:appid, conf:conf});
+		});
+	} 
+})();
+	  </script> 
   </div>
 </div>
 </body>

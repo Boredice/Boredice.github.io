@@ -4,34 +4,105 @@
 <meta charset="utf-8">
 <title>Titans</title>
 <link rel="shortcut icon" href="../icon.ico">
-<link href="css/contentIntroText.css" rel="stylesheet" type="text/css">
+<link href="css/contentIntroCSS.css" rel="stylesheet" type="text/css">
+<style>
+.background {
+	background-image: url(images/bgimages/green.png);
+}
+.title {
+	color: mediumaquamarine;
+}
+.subtitle {
+	color: mediumaquamarine;
+}
+.version {
+	color: mediumaquamarine;
+}
+h2 {
+	color: mediumaquamarine;
+	border: 1.3px solid mediumaquamarine;
+}
+.btn {
+	color: mediumaquamarine;
+	border: 2px solid mediumaquamarine;
+}
+.btn:hover {
+	background-color: mediumaquamarine;
+}
+</style>
 </head>
 <body>
+<div class="background">
+<p class="title">Titans</p>
+<p class="subtitle">别样的计算器</p>
+<p class="version">2.11.1</p>
+<a href="../files/Titans.zip">
+ <div id="btn_download" class="btn" onMouseOver="this.innerHTML='2.3MB'" onMouseOut="this.innerHTML='下载'">下载</div>
+</a>
+</div>
 <div class="container">
-  <header>
-    <p class="ifr"><a href=".."><span style="color: #00ABFF; font-size: 35px; font-family: IceFlatRound, '微软雅黑';">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px; font-family: Sintony, '微软雅黑';">&nbsp;&nbsp;&nbsp;Titans</span></p>
-  </header>
-  <div class="text"> <span style= "color: #00ABFF; font-size: 22px; font-family: 'Sintony','微软雅黑'">Titans 2.11.1</span> <a href="../files/Titans.zip">
-    <div class="btn">下载</div>
-    </a>
-    <p>这是一款强大的文本计算器，支持大多数函数运算，提供了诸多方便的功能。它可以输入一个算式，然后立即计算出结果。（Win8/10）</p>
-    <img src="images/Titans-1.jpg" width="71%">
+  <div class="text">
     <h2>功能</h2>
-    <p>Titans支持保留小数（最高9位），支持随机数，支持查看数字属性：整数、小数、正负、奇偶、自然数、平方数、立方数、质合数、完全数，以及转换进制、罗马数字（1~3999的整数），也可以转换为人民币大写。</p>
+    <p>这是一款强大的文本计算器，支持大多数函数运算，提供了诸多方便的功能。它可以输入一个算式，然后无需点击任何按钮，即可立即计算出结果。（需.NetFramework4.5及以上，Win8及以上自带）</p>
+    <img src="images/screenshots/titans-1.png" style="max-width: 682px" width="100%" alt=""/>
+    <p>Titans支持保留小数（最高9位），支持随机数，支持查看数字属性：整数、小数、正负、奇偶、自然数、平方数、立方数、质合数、完全数，以及转换进制、罗马数字，也可以转换为人民币大写。</p>
     <p>当然，Titans也支持科学运算，如E+, E-, ^, abs, log, exp, tan, sin, cos, sgn, sqr, oct, int, fix, round, mod, and, or, xor, !, π, rd等。</p>
-    <p>几乎所有计算器都是很难识别的千位分隔符，而Titans却别出心裁地使用了万位分隔符。</p>
+    <p>不仅如此，Titans还别出心裁地使用了万位分隔符，使阅读数字更加简单。</p>
     <p>除此之外，Titans还有更多实用的功能，在主界面右下角的“帮助”里即可查看。</p>
+    <p>下图是Titans的数字属性窗口</p>
+    <img src="images/screenshots/titans-2.png" style="max-width: 429px" width="100%" alt=""/>
+    <p>Titans从开发到现在已经一年多了，期间增加了数不清的功能，当然Bug也在无形中增加了，如果在使用过程中发现任何Bug，欢迎在评论区反馈。</p>
     <h2>评论</h2>
-    <!--畅言-->
-        <!--PC和WAP自适应畅言-->
+    <!--畅言--> 
+    <!--PC和WAP自适应畅言-->
 <div id="SOHUCS"></div> 
 <script type="text/javascript"> 
-(function(){ 
-var appid = 'cyt4MjMTF'; 
-var conf = 'prod_874e3e15698f8e9e7deec66b7ecf889b'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 1000) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>  
+(function()
+ { 
+	var appid = 'cyt4MjMTF'; 
+	var conf = 'prod_874e3e15698f8e9e7deec66b7ecf889b'; 
+	var width = window.innerWidth || document.documentElement.clientWidth; 
+	if (width < 1000)
+	{ 
+		window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+	}
+	else
+	{
+		var loadJs = function(d, a)
+		{
+			var c = document.getElementsByTagName("head")[0]||document.head||document.documentElement;
+			var b = document.createElement("script");
+			b.setAttribute("type", "text/javascript");
+			b.setAttribute("charset", "UTF-8");
+			b.setAttribute("src", d);
+			if(typeof a === "function")
+			{
+				if(window.attachEvent)
+				{
+					b.onreadystatechange = function()
+					{
+						var e = b.readyState;
+						if(e === "loaded"||e === "complete")
+						{
+							b.onreadystatechange = null;
+							a();
+						}
+					}
+				}
+				else
+				{
+					b.onload = a;
+				}
+			}
+			c.appendChild(b)
+		};
+		loadJs("https://changyan.sohu.com/upload/changyan.js", function()
+		{
+			window.changyan.api.config({appid:appid, conf:conf});
+		});
+	} 
+})();
+	  </script> 
   </div>
 </div>
 </body>

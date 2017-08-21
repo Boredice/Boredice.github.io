@@ -4,87 +4,130 @@
 <meta charset="utf-8">
 <title>Sext</title>
 <link rel="shortcut icon" href="../icon.ico">
-<link href="css/contentIntroText.css" rel="stylesheet" type="text/css">
+<link href="css/contentIntroCSS.css" rel="stylesheet" type="text/css">
+<!--链接到所有Intro页面公用的CSS，并在Style标签里单独设置个别样式颜色-->
+<style>
+.background {
+	background-image: url(images/bgimages/orange.png);
+}
+.title {
+	color: orange;
+}
+.subtitle {
+	color: orange;
+}
+.version {
+	color: orange;
+}
+h2 {
+	color: orange;
+	border: 1.3px solid orange;
+}
+.btn {
+	color: orange;
+	border: 2px solid orange;
+}
+.btn:hover {
+	background-color: orange;
+}
+.sextitem {
+	font-size: 25px;
+}
+.lattice {
+	font-family: 'SimSun';
+	line-height: 14px;
+}
+</style>
 </head>
 <body>
+<div class="background">
+  <p class="title">Sext</p>
+  <p class="subtitle">别样的文本工具</p>
+  <p class="version">2.10.5</p>
+  <!--下载按钮，鼠标移入显示文件大小，移出显示下载--> 
+  <a href="../files/Sext.zip">
+  <div id="btn_download" class="btn" onMouseOver="this.innerHTML='79.5KB'" onMouseOut="this.innerHTML='下载'">下载</div>
+  </a> </div>
 <div class="container">
-  <header>
-    <p class="ifr"><a href=".."><span style="color: #00ABFF; font-size: 35px; font-family: IceFlatRound, '微软雅黑';">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px; font-family: Sintony, '微软雅黑';">&nbsp;&nbsp;&nbsp;Sext</span></p>
-  </header>
-  <div class="text"> <span style= "color: #00ABFF; font-size: 22px; font-family: 'Sintony','微软雅黑'">Sext 1.7.3</span> <a href="../files/Sext.exe">
-    <div class="btn">下载</div>
-    </a>
-    <p>这是一个别样的文本工具，可以将文本转换成各种奇葩的字符。（Win7/8/10）</p>
-    <img src="images/Sext-1.jpg" width="50%">
+  <div class="text"> 
+    <!--正文-->
     <h2>功能</h2>
-    <p>这个程序能将文本转换为小型大写字母、颠倒、气泡、上标、全角、加线、加点、括号、简繁转换、菊花文，以及Unicode编码、解码。</p>
+    <p>这个程序能将文本转换为小型大写字母、颠倒、气泡、上标、全角、加线、加点、括号、简繁转换、菊花文、点阵字，以及Unicode编码、解码，如此多的功能，浓缩在仅有80KB的大小中，界面简约而自然。（需.NetFramework3.5及以上，Win7及以上自带）</p>
+    <img src="images/screenshots/sext-1.png" style="max-width: 703px" width="100%" alt=""/>
     <p>转换后的内容里有特殊字符，所以可能会显示成一个个框。</p>
-    <p>用一句话做个演示：Hello World!</p>
-    <p>————————————————————————————————</p>
-    <p>SmallCaps</p>
-    <p class="sextitem">Hᴇʟʟᴏ Wᴏʀʟᴅ!</p>
-    <p>————————————————————————————————</p>
-    <p>UpsideDown</p>
+    <p>随便举几个栗子：</p>
     <p class="sextitem">¡pןɹoM oןןǝH</p>
-    <p>————————————————————————————————</p>
-    <p>Bubble</p>
-    <p class="sextitem">Ⓗⓔⓛⓛⓞ Ⓦⓞⓡⓛⓓ!</p>
-    <p>————————————————————————————————</p>
-    <p>SuperScript</p>
-    <p class="sextitem">ᴴᵉˡˡᵒ ᵂᵒʳˡᵈ!</p>
-    <p>————————————————————————————————</p>
-    <p>FullWidth</p>
-    <p class="sextitem">Ｈｅｌｌｏ　Ｗｏｒｌｄ！</p>
-    <p>————————————————————————————————</p>
-    <p>Line</p>
-    <p class="sextitem" style="line-height: 25px">H̲e̲l̲l̲o̲ ̲W̲o̲r̲l̲d̲!̲</p>
-    <p class="sextitem" style="line-height: 25px">̶H̶e̶l̶l̶o̶ ̶W̶o̶r̶l̶d̶!̶</p>
-    <p class="sextitem" style="line-height: 25px">H̅e̅l̅l̅o̅ ̅W̅o̅r̅l̅d̅!̅</p>
-    <p class="sextitem" style="line-height: 25px">̶H̶̲̅e̶̲̅l̶̲̅l̶̲̅o̶̲̅ ̶̲̅W̶̲̅o̶̲̅r̶̲̅l̶̲̅d̶̲̅!̶̲̅</p>
-    <p class="sextitem" style="line-height: 25px">[H̲̅e̲̅l̲̅l̲̅o̲̅ ̲̅W̲̅o̲̅r̲̅l̲̅d̲̅!̲̅]</p>
-    <p>————————————————————————————————</p>
-    <p>Unicode</p>
-    <p>用Hello World!编码</p>
-    <p class="sextitem">\u0048\u0065\u006C\u006C\u006F\u0020</p>
-    <p class="sextitem">\u0057\u006F\u0072\u006C\u0064\u0021</p>
-    <p>用上面的解码</p>
-    <p class="sextitem">Hello World!</p>
-	<p>————————————————————————————————</p>
-    <p>Chinese</p>
-    <p>用 悦内黄册历众 简转繁：</p>
-    <p class="sextitem">悅內黃冊歷眾</p>
-    <p>用 悅內黃冊歷眾 繁转简：</p>
-	<p class="sextitem">悦内黄册历众</p>
-    <p>————————————————————————————————</p>
-    <p>Dot</p>
-    <p class="sextitem" style="line-height: 25px">Ḥẹḷḷọ Ẉọṛḷḍ!</p>
-    <p class="sextitem" style="line-height: 25px">H̥e̥l̥l̥o̥ W̥o̥r̥l̥d̥!</p>
-    <p class="sextitem" style="line-height: 25px">Ḣėl̇l̇ȯ Ẇȯṙl̇ḋ!</p>
-    <p class="sextitem" style="line-height: 25px">H̊e̊l̊l̊o̊ W̊o̊r̊l̊d̊!</p>
-    <p>————————————————————————————————</p>
-    <p>Brackets</p>
-    <p class="sextitem">🄗⒠⒧⒧⒪ 🄦⒪⒭⒧⒟!</p>
-	<p>————————————————————————————————</p>
-    <p>Chrysanthemum</p>
-    <p>主页上因大小限制将此项写为Mum，下面用 你好世界 演示，实际可能与下面不符：</p>
-    <p class="sextitem">你҉好҉世҉界҉</p>
-	<p>————————————————————————————————</p>
-    <p>Unicode 解码</p>
-    <p style="font-size: 20px;line-height: 10px;">&nbsp;</p>
-    <p>好吧啥都没有。。因为Unicode解码格式必须为上面编码后的<strong>\u0000</strong>格式，其中\u可以写为$或者Uni，而这里用HelloWorld去解码当然解不出来。</p>
-    <p>————————————————————————————————</p>
-    <p>当然Sext也有一些无法转换的字母，比如UpsideDown中的B G K R Y这几个字母，SuperScript的q等</p>
+    <p class="sextitem">H̲e̲l̲l̲o̲ ̲W̲o̲r̲l̲d̲!̲</p>
+    <p class="sextitem">H̥e̥l̥l̥o̥ W̥o̥r̥l̥d̥!</p>
+    <p>是不是屌炸天了？哎，下面还有更屌的：</p>
+    <!--点阵字在小宽度情况下会自动换行影响排版，因此设置了最小宽度-->
+    <p class="lattice" style="min-width: 490px">
+     　　　　　囧　　　　　　　　　　　　　囧　　　　　　　　囧　　　　　　<br>
+      　　　　　囧囧囧囧囧囧　囧囧囧囧　　　囧　　　　　　　　　囧　　　　　<br>
+      　　　　　囧　　　　　　囧　　囧　囧囧囧囧囧囧　囧囧囧囧囧囧囧囧囧囧囧<br>
+      　　　　　囧　　　　　　囧　　囧　　囧　　　　　囧　　　　　　　　　囧<br>
+      　囧囧囧囧囧囧囧囧囧　　囧　囧　　　囧　囧　　　　　　　　　　　　　　<br>
+      　囧　　　　　　　囧　　囧　囧　　囧　　囧　　　　　囧囧囧囧囧囧囧　　<br>
+      　囧　　　　　　　囧　　囧　　囧　囧囧囧囧囧囧　　　　　　　　囧　　　<br>
+      　囧　　　　　　　囧　　囧　　囧　　　　囧　　　　　　　　　囧　　　　<br>
+      　囧囧囧囧囧囧囧囧囧　　囧　　囧　　　　囧　　　囧囧囧囧囧囧囧囧囧囧囧<br>
+      　　　　　　　　　　　　囧囧囧　　囧囧囧囧囧囧　　　　　　囧　　　　　<br>
+      　囧　囧　　囧　　囧　　囧　　　　　　　囧　　　　　　　　囧　　　　　<br>
+    囧　　　囧　　囧　　囧　囧　　　　　　　囧　　　　　　囧囧囧　　　　　</p>
+    <p>这在Sext中是Lattice，有很多参数可以设置（这货占了Sext大小的六分之一），直接上个图吧：</p>
+    <img src="images/screenshots/sext-2.png" style="max-width: 1018px" width="100%" alt=""/>
+    <p>离线也能转换哦！你可以自己设置各个参数，并可以选择电脑上安装的任意字体进行转换，但要注意的是，除宋体以外的其它字体在小字号情况下可能会有残缺。 </p>
+    <p>当然Sext也有一些无法转换的字母，比如UpsideDown中的B G K R Y这几个字母，SuperScript的q等，除此以外有任何Bug，欢迎在评论区反馈。</p>
     <h2>评论</h2>
-    <!--畅言--> 
-    <!--PC和WAP自适应畅言-->
-<div id="SOHUCS"></div> 
-<script type="text/javascript"> 
-(function(){ 
-var appid = 'cyt4MjMTF'; 
-var conf = 'prod_874e3e15698f8e9e7deec66b7ecf889b'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 1000) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script> 
+    <!--搜狐畅言评论-->
+    <div id="SOHUCS"></div>
+    <script type="text/javascript"> 
+(function()
+ { 
+	var appid = 'cyt4MjMTF'; 
+	var conf = 'prod_874e3e15698f8e9e7deec66b7ecf889b'; 
+	var width = window.innerWidth || document.documentElement.clientWidth; 
+	if (width < 1000)
+	{ 
+		window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+	}
+	else
+	{
+		var loadJs = function(d, a)
+		{
+			var c = document.getElementsByTagName("head")[0]||document.head||document.documentElement;
+			var b = document.createElement("script");
+			b.setAttribute("type", "text/javascript");
+			b.setAttribute("charset", "UTF-8");
+			b.setAttribute("src", d);
+			if(typeof a === "function")
+			{
+				if(window.attachEvent)
+				{
+					b.onreadystatechange = function()
+					{
+						var e = b.readyState;
+						if(e === "loaded"||e === "complete")
+						{
+							b.onreadystatechange = null;
+							a();
+						}
+					}
+				}
+				else
+				{
+					b.onload = a;
+				}
+			}
+			c.appendChild(b)
+		};
+		loadJs("https://changyan.sohu.com/upload/changyan.js", function()
+		{
+			window.changyan.api.config({appid:appid, conf:conf});
+		});
+	} 
+})();
+	  </script> 
   </div>
 </div>
 </body>

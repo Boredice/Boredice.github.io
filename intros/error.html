@@ -4,37 +4,112 @@
 <meta charset="utf-8">
 <title>Error</title>
 <link rel="shortcut icon" href="../icon.ico">
-<link href="css/contentIntroText.css" rel="stylesheet" type="text/css">
+<link href="css/contentIntroCSS.css" rel="stylesheet" type="text/css">
+<style>
+.background {
+	background-image: url(images/bgimages/red.png);
+}
+.title {
+	color: salmon;
+}
+.subtitle {
+	color: salmon;
+}
+.version {
+	color: salmon;
+}
+h2 {
+	color: salmon;
+	border: 1.3px solid salmon;
+}
+.btn {
+	color: salmon;
+	border: 2px solid salmon;
+}
+.btn:hover {
+	background-color: salmon;
+}
+</style>
 </head>
 <body>
+<div class="background">
+<p class="title">Error</p>
+<p class="subtitle">完美的整人工具</p>
+<p class="version">1.4.4</p>
+<a href="../files/Error.zip">
+  <div id="btn_download" class="btn" onMouseOver="this.innerHTML='79.5KB'" onMouseOut="this.innerHTML='下载'">下载</div>
+</a>
+</div>
 <div class="container">
-  <header>
-    <p class="ifr"><a href=".."><span style="color: #00ABFF; font-size: 35px; font-family: IceFlatRound, '微软雅黑';">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px; font-family: Sintony, '微软雅黑';">&nbsp;&nbsp;&nbsp;Error</span></p>
-  </header>
-  <div class="text"> <span style= "color: #00ABFF; font-size: 22px; font-family: 'Sintony','微软雅黑'">Error 2.10.1</span> <a href="../files/Error.zip">
-    <div class="btn">下载</div>
-    </a>
-    <p>这是一个功能强大的整人程序，你可以通过这个程序“锁定”电脑，制造出各种假象。（Win7/8/10）</p>
-    <img src="images/Error-1.jpg" width="40%">
-    <h2 style="font-weight: 600;color: #FF7174;border: 2.3px solid #FF7174;">解锁</h2>
-    <p style="color: #FF7174">此项必读！！！一定要记得解锁方式，要不然只能重启了！！</p>
-    <p>在锁定时，用鼠标<strong>右键</strong>在屏幕上画一道<strong>斜线</strong>，最好从左上角画到右下角，如果鼠标隐藏了，先把鼠标往左上移，然后再盲画。接着会出现一个文本框，输入<strong>(当前小时数(24时制))+(当前分钟数的十位数)</strong>再点击按钮即可解锁。举个栗子，如果现在时间为18:52，那么解锁码就是18+5=23。</p>
+  <div class="text">
+    <h2 style="border: 2px solid salmon; font-weight: bold">解锁</h2>
+    <p style="font-weight: bold">此项下载必读！</p>
+    <p>在锁定时用鼠标<strong>右键</strong>在屏幕上画一道<strong>斜线</strong>，最好从左上角画到右下角，如果鼠标隐藏了，先把鼠标往左上移，然后再盲画。接着会出现一个文本框，输入<strong>(当前小时数(24时制))+(当前分钟数的十位数)</strong>再点击按钮即可解锁。举个栗子，如果现在时间为18:52，那么解锁码就是18+5=23。一定要记住了！</p>
+    <p>因为此项真的很重要所以放在前面了，那么接着看：</p>
     <h2>功能</h2>
-    <p>你可以用这个程序，制造出电脑死机、键盘失灵、蓝屏、闪屏、黑屏等各种假象，相比于Nullice的TopOn，独特的是程序使电脑“崩溃”时，任何按键都无法按下（除Ctrl+Alt+Delete），程序的“蓝屏”会自动检测系统，如果是Win8以上，蓝屏界面是一个:(，如果是Win7以下，蓝屏界面是崩溃代码，蓝屏、黑屏、闪屏效果会隐藏鼠标箭头，效果更加逼真。主页右上角的 - 按钮是将窗体隐藏到系统右下角托盘。</p>
-    <p>至于截图嘛，就不放了。（鼠标键盘屏幕都锁定了怎么截）</p>
-    <p>这个程序不知道会不会被杀毒软件误报，遇到了不要管，保证没毒。</p>
-    <p>PS: 做Error的时候一开始忘加入解锁了，就这么被它坑重启了六次。。</p>
+    <p>这是一个完美、强大的整人程序，你可以通过这个程序“锁定”电脑，制造出各种假象。（需.NetFramework3.5及以上，Win7及以上自带）</p>
+    <img src="images/screenshots/error-1.png" style="max-width: 545px" width="100%" alt=""/>
+    <p>为什么是完美呢？因为Error运行后会屏蔽掉所有按键（除Ctrl+Alt+Delete），黑屏、闪屏和蓝屏还会隐藏鼠标箭头，且窗体会覆盖掉所有程序，任务管理器都不管用！</p>
+    <p>Error有5个功能：锁定全部，锁定键盘，蓝屏，闪屏，黑屏。</p>
+    <p>锁定全部是用一个几近透明的窗体将屏幕覆盖住，造成鼠标、键盘失灵的假象。</p>
+    <p>锁定键盘是用键盘钩子将键盘事件屏蔽，使用后最好点击 - 按钮将窗体最小化到系统右下托盘以隐藏窗体，杀毒软件可能会拦截，请加入白名单或关闭杀毒软件。</p>
+    <p>蓝屏是用一张蓝屏的图片作为窗体背景，并隐藏鼠标、屏蔽键盘，其会自动检测系统，如果是Win8及以上，则为 ：（ 界面，如果是Win7及以下，则是满屏的英文错误代码。</p>
+    <p>闪屏是每隔0.1秒就闪动一次黑屏，并屏蔽鼠标、键盘。</p>
+    <p>黑屏是将窗体背景设置为全黑，并屏蔽鼠标、键盘。</p>
+    <p>给大家截个屏吧，这是蓝屏（别问我怎么截的，系统截图工具+延迟功能轻松搞定）：</p>
+    <img src="images/screenshots/error-2.png" style="max-width: 600px; border-radius: 10px;" width="100%" alt=""/>
+    <p>至于这个程序用来干啥就随便了，可以整整朋友，也可以用来锁屏。</p>
     <h2>评论</h2>
     <!--畅言--> 
-        <!--PC和WAP自适应畅言-->
+    <!--PC和WAP自适应畅言-->
 <div id="SOHUCS"></div> 
 <script type="text/javascript"> 
-(function(){ 
-var appid = 'cyt4MjMTF'; 
-var conf = 'prod_874e3e15698f8e9e7deec66b7ecf889b'; 
-var width = window.innerWidth || document.documentElement.clientWidth; 
-if (width < 1000) { 
-window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script> 
+(function()
+ { 
+	var appid = 'cyt4MjMTF'; 
+	var conf = 'prod_874e3e15698f8e9e7deec66b7ecf889b'; 
+	var width = window.innerWidth || document.documentElement.clientWidth; 
+	if (width < 1000)
+	{ 
+		window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>');
+	}
+	else
+	{
+		var loadJs = function(d, a)
+		{
+			var c = document.getElementsByTagName("head")[0]||document.head||document.documentElement;
+			var b = document.createElement("script");
+			b.setAttribute("type", "text/javascript");
+			b.setAttribute("charset", "UTF-8");
+			b.setAttribute("src", d);
+			if(typeof a === "function")
+			{
+				if(window.attachEvent)
+				{
+					b.onreadystatechange = function()
+					{
+						var e = b.readyState;
+						if(e === "loaded"||e === "complete")
+						{
+							b.onreadystatechange = null;
+							a();
+						}
+					}
+				}
+				else
+				{
+					b.onload = a;
+				}
+			}
+			c.appendChild(b)
+		};
+		loadJs("https://changyan.sohu.com/upload/changyan.js", function()
+		{
+			window.changyan.api.config({appid:appid, conf:conf});
+		});
+	} 
+})();
+	  </script> 
   </div>
 </div>
 </body>
