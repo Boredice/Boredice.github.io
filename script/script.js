@@ -1,10 +1,21 @@
-﻿//Baidu Statistics
+﻿//Is IE8 Tip
+function isIE8() {
+	if (navigator.userAgent.indexOf("MSIE") > 0)
+	{
+		if (navigator.userAgent.indexOf("MSIE 6.0") > 0 || navigator.userAgent.indexOf("MSIE 7.0") > 0 || navigator.userAgent.indexOf("MSIE 8.0") > 0)
+		{
+			document.title = "浏览器版本过低";
+		}
+	}
+}
+isIE8();
+//Baidu Statistics
 var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?7e9a6e18dedc6b09b765fd1aac6591b4";
-  var s = document.getElementsByTagName("script")[0]; 
-  s.parentNode.insertBefore(hm, s);
+(function () {
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?7e9a6e18dedc6b09b765fd1aac6591b4";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.insertBefore(hm, s);
 })();
 //Console
 console.log("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　囧　　囧　　　　　　　　　　　　　\r\n囧囧囧囧　　　　　　　　　　　　　　　　　　　　　　　　　　　　　囧　　囧　　　　　　　　　　　　　\r\n囧　　　囧　　　　　　　　　　　　　　　　　　　　　　　　　　　　囧　　　　　　　　　　　　　　　　\r\n囧　　　囧　　　　　　　　　　　　　　　　　　　　　　　　　　　　囧　　　　　　　　　　　　　　　　\r\n囧　　　囧　　　　囧囧囧囧　　　囧　囧　　　囧囧囧　　　　囧囧囧囧囧　　囧　　　囧囧囧　　　囧囧囧　\r\n囧囧囧囧　　　　囧　　　囧囧　　囧囧　　　囧　　　囧　　囧　　　囧囧　　囧　　囧　　　　　囧　　　囧\r\n囧　　　囧囧　　囧　　　　囧　　囧　　　　囧囧囧囧囧　　囧　　　　囧　　囧　　囧　　　　　囧囧囧囧囧\r\n囧　　　　囧　　囧　　　　囧　　囧　　　　囧　　　　　　囧　　　　囧　　囧　　囧　　　　　囧　　　　\r\n囧　　　囧囧　　囧　　　囧囧　　囧　　　　囧　　　　　　囧　　　囧囧　　囧　　囧　　　　　囧　　　　\r\n囧囧囧囧囧　　　　囧囧囧囧　　　囧　　　　　囧囧囧　　　　囧囧囧囧囧　　囧　　　囧囧囧　　　囧囧囧　");
