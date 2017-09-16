@@ -2,13 +2,9 @@
 	font-family: 'IceFlatRound';
 	src: url('../fonts/Ice Flat Round.ttf');
 }
-@font-face{
-	font-family: 'Sintony';
-	src: url('../fonts/Sintony.ttf');
-}
-.ifr{
-	font-family:'IceFlatRound','微软雅黑';
-}
+/*body {
+	font-family: "微软雅黑";
+}*/
 ::-webkit-scrollbar {
     width: 12px;
 	background: rgba(0,0,0,0);
@@ -36,7 +32,7 @@ HTML {
 }
 ::selection{
 	color: #00ABFF;
-    background: #E9F2FF;
+  	background: #E9F2FF;
 }
 a {	
 	text-decoration : none;
@@ -73,7 +69,6 @@ a:active {
 }
 /* Body */
 body {
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 	background-color: #FFFFFF;
 	margin: 0;
 	margin-top: 15px;
@@ -93,7 +88,6 @@ img:active {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #FFFFFF;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 }
 /* Header */
 header {
@@ -112,7 +106,6 @@ header {
 	padding-top: 15px;
 	line-height: 2em;
 	font-size: 22px;
-	font-family: "微软雅黑";
 }
 .hero_header {
 	color: #FFFFFF;
@@ -124,7 +117,6 @@ header {
 .text_column {
 	width: 90%;
 	text-align: left;
-	font-weight: lighter;
 	line-height: 25px;
 	float: left;
 	padding-left: 20px;
@@ -175,7 +167,6 @@ header {
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
-	font-family: Sintony, "微软雅黑";
 }
 .gallery .thumbnail h2{
 	font-weight: 400;
@@ -185,14 +176,12 @@ header {
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
-	font-family: "微软雅黑";
 }
 .gallery .thumbnail p {
 	margin: 0;
 	color: #B3B3B3;
 	text-align: left;
 	padding-left: 20px;
-	font-family: "微软雅黑";
 }
 /* More info */
 .intro {
@@ -264,7 +253,6 @@ header {
 	font-weight: lighter;
 	letter-spacing: 2px;
 	border-top-width: 2px;
-	font-family: "微软雅黑";
 }
 footer {
 	background-color: #B3B3B3;
@@ -386,7 +374,7 @@ footer {
 }
 .thumbnail {
 	width: 48%;
-	font-family: "微软雅黑";
+
 }
 .text_column {
 	width: 90%;

@@ -107,10 +107,9 @@ HTML {
 	background-color: #FFFFFF;
 }
 body {
+	font-family: "Microsoft YaHei";
 	line-height: 35px;
 	font-size: 14px;
-	font-family: 'Segoe UI', 'Calibri', 'Microsoft YaHei';
-	/*原为链接的Sintony字体*/
 	margin: 0px;
 }
 a {

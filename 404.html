@@ -1,21 +1,29 @@
-﻿<!doctype html>
----
+﻿---
 permalink: 404.html
 ---
+<!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <title>Boredice 404</title>
 <link rel="shortcut icon" href="erroricon.ico">
 <style>
+	body {
+		font-family: 'Microsoft YaHei';
+		font-family: 'Empty';
+		line-height: 0;
+		background-color: #FFFFFF;
+		margin: 0;
+		margin-top: 10px;
+	}
 	img {
 		transition: opacity 0.2s ease-in-out;
 	}
 	img:hover {
-	opacity: 0.6;
+		opacity: 0.6;
 	}
 	img:active {
-	opacity: 0.45;
+		opacity: 0.45;
 	}
 	::selection {
 		color: #00ABFF;    
@@ -45,19 +53,11 @@ permalink: 404.html
 		scrollbar-shadow-color: #D9D9D9;
 	}
 	.container {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #FFFFFF;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	text-align: center;
-	}
-	body {
-		font-family: 'Empty';
-		line-height: 0;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
 		background-color: #FFFFFF;
-		margin: 0;
-		margin-top: 10px;
+		text-align: center;
 	}
 	@font-face {
 		font-family: 'IceFlatRound';
@@ -66,13 +66,6 @@ permalink: 404.html
 	@font-face {
 		font-family: 'Empty';
 		src: url('fonts/Empty.ttf');
-	}
-	.ifr {
-		font-family:'IceFlatRound';
-	}
-	@font-face {
-		font-family: 'Sintony';
-		src: url('fonts/Sintony.ttf');
 	}
 	header {
 		width: 100%;
@@ -111,11 +104,11 @@ permalink: 404.html
 <body>
 <div class="container">
     <header>
-      <p class="ifr"><a href=".."><span style="color: #00ABFF; font-size: 35px; font-family: IceFlatRound, '微软雅黑';">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px; font-family: Sintony, '微软雅黑'">&nbsp;&nbsp;&nbsp;404</span></p>
+      <p><a href=".."><span style="color: #00ABFF; font-size: 35px; font-family: IceFlatRound">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px;">&nbsp;&nbsp;&nbsp;404</span></p>
 </header>
 <div class="hgt">
 <a href=".."><img src="images/404.gif" width="40%" alt=""/></a>
-<p class="text" style="text-align: center; font-family: '微软雅黑'; color: #28ABFF; font-size: 24px;">额，页面貌似找不到了呢。。</p>
+<p class="text" style="text-align: center; color: #28ABFF; font-size: 24px;">额，页面貌似找不到了呢。。</p>
 </div>
 </div>
 </body>

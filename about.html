@@ -5,6 +5,9 @@
 <title>About Boredice</title>
 <link rel="shortcut icon" href="icon.ico">
 <style>
+	body {
+		font-family: "Microsoft YaHei";
+	}
 	img {
 		transition: opacity 0.2s ease-in-out;
 		transition: all 0.2s linear;
@@ -43,15 +46,13 @@
 		scrollbar-shadow-color: #D9D9D9;
 	}
 	.container {
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-	background-color: #FFFFFF;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	color: #979797;
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+		background-color: #FFFFFF;
+		color: #979797;
 	}
 	body {
-		font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
 		background-color: #FFFFFF;
 		margin: 0;
 		margin-top: 26px;
@@ -59,13 +60,6 @@
 	@font-face {
 		font-family: 'IceFlatRound';
 		src: url('fonts/Ice Flat Round.ttf');
-	}
-	@font-face {
-		font-family: 'Sintony';
-		src: url('fonts/Sintony.ttf');
-	}
-	.ifr {
-		font-family:'IceFlatRound';
 	}
 	header {
 		width: 100%;
@@ -86,7 +80,6 @@
 	}
 	.contact {
 		color: #00ABFF;
-		font-family: 'Sintony','微软雅黑';
 		transition: all 0.2s linear;
 	}
 	.contact:hover {
@@ -102,20 +95,23 @@
 <body>
    <div class="container">
      <header>
-      <p class="ifr"><a href=".."><span style="color: #00ABFF; font-size: 35px; font-family: IceFlatRound, '微软雅黑';">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px; font-family: IceFlatRound, '微软雅黑';">&nbsp;&nbsp;&nbsp;关于</span></p>
+      <p><a href=".."><span style="color: #00ABFF; font-size: 35px; font-family: IceFlatRound">&nbsp;Boredice</span></a><span style="color: #B7B7B7; font-size: 20px; font-family: IceFlatRound">&nbsp;&nbsp;&nbsp;关于</span></p>
        </header>
        <table width="721" align="center">
           <tr>
               <td width="32"></td>
-              <td width="218"><img src="images/Profile Picture.jpg" height="240"></td>
-              <td width="344"><span style="color:#777777;font-family: 'Sintony','微软雅黑';font-size: 20px">Boredice - 逗逼小骚年<br><br></span><span style="color: #888888;font-family: 'Sintony','微软雅黑';font-size: 15px;line-height: 30px">一个热爱IT的小学生<br>喜欢写网页，写程序，做设计<br>爱好 Office、Camtasia、Flash、Phtoshop、Dreamweaver、C#、VBA、HTML、CSS 等<br>从图形设计到程序开发，热衷于各种创作<br><br></span>
+              <td width="218"><img src="images/Profile Picture.jpg" height="240" style="border-radius: 220px; border: 2px solid #DDD"></td>
+              <td width="344"><span style="color:#777777;font-size: 20px">Boredice - 逗逼小骚年<br><br></span><span style="color: #888888;font-size: 15px;line-height: 30px">一个热爱IT的小学生<br>喜欢写网页，写程序，做设计<br>爱好 Office、Camtasia、Flash、Phtoshop、Dreamweaver、C#、VBA、HTML、CSS 等<br>从图形设计到程序开发，热衷于各种创作<br><br></span>
               <a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact">知乎</a>&nbsp;&nbsp;&nbsp;
               <a href="https://github.com/Boredice" target="_blank" class="contact">Github</a>&nbsp;&nbsp;&nbsp;
               <a href="mailto:2419029544@qq.com" class="contact">Email</a>&nbsp;&nbsp;&nbsp;
-              <a href="https://tieba.baidu.com/f?kw=boredice&ie=utf-8" class="contact">贴吧</a>
+              <a href="https://tieba.baidu.com/f?kw=boredice&ie=utf-8" target="_blank" class="contact">贴吧</a>&nbsp;&nbsp;&nbsp;
+              <a href="javascript:alert('CSDN下次再做');" target="_blank" class="contact">CSDN</a>
               </td>
           </tr>
        </table>
+       <p align="center" style="margin-top: 65px;color:#AAA">有建议？<a href="comment" class="contact">评论一下</a>吧！</p>
+       <p align="center" style="color:#AAA">本网站来自Github Pages</p>
    </div>
 </body>
 </html>
