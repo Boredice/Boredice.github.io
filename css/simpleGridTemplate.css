@@ -2,9 +2,9 @@
 	font-family: 'IceFlatRound';
 	src: url('../fonts/Ice Flat Round.ttf');
 }
-/*body {
+body {
 	font-family: "微软雅黑";
-}*/
+}
 ::-webkit-scrollbar {
     width: 12px;
 	background: rgba(0,0,0,0);
