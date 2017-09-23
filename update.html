@@ -1,129 +1,148 @@
 ﻿<!doctype html>
+<!--此网页为网站升级页面，需要时将script/script.js中网页跳转语句的注释去掉-->
 <html>
 <head>
 <meta charset="utf-8">
 <title>Boredice Update</title>
 <link rel="shortcut icon" href="erroricon.ico">
 <style>
-	body {
-		font-family: "Microsoft YaHei";
-	}
-	img {
-		transition: opacity 0.2s ease-in-out;
-	}
-	img:hover {
-		opacity: 0.6;
-	}
-	img:active {
-		opacity: 0.45;
-	}
-	::selection {
-		color: #00ABFF;    
-		background: #E9F2FF;
-	}
+body {
+	font-family: "Microsoft YaHei";
+}
+img {
+	transition: opacity 0.2s ease-in-out;
+}
+img:hover {
+	opacity: 0.6;
+}
+img:active {
+	opacity: 0.45;
+}
+::selection {
+	color: #00ABFF;
+	background: #E9F2FF;
+}
 	::-webkit-scrollbar {
-		width: 12px;
-		background: rgba(0,0,0,0);
-	}
+ width: 12px;
+ background: rgba(0,0,0,0);
+}
 	::-webkit-scrollbar-track {
-		border-radius: 10px;
-	}
+ border-radius: 10px;
+}
 	::-webkit-scrollbar-thumb {
-		border-radius: 10px;
-		background: rgba(0,0,0,0.1);
-	}
+ border-radius: 10px;
+ background: rgba(0,0,0,0.1);
+}
 	::-webkit-scrollbar-thumb:hover {
-		background: rgba(0,0,0,0.2);
-	}
+ background: rgba(0,0,0,0.2);
+}
 	::-webkit-scrollbar-thumb:active {
-		background: rgba(0,0,0,0.3);
-	}
-	HTML {   
-		scrollbar-base-color: #D9D9D9;
-		scrollbar-track-color: #FFFFFF;
-		scrollbar-arrow-color: #D9D9D9;
-		scrollbar-shadow-color: #D9D9D9;
-	}
-	.container {
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		background-color: #FFFFFF;
-		text-align: center;
-	}
-	body {
-		background-color: #FFFFFF;
-		margin: 0;
-		margin-top: 7%;
-		text-align: center;
-	}
-	.hgt {
-		padding-top: 30px;
-	}
-	.title {
-		line-height: 12px;
-		font-weight: lighter;
-		transition: all 0.1s linear;
-		text-align: center;
-		color: #28ABFF;
-		font-size: 70px;
-		cursor: default;
-	}
-	.title:active {
-		font-size: 75px;
-		line-height: 5px;
-	}
-	.text {
-		line-height: 15px;
-		font-weight: lighter;
-		transition: all 0.1s linear;
-		text-align: center;
-		color: #28ABFF;
-		font-size: 24px;
-		cursor: default;
-	}
-	.text:active {
-		font-size: 27px;
-	}
-	.button {
-		display: inline-block;
-		margin: 20px 5px 20px 5px;
-		width: 80px;
-		padding: 10px 15px 10px 15px;
-		border-radius: 30px;
-		border: 2px solid #00ABFF;
-		color: #28ABFF;
-		transition: all 0.2s linear;
-		font-size: 18px;
-		box-shadow: 0px 0px 20px #DDD;
-		cursor: pointer;
-	}
-	.button:hover {
-		background-color: #00ABFF;
-		color: white;
-	}
-	.button:active {
-		border-radius: 15px;
-		color: rgba(255,255,255,0.7);
-		border: 2px solid #2BB9FF;
-		background: rgba(0,171,255,0.7)
-	}
-	a {
-		text-decoration: none;
-		cursor: default;
-	}
+ background: rgba(0,0,0,0.3);
+}
+HTML {
+	scrollbar-base-color: #D9D9D9;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-arrow-color: #D9D9D9;
+	scrollbar-shadow-color: #D9D9D9;
+}
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #FFFFFF;
+	text-align: center;
+}
+body {
+	background-color: #FFFFFF;
+	margin: 0;
+	margin-top: 7%;
+	text-align: center;
+}
+.hgt {
+	padding-top: 30px;
+}
+.title {
+	line-height: 12px;
+	font-weight: lighter;
+	transition: all 0.1s linear;
+	text-align: center;
+	color: #28ABFF;
+	font-size: 70px;
+	cursor: default;
+}
+.title:active {
+	font-size: 75px;
+	line-height: 5px;
+}
+.text {
+	line-height: 15px;
+	font-weight: lighter;
+	transition: all 0.1s linear;
+	text-align: center;
+	color: #28ABFF;
+	font-size: 24px;
+	cursor: default;
+}
+.text:active {
+	font-size: 27px;
+}
+.button {
+	display: inline-block;
+	margin: 20px 5px 20px 5px;
+	width: 80px;
+	padding: 10px 15px 10px 15px;
+	border-radius: 30px;
+	border: 2px solid #00ABFF;
+	color: #28ABFF;
+	transition: all 0.2s linear;
+	font-size: 18px;
+	box-shadow: 0px 0px 20px #DDD;
+	cursor: pointer;
+}
+.button:hover {
+	background-color: #00ABFF;
+	color: white;
+}
+.button:active {
+	border-radius: 15px;
+	color: rgba(255,255,255,0.7);
+	border: 2px solid #2BB9FF;
+	background: rgba(0,171,255,0.7)
+}
 </style>
 </head>
 <body>
 <div class="container">
-<div class="hgt">
-<p class="title">Update</p>
-<p class="text">Boredice正更新维护中</p>
-<!--这个一开始写8月4日，后来改成8月15日，现在又改成9月15日。。-->
-<p class="text">预计在[Month]月[Day]日左右完成</p>
-<a href="javascript:window.history.back();"><div class="button" align="center">返回</div></a>
-<!--原设有关闭按钮，但在Chrome下试了许多方法都不行，所以取消-->
-</div>
+  <div class="hgt">
+    <p class="title">Update</p>
+    <p class="text">Boredice正更新维护中</p>
+    <!--这个一开始写8月4日，后来改成8月15日，现在又改成9月15日。。最后改成了自定义。。。。-->
+    <p class="text" id="txt_date"></p>
+    <a href="javascript:window.history.back();">
+    <div class="button" align="center">返回</div>
+    </a> 
+    <script type="text/javascript">
+	//并没有什么卵用的检测日期
+	var date = window.location.search;
+	if (date !== "" && date.indexOf(".") !== -1 && date.indexOf("?date=") !== -1 && (date.length === 9 || date.length === 10 || date.length === 11))
+	{
+		var month = date[6] + date[7];
+		var day = date.substring(9);
+		if (month.indexOf(".") !== -1)
+		{
+			month = month[0];
+			day = date.substring(8);
+		}
+		var intmonth = parseInt(month);
+		var intday = parseInt(day);
+		if ((intmonth < 1 || intmonth > 12 || intday < 1 || intday > 31 || month.indexOf(".") !== -1 || day.indexOf(".") !== -1) === false)
+		{
+			var innerhtml = "预计在" + month + "月" + day + "日" + "左右完成";
+			document.getElementById("txt_date").innerHTML = innerhtml;
+		}
+	}
+</script> 
+  </div>
 </div>
 </body>
 </html>
