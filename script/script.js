@@ -1,16 +1,15 @@
-﻿//Internet Explorer 8
+﻿//Update
+//window.location.href='update?date=9.28';
+
+//Fuck Internet Explorer 9
 var search = window.location.search;
 if (search !== "?bslow")
 {
-	var b_version = navigator.appVersion;
-	var version = b_version.split(";");
-	if (version.length > 1)
+	var ievs = parseInt(navigator.appVersion.split(";")[1].replace(/[]/g, "").replace("MSIE", ""));
+	if (navigator.appName == "Microsoft Internet Explorer" && 
+		ievs <= 9)
 	{
-		var trim_Version = parseInt(version[1].replace(/[]/g, "").replace(/MSIE/g, ""));
-		if (trim_Version < 9)
-		{
-			window.location.href = "bslow";
-		}
+		window.location.href = "bslow?iev=" + ievs;
 	}
 }
 
@@ -23,9 +22,6 @@ var _hmt = _hmt || [];
 	s.parentNode.insertBefore(hm, s);
 })();
 
-//Console
+//Console Log
 console.log("　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　囧　　囧　　　　　　　　　　　　　\r\n囧囧囧囧　　　　　　　　　　　　　　　　　　　　　　　　　　　　　囧　　囧　　　　　　　　　　　　　\r\n囧　　　囧　　　　　　　　　　　　　　　　　　　　　　　　　　　　囧　　　　　　　　　　　　　　　　\r\n囧　　　囧　　　　　　　　　　　　　　　　　　　　　　　　　　　　囧　　　　　　　　　　　　　　　　\r\n囧　　　囧　　　　囧囧囧囧　　　囧　囧　　　囧囧囧　　　　囧囧囧囧囧　　囧　　　囧囧囧　　　囧囧囧　\r\n囧囧囧囧　　　　囧　　　囧囧　　囧囧　　　囧　　　囧　　囧　　　囧囧　　囧　　囧　　　　　囧　　　囧\r\n囧　　　囧囧　　囧　　　　囧　　囧　　　　囧囧囧囧囧　　囧　　　　囧　　囧　　囧　　　　　囧囧囧囧囧\r\n囧　　　　囧　　囧　　　　囧　　囧　　　　囧　　　　　　囧　　　　囧　　囧　　囧　　　　　囧　　　　\r\n囧　　　囧囧　　囧　　　囧囧　　囧　　　　囧　　　　　　囧　　　囧囧　　囧　　囧　　　　　囧　　　　\r\n囧囧囧囧囧　　　　囧囧囧囧　　　囧　　　　　囧囧囧　　　　囧囧囧囧囧　　囧　　　囧囧囧　　　囧囧囧　");
 console.log("\u54C8\u54C8\uFF0C\u7ADF\u7136\u6709\u4EBA\u770B\u6211\u4EE3\u7801\u4E86\u561B\uFF0C\u7ED9\u4F60\u4E2A\u5F69\u86CB\u5427\uFF01");
-
-//Update
-window.location.href='update?date=9.28';

@@ -14,6 +14,7 @@ body {
 	margin-top: 7%;
 	text-align: center;
 	padding-top: 30px;
+	font-weight: lighter;
 }
 .title {
 	line-height: 12px;
@@ -47,8 +48,16 @@ button:active {
 </head>
 <body>
     <p class="title">Browser Low</p>
-    <p class="text">你的Internet Explorer版本过低<br>将无法正常访问Boredice</p>
+    <p class="text" id="txt_iev">你的Internet Explorer版本过低<br>将无法正常访问Boredice<br>建议升级IE 11或使用Chrome</p>
     <button onClick="window.location.href='..?bslow';">继续访问</button>
     <button onClick="window.history.back();">返回</button>
 </body>
+<script type="text/javascript">
+	var search = window.location.search;
+	if (search.indexOf("?iev=") !== -1)
+	{
+		search = search.replace("?iev=", "");
+		document.getElementById("txt_iev").innerHTML = "你正在使用Internet Explorer " + search + "<br>将无法正常访问Boredice<br>建议升级IE 11或使用Chrome";
+	}
+</script>
 </html>
