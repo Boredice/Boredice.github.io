@@ -1,13 +1,12 @@
 ﻿//Update
 //window.location.href='update?date=9.28';
 
-//Fuck Internet Explorer 9
+//Fuck Internet Explorer 8
 var search = window.location.search;
 if (search !== "?bslow")
 {
 	var ievs = parseInt(navigator.appVersion.split(";")[1].replace(/[]/g, "").replace("MSIE", ""));
-	if (navigator.appName == "Microsoft Internet Explorer" && 
-		ievs <= 9)
+	if (navigator.appName === "Microsoft Internet Explorer" && ievs <= 8)
 	{
 		window.location.href = "bslow?iev=" + ievs;
 	}

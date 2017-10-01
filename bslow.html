@@ -6,15 +6,14 @@
 <link rel="shortcut icon" href="erroricon.ico">
 <style>
 body {
-	font-family: "Microsoft YaHei";
-}
-body {
 	background-color: #FFFFFF;
 	margin: 0;
 	margin-top: 7%;
 	text-align: center;
 	padding-top: 30px;
-	font-weight: lighter;
+	user-select: none;
+	font-family: "Microsoft YaHei";
+	cursor: default;
 }
 .title {
 	line-height: 12px;
@@ -49,7 +48,7 @@ button:active {
 <body>
     <p class="title">Browser Low</p>
     <p class="text" id="txt_iev">你的Internet Explorer版本过低<br>将无法正常访问Boredice<br>建议升级IE 11或使用Chrome</p>
-    <button onClick="window.location.href='..?bslow';">继续访问</button>
+    <button onClick="window.location.href='..?bslow';" id="btn_ctn">继续访问</button>
     <button onClick="window.history.back();">返回</button>
 </body>
 <script type="text/javascript">
@@ -57,7 +56,15 @@ button:active {
 	if (search.indexOf("?iev=") !== -1)
 	{
 		search = search.replace("?iev=", "");
-		document.getElementById("txt_iev").innerHTML = "你正在使用Internet Explorer " + search + "<br>将无法正常访问Boredice<br>建议升级IE 11或使用Chrome";
+		if (!isNaN(search) && search.length != 0 && search.indexOf(".") == -1 && parseInt(search) >= 1 && parseInt(search) <= 8)
+		{
+			document.getElementById("txt_iev").innerHTML = "WTF? 你TM竟然还在使用 IE " + search + " ? <br>网站显示会发生严重异常<br>建议升级IE 11或使用Chrome";
+			if (parseInt(search) < 6)
+			{
+				document.getElementById("txt_iev").innerHTML = "哎，看样子真是没救了，<br>TMD你竟然在使用 IE " + search;
+				document.getElementById("btn_ctn").hidden = true;
+			}
+		}
 	}
 </script>
 </html>

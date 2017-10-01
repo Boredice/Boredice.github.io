@@ -49,11 +49,9 @@ HTML {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
-	background-color: #FFFFFF;
 	text-align: center;
 }
 body {
-	background-color: #FFFFFF;
 	margin: 0;
 	margin-top: 7%;
 	text-align: center;
@@ -109,19 +107,26 @@ body {
 	border: 2px solid #2BB9FF;
 	background: rgba(0,171,255,0.7)
 }
+.bgparticle {
+	position: fixed;
+	z-index: -1;
+	left: 0;
+	top: 0;
+}
 </style>
 </head>
 <body>
+<canvas class="bgparticle" onContextMenu="return false"></canvas>
 <div class="container">
   <div class="hgt">
     <p class="title">Update</p>
     <p class="text">Boredice正更新维护中</p>
     <!--这个一开始写8月4日，后来改成8月15日，现在又改成9月15日。。最后改成了自定义。。。。-->
     <p class="text" id="txt_date"></p>
-    <a href="javascript:window.history.back();">
+    <a href="javascript:window.history.back();" draggable="false">
     <div class="button" align="center">返回</div>
     </a> 
-    <script type="text/javascript">
+    <script type="text/javascript" src="script/particle.js">
 	//并没有什么卵用的检测日期
 	var date = window.location.search;
 	if (date !== "" && date.indexOf(".") !== -1 && date.indexOf("?date=") !== -1 && (date.length === 9 || date.length === 10 || date.length === 11))
@@ -141,7 +146,7 @@ body {
 			document.getElementById("txt_date").innerHTML = innerhtml;
 		}
 	}
-</script> 
+</script>
   </div>
 </div>
 </body>

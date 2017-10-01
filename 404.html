@@ -11,9 +11,10 @@ permalink: 404.html
 body {
 	font-family: 'Empty';
 	line-height: 0;
-	background-color: #FFFFFF;
+	color: #FFFFFF;
 	margin: 0;
 	margin-top: 7%;
+	cursor: default;
 }
 ::selection {
 	color: #00ABFF;
@@ -94,16 +95,22 @@ HTML {
 	border: 2px solid #2BB9FF;
 	background: rgba(0,171,255,0.7)
 }
+.bgparticle {
+	position: fixed;
+	z-index: -1;
+	left: 0;
+	top: 0;
+}
 </style>
 </head>
 <body>
-<div class="container">
- <img src="images/404.gif" width="334px"> 
+<canvas class="bgparticle" onContextMenu="return false"></canvas>
+<div class="container"> <img src="images/404.gif" width="334px" draggable="false"> 
   <!--加四个空格以使其看起来更居中-->
   <p class="text">&nbsp;&nbsp;&nbsp;&nbsp;页面被Boredice吃掉了。。</p>
-  <a href="..">
+  <a href=".." draggable="false">
   <div class="button" align="center">回到主页</div>
-  </a>
-</div>
+  </a> </div>
+    <script type="text/javascript" src="script/particle.js"></script>
 </body>
 </html>
