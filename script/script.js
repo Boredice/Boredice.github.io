@@ -1,24 +1,24 @@
-﻿//Update
+"use strict";
+
+//Update Page
 //window.location.href='update?date=9.28';
 
 //Fuck Internet Explorer 8
 var search = window.location.search;
-if (search !== "?bslow")
-{
-	var ievs = parseInt(navigator.appVersion.split(";")[1].replace(/[]/g, "").replace("MSIE", ""));
-	if (navigator.appName === "Microsoft Internet Explorer" && ievs <= 8)
-	{
-		window.location.href = "bslow?iev=" + ievs;
-	}
+if (search !== "?bslow") {
+    var ievs = parseInt(navigator.appVersion.split(";")[1].replace(/[]/g, "").replace("MSIE", ""));
+    if (navigator.appName === "Microsoft Internet Explorer" && ievs <= 8) {
+        window.location.href = "bslow?iev=" + ievs;
+    }
 }
 
 //Baidu Statistics
 var _hmt = _hmt || [];
 (function () {
-	var hm = document.createElement("script");
-	hm.src = "https://hm.baidu.com/hm.js?7e9a6e18dedc6b09b765fd1aac6591b4";
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.insertBefore(hm, s);
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?7e9a6e18dedc6b09b765fd1aac6591b4";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
 })();
 
 //Console Log

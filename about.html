@@ -97,9 +97,16 @@
 		margin-top: 45px;
 		border: 1.3px solid #DDD;
 	}
+	.bgparticle {
+		position: fixed;
+		z-index: -1;
+		left: 0;
+		top: 0;
+	}
 </style>
 </head>
 <body>
+	<canvas class="bgparticle" onContextMenu="return false"></canvas>
    <div class="container">
        <h1 style="font-size: 70px;">About</h1>
        <h1>Boredice</h1><hr>
@@ -109,7 +116,7 @@
               <td width="218"><img src="images/Profile Picture.jpg" height="240" style="border-radius: 220px; border: 2px solid #DDD" draggable="false"></td>
               <td width="344"><span style="color:#777777;font-size: 23px;font-weight:lighter">Boredice<br><br></span><span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">一个热爱IT的小学生<br>喜欢写网页，写程序，做设计<br>爱好 Office、Camtasia、Phtoshop、Dreamweaver、C#、HTML、JS 等<br>从图形设计到程序开发，热衷于各种创作<br><br></span>
               <a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact" draggable="false">知乎</a>&nbsp;&nbsp;&nbsp;
-              <a href="https://github.com/Boredice" target="_blank" class="contact" draggable="false">Github</a>&nbsp;&nbsp;&nbsp;
+              <a href="https://github.com/boredice" target="_blank" class="contact" draggable="false">Github</a>&nbsp;&nbsp;&nbsp;
               <a href="mailto:2419029544@qq.com" class="contact" draggable="false">Email</a>&nbsp;&nbsp;&nbsp;
               <a href="https://tieba.baidu.com/f?kw=boredice&ie=utf-8" target="_blank" class="contact" draggable="false">贴吧</a>&nbsp;&nbsp;&nbsp;
               <a href="javascript:alert('CSDN下次再做');" target="_blank" class="contact" draggable="false">CSDN</a>
@@ -117,7 +124,8 @@
           </tr>
        </table>
        <p align="center" style="margin-top: 65px;color:#AAA">有建议？<a href="comment" class="contact" draggable="false">评论一下</a>吧！</p>
-       <p align="center" style="color:#AAA">本网站来自Github Pages</p>
+       <p align="center" style="color:#AAA">By Github Pages</p>
    </div>
+	    <script type="text/javascript" src="script/particle.js"></script>
 </body>
 </html>
