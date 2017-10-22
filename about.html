@@ -4,127 +4,130 @@
 <meta charset="utf-8">
 <title>About Boredice</title>
 <link rel="shortcut icon" href="icon.ico">
+<script src="script/script.js"></script>
 <style>
-	body {
-		font-family: "Microsoft YaHei";
-		cursor: default;
-	}
-	img {
-		transition: opacity 0.2s ease-in-out;
-		transition: all 0.2s linear;
-	}
-	img:hover {
-		opacity:0.6;
-	}
-	img:active {
-		opacity: 0.45;
-	}
-	::selection {
-		color: #00ABFF;    
-		background: #E9F2FF;
-	}
+body {
+	font-family: "Microsoft YaHei";
+	cursor: default;
+}
+img {
+	transition: opacity 0.2s ease-in-out;
+	transition: all 0.2s linear;
+}
+img:hover {
+	opacity: 0.6;
+}
+img:active {
+	opacity: 0.45;
+}
+::selection {
+	color: #00ABFF;
+	background: #E9F2FF;
+}
 	::-webkit-scrollbar {
-		width: 12px;
-		background: rgba(0,0,0,0);
-	}
+ width: 12px;
+ background: rgba(0,0,0,0);
+}
 	::-webkit-scrollbar-track {
-		border-radius: 10px;
-	}
+ border-radius: 10px;
+}
 	::-webkit-scrollbar-thumb {
-		border-radius: 10px;
-		background: rgba(0,0,0,0.1);
-	}
+ border-radius: 10px;
+ background: rgba(0,0,0,0.1);
+}
 	::-webkit-scrollbar-thumb:hover {
-		background: rgba(0,0,0,0.2);
-	}
+ background: rgba(0,0,0,0.2);
+}
 	::-webkit-scrollbar-thumb:active {
-		background: rgba(0,0,0,0.3);
-	}
-	HTML {   
-		scrollbar-base-color: #D9D9D9;
-		scrollbar-track-color: #FFFFFF;
-		scrollbar-arrow-color: #D9D9D9;
-		scrollbar-shadow-color: #D9D9D9;
-	}
-	.container {
-		width: 90%;
-		margin-left: auto;
-		margin-right: auto;
-		color: #979797;
-	}
-	body {
-		background-color: #FFFFFF;
-		margin: 0;
-		margin-top: 26px;
-		padding-top: 20px;
-	}
-	@font-face {
-		font-family: 'IceFlatRound';
-		src: url('fonts/Ice Flat Round.ttf');
-	}
-	a {
-		text-decoration : none;
-		transition: opacity 0.15s ease-in-out;
-	}
-	a:hover {
-		opacity: 0.7;
-	}
-	a:active {
-		opacity: 0.5;
-	}
-	.contact {
-		color: #00ABFF;
-		transition: all 0.2s linear;
-	}
-	.contact:hover {
-		background-color: #00ABFF;
-		color: white;
-		padding: 3px 5px 3px 5px;
-		font-size: 6px;
-		border-radius: 30px;
-		border: 2px solid #00ABFF;
-	}
-	h1 {
-		text-align: center;
-		color: #00ABFF;
-		font-weight: lighter;
-		font-size: 40px;
-		line-height: 20px;
-	}
-	hr {
-		width: 75%;
-		margin-top: 45px;
-		border: 1.3px solid #DDD;
-	}
-	.bgparticle {
-		position: fixed;
-		z-index: -1;
-		left: 0;
-		top: 0;
-	}
+ background: rgba(0,0,0,0.3);
+}
+HTML {
+	scrollbar-base-color: #D9D9D9;
+	scrollbar-track-color: #FFFFFF;
+	scrollbar-arrow-color: #D9D9D9;
+	scrollbar-shadow-color: #D9D9D9;
+}
+.container {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	color: #979797;
+}
+body {
+	background-color: #FFFFFF;
+	margin: 0;
+	margin-top: 26px;
+	padding-top: 20px;
+}
+@font-face {
+	font-family: 'IceFlatRound';
+	src: url('fonts/Ice Flat Round.ttf');
+}
+a {
+	text-decoration : none;
+	transition: opacity 0.15s ease-in-out;
+}
+a:hover {
+	opacity: 0.7;
+}
+a:active {
+	opacity: 0.5;
+}
+.contact {
+	color: #00ABFF;
+	transition: all 0.2s linear;
+}
+.contact:hover {
+	padding: 5px 10px;
+	border-radius: 50px;
+	background-color: #00ABFF;
+	color: white;
+}
+h1 {
+	text-align: center;
+	color: #00ABFF;
+	font-weight: lighter;
+	font-size: 40px;
+	line-height: 20px;
+}
+hr {
+	width: 75%;
+	margin-top: 45px;
+	border: 1.3px solid #DDD;
+}
 </style>
 </head>
 <body>
-	<canvas class="bgparticle" onContextMenu="return false"></canvas>
-   <div class="container">
-       <h1 style="font-size: 70px;">About</h1>
-       <h1>Boredice</h1><hr>
-       <table width="721" align="center" style="margin-top: 70px;">
-          <tr>
-              <td width="32"></td>
-              <td width="218"><img src="images/Profile Picture.jpg" height="240" style="border-radius: 220px; border: 2px solid #DDD" draggable="false"></td>
-              <td width="344"><span style="color:#777777;font-size: 23px;font-weight:lighter">Boredice<br><br></span><span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">一个热爱IT的小学生<br>喜欢写网页，写程序，做设计<br>爱好 Office、Camtasia、Phtoshop、Dreamweaver、C#、HTML、JS 等<br>从图形设计到程序开发，热衷于各种创作<br><br></span>
-              <a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact" draggable="false">知乎</a>&nbsp;&nbsp;&nbsp;
-              <a href="https://github.com/boredice" target="_blank" class="contact" draggable="false">Github</a>&nbsp;&nbsp;&nbsp;
-              <a href="mailto:2419029544@qq.com" class="contact" draggable="false">Email</a>&nbsp;&nbsp;&nbsp;
-              <a href="https://tieba.baidu.com/f?kw=boredice&ie=utf-8" target="_blank" class="contact" draggable="false">贴吧</a>&nbsp;&nbsp;&nbsp;
-              <a href="javascript:alert('CSDN下次再做');" target="_blank" class="contact" draggable="false">CSDN</a>
-              </td>
-          </tr>
-       </table>
-       <p align="center" style="margin-top: 65px;color:#AAA">有建议？<a href="comment" class="contact" draggable="false">评论一下</a>吧！</p>
-       <p align="center" style="color:#AAA">By Github Pages</p>
-   </div>
-	    <script type="text/javascript" src="script/particle.js"></script>
+<canvas id="bgparticle" hidden="true"></canvas>
+<div class="container">
+  <h1 style="font-size: 70px;">About</h1>
+  <h1>Boredice</h1>
+  <hr>
+  <table width="721" align="center" style="margin-top: 70px;">
+    <tr>
+      <td width="32"></td>
+      <td width="218"><img src="images/Profile Picture.jpg" height="240" style="border-radius: 220px; border: 2px solid #DDD" draggable="false"></td>
+      <td width="344"><span style="color:#777777;font-size: 23px;font-weight:lighter">Boredice<br>
+        <br>
+        </span><span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">
+        一个热爱IT的小学生<br>
+        喜欢写网页，写程序，做设计<br>
+        爱好 Office、Camtasia、Phtoshop、Dreamweaver、C#、HTML、JS 等<br>
+        从图形设计到程序开发，热衷于各种创作<br>
+        <br>
+        </span>
+        <a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact" draggable="false">知乎</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://github.com/boredice" target="_blank" class="contact" draggable="false">Github</a>&nbsp;&nbsp;&nbsp;
+        <a href="mailto:2419029544@qq.com" class="contact" draggable="false">Email</a>&nbsp;&nbsp;&nbsp;
+        <a href="https://tieba.baidu.com/f?kw=boredice&ie=utf-8" target="_blank" class="contact" draggable="false">贴吧</a>&nbsp;&nbsp;&nbsp;
+        <a href="javascript:alert('Coming Soon');" target="_blank" class="contact" draggable="false">CSDN</a></td>
+    </tr>
+  </table>
+  <p align="center" style="margin-top: 65px;color:#AAA">有建议？<a href="comment" class="contact" draggable="false">评论一下</a>吧！</p>
+  <p align="center" style="color:#AAA">By Github Pages</p>
+     <p align="center" style="color:#AAA">粒子效果基于知乎某匿名用户</p>
+    <p align="center" style="color:#AAA">建于2017.6.20，正逢期末考试</p>
+</div>
+<script type="text/javascript" src="script/particle.js"></script>
 </body>
 </html>

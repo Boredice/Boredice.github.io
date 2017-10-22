@@ -107,16 +107,10 @@ body {
 	border: 2px solid #2BB9FF;
 	background: rgba(0,171,255,0.7)
 }
-.bgparticle {
-	position: fixed;
-	z-index: -1;
-	left: 0;
-	top: 0;
-}
 </style>
 </head>
 <body>
-<canvas class="bgparticle" onContextMenu="return false"></canvas>
+<canvas id="bgparticle" hidden="true"></canvas>
 <div class="container">
   <div class="hgt">
     <p class="title">Update</p>
@@ -125,8 +119,9 @@ body {
     <p class="text" id="txt_date"></p>
     <a href="javascript:window.history.back();" draggable="false">
     <div class="button" align="center">返回</div>
-    </a> 
-    <script type="text/javascript" src="script/particle.js">
+    </a>
+    <script src="script/particle.js"></script>
+    <script type="text/javascript">
 	//并没有什么卵用的检测日期
 	var date = window.location.search;
 	if (date !== "" && date.indexOf(".") !== -1 && date.indexOf("?date=") !== -1 && (date.length === 9 || date.length === 10 || date.length === 11))
