@@ -70,6 +70,13 @@ function checkDebug()
 		}
 	}
 }
+function loadAllFunction()
+{
+	voidDrag();
+	loadTitle();
+	loadOfflineTip();
+	checkDebug();
+}
 
 //Title & Icon
 function loadTitle()
