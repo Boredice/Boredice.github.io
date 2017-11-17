@@ -1,17 +1,51 @@
 "use strict";
 
-//Update Page
+//Update & Debug
 var updatedate = "";
 if (updatedate !== "")
 {
 	window.location.href = "update?date=" + updatedate;
 }
+var debug = false;
+if (window.location.href.indexOf("boredice.github.io" === -1))
+{
+	debug = true;
+}
+function checkDebug()
+{
+	if (debug)
+	{
+		console.warn("You are in debugging mode.\r\nThere has been a little change.");
+		var taga = document.getElementsByTagName("a");
+		for (var i = 0; i < taga.length; i++)
+		{
+			if (taga[i].href.indexOf("javascript:") === -1)
+			{
+				taga[i].href += ".html";
+			}
+		}
+	}
+}
 
-//Fuck Internet Explorer 8
+//Notice Board
+var notice = 
+"Boredice把Random源代码误删了！(っ °Д °;)っ/n/没事干想做个Uwp版的Random，懒得做就直接把项目文件Shift+Delete了，结果删到旁边的WinformRandom了.../n/所以在近期，Xuler正式发布后，Random将重做啦！/n/将会加入更多新功能，如随机文件名，自定义规则随机，真随机等.../dn/对了，Xuler已经快做完了，敬请期待吧！/n/还有之前计划的Findow，额，Logo都设计好了，但不想管它了，近期内将不会开始开发。/dn/还有响应式网站设计，目前只有首页做到了，后续将会将其它页面适应移动端。/dn/发现一个惊天巨BU....G，INTROS中的网页引用JS时没有使用\"../\"，导致JS无法正常引用...";
+function loadNotice()
+{
+	if (notice.length === 0)
+	{
+		notice = "这里空空如也";
+	}
+	notice = notice.replace(/\/n\//g, "\\n").replace(/\/dn\//g, "\\n\\n");
+	var notice_a = document.getElementById("noticea");
+	notice_a.href = "javascript:blurAlert('公告板 NOTICE BOARD\\n\\n" + notice + "')";
+}
+
+//Fuck Internet Explorer 9
 var search = window.location.search;
 if (search !== "?bslow") {
     var ievs = parseInt(navigator.appVersion.split(";")[1].replace(/[]/g, "").replace("MSIE", ""));
-    if (navigator.appName === "Microsoft Internet Explorer" && ievs <= 8) {
+    if (navigator.appName === "Microsoft Internet Explorer" && ievs <= 9) {
         window.location.href = "bslow?iev=" + ievs;
     }
 }
@@ -24,14 +58,14 @@ function setBlur(bool)
 }
 function soonAlert(name)
 {
-	blurAlert("即将推出，敬请期待！你可以在评论网页里说出对" + name + "的期待和建议。");
+	blurAlert("即将推出，敬请期待！你可以在反馈网页里说出对" + name + "的期待和建议。");
 }
 function blurAlert(msg)
 {
 	var body = document.getElementsByTagName("body")[0];
 	setBlur(true);
 	setTimeout(function(){alert(msg);},50);
-	setTimeout(function(){body.style.filter = "";},50);
+	setTimeout(function(){setBlur(false);},50);
 }
 function refresh()
 {
@@ -54,28 +88,12 @@ function voidDrag()
 		tagimg[i].draggable = false;
 	}
 }
-function checkDebug()
-{
-	var lchref = window.location.href;
-	if (lchref.indexOf("boredice.github.io" === -1))
-	{
-		console.warn("You are in debugging mode...");
-		var taga = document.getElementsByTagName("a");
-		for (var i = 0; i < taga.length; i++)
-		{
-			if (taga[i].href.indexOf("javascript:") === -1)
-			{
-				taga[i].href += ".html";
-			}
-		}
-	}
-}
 function loadAllFunction()
 {
 	voidDrag();
 	loadTitle();
-	loadOfflineTip();
 	checkDebug();
+	loadNotice();
 }
 
 //Title & Icon
@@ -88,33 +106,23 @@ function loadTitle()
 function setTitle(bool)
 {
 	document.title = bool ? "Hi, Boredicer!" : "Boredice";
-	document.getElementsByTagName("link")[1].setAttribute("href", bool ? "icon.ico" : "voidicon.ico");
-}
-
-//Offline Tip
-function loadOfflineTip()
-{
-	window.ononline = function(){setOfflineTip(true);};
-	window.onoffline = function(){setOfflineTip(false);};
-	document.getElementById("offline").className = "tipbar";
-	document.getElementById("offlinetxt").innerHTML = "你似乎未连接到Internet~";
-	document.getElementById("offlineicon").src = "images/Internet.png";
-	document.getElementById("offlineicon").draggable = "false";
-}
-function setOfflineTip(bool)
-{
-	console.log(bool);
-	document.getElementById("offline").hidden = bool;
+	document.getElementsByTagName("link")[1].setAttribute("href", bool ? "images/icons/icon.ico" : "images/icons/voidicon.ico");
 }
 
 //Baidu Statistics
-var _hmt = _hmt || [];
-var hm = document.createElement("script");
-hm.src = "https://hm.baidu.com/hm.js?7e9a6e18dedc6b09b765fd1aac6591b4";
-var s = document.getElementsByTagName("script")[0];
-s.parentNode.onerror = function () {blurAlert("Error");};
-s.parentNode.insertBefore(hm, s);
+if (!debug)
+{
+	var _hmt = _hmt || [];
+	var hm = document.createElement("script");
+	hm.src = "https://hm.baidu.com/hm.js?7e9a6e18dedc6b09b765fd1aac6591b4";
+	var s = document.getElementsByTagName("script")[0];
+	s.parentNode.onerror = function () {blurAlert("Error");};
+	s.parentNode.insertBefore(hm, s);
+}
 
 //Console Log
-console.log("                                                                  88    88                          \r\n88888888                                                          88    88                          \r\n88      88                                                        88                                \r\n88      88                                                        88                                \r\n88      88        88888888      88  88      888888        8888888888    88      888888      888888  \r\n88888888        88      8888    8888      88      88    88      8888    88    88          88      88\r\n88      8888    88        88    88        8888888888    88        88    88    88          8888888888\r\n88        88    88        88    88        88            88        88    88    88          88        \r\n88      8888    88      8888    88        88            88      8888    88    88          88        \r\n8888888888        88888888      88          888888        8888888888    88      888888      888888  ");
-console.log("\u54C8\u54C8\uFF0C\u7ADF\u7136\u6709\u4EBA\u770B\u6211\u4EE3\u7801\u4E86\u561B\uFF0C\u7ED9\u4F60\u4E2A\u5F69\u86CB\u5427\uFF01\uFF08\u8BF7\u5C06\u63A7\u5236\u53F0\u8C03\u5BBD\uFF09");
+if (!debug)
+{
+	console.log("                                                                  88    88                          \r\n88888888                                                          88    88                          \r\n88      88                                                        88                                \r\n88      88                                                        88                                \r\n88      88        88888888      88  88      888888        8888888888    88      888888      888888  \r\n88888888        88      8888    8888      88      88    88      8888    88    88          88      88\r\n88      8888    88        88    88        8888888888    88        88    88    88          8888888888\r\n88        88    88        88    88        88            88        88    88    88          88        \r\n88      8888    88      8888    88        88            88      8888    88    88          88        \r\n8888888888        88888888      88          888888        8888888888    88      888888      888888  ");
+	console.log("哈哈，竟然有人看我代码了嘛，给你个彩蛋吧！（请将控制台调宽）");
+}

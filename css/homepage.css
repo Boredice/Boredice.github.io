@@ -40,7 +40,6 @@ a:active {
 img {
 	transition: opacity 0.2s ease-in-out;
 	border: 0;
-	background-color: white;
 }
 @font-face{
 	font-family: 'IceFlatRound';
@@ -81,6 +80,18 @@ header .title {
 	font-family: "IceFlatRound";
 	color: #00ABFF;
 	font-size: 35px;
+}
+.msgbox {
+	background-color: white;
+	z-index: 999;
+	position: fixed;
+	border-radius: 20px;
+	box-shadow: 0px 0px 17.5px #CCC;
+	padding: 15px 25px;
+	left: 20%;
+	top: 20%;
+	right: 20%;
+	bottom: 20%;
 }
 .tipbar {
 	max-width: 800px;

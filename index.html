@@ -7,9 +7,10 @@
 
 <script src="script/script.js"></script>
 <noscript>
-<div class="tipbar"><span class="sptxt">
-<p>012</p><a href="more/noscript" target="_blank">3</a>
-</span></div>
+<div class="tipbar">
+<span class="sptxt"><p>012</p>
+<a href="more/noscript" target="_blank">3</a></span>
+</div>
 </noscript>
 
 <meta charset="utf-8">
@@ -17,19 +18,14 @@
 <meta name="google-site-verification" content="-tAoS08rodmGL6ZHIQwuLqilmgEEvNSZ8RWqSHD-JYs">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keyword" content="Boredice,Ice">
-<meta name="descripting" content="这是Boredice的个人主页">
+<meta name="descripting" content="This is Boredice's personal homepage.">
 <meta name="baidu-site-verification" content="kp2A4Njk7U" />
 <title>Boredice</title>
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="icon.ico">
+<link href="css/homepage.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="images/icons/icon.ico">
 
 </head>
 <body>
-<div id="offline" hidden="true">
-<img id="offlineicon">
-<p id="offlinetxt"></p>
-</div>
-
 <canvas id="bgparticle" hidden="true"></canvas>
 
 <div class="container"> 
@@ -40,16 +36,31 @@
     </header>
 	<div style="height: 70px"></div>
 
-    <div class="thumbnail">
+	<div class="thumbnail">
+     <a href="" id="noticea">
+     <img src="images/thumbnails/Notice.png"></a>
+      <h2 style="text-align: center">公告</h2>
+      <p class="abouttp">此地无银三百两</p>
+    </div>
+	  
+    <div class="thumbnail" hidden="true">
      <a href="more/activity">
-     <img src="images/More.jpg"></a>
-      <h2 style="text-align: center;">活动</h2>
-      <p class="abouttp">网站Logo征集！</p>
+     <img src="images/thumbnails/More.png"></a>
+      <h2 style="text-align: center">活动</h2>
+      <p class="abouttp">活动内容概括</p>
     </div>
     
     <div class="thumbnail">
+      <a href="javascript:soonAlert('Xuler')">
+      <img src="images/thumbnails/Xuler.png"></a>
+       <h4>Exfolder</h4>
+       <p class="tag">特殊文件夹工具</p>
+       <p class="text_column">这是一个简单的创建和删除的小工具，即将推出，敬请期待。</p>
+     </div>
+
+    <div class="thumbnail">
      <a href="javascript:soonAlert('Xuler')">
-     <img src="images/Xuler.jpg"></a>
+     <img src="images/thumbnails/Xuler.png"></a>
       <h4>Xuler</h4>
       <p class="tag">简尺</p>
       <p class="text_column">这是一个测量坐标及角度等的工具，即将推出，敬请期待。</p>
@@ -57,7 +68,7 @@
     
     <div class="thumbnail">
      <a href="javascript:soonAlert('Findow')">
-     <img src="images/Question.jpg"></a>
+     <img src="images/thumbnails/More.png"></a>
       <h4>Findow</h4>
       <p class="tag">简窗</p>
       <p class="text_column">这是一个管理窗体的工具，可以获取和更改窗体的信息，即将推出，敬请期待。</p>
@@ -65,7 +76,7 @@
     
     <div class="thumbnail">
      <a href="intros/sode">
-     <img src="images/Sode.jpg"></a>
+     <img src="images/thumbnails/Sode.jpg"></a>
       <h4>Sode</h4>
       <p class="tag">简码</p>
       <p class="text_column">这是一个基于ZXing的二维码&条码工具，支持写码、读码和文码，支持多种码制。</p>
@@ -73,7 +84,7 @@
     
     <div class="thumbnail">
      <a href="intros/nullfile">
-     <img src="images/Nullfile.jpg"></a>
+     <img src="images/thumbnails/Nullfile.jpg"></a>
       <h4>Nullfile</h4>
       <p class="tag">空文</p>
       <p class="text_column">这是一个生成损坏文件的工具，你可以使用这个工具来生成指定大小的损坏文件。</p>
@@ -81,7 +92,7 @@
     
     <div class="thumbnail">
      <a href="intros/sext">
-     <img src="images/Sext.jpg"></a>
+     <img src="images/thumbnails/Sext.jpg"></a>
       <h4>Sext</h4>
       <p class="tag">简文</p>
       <p class="text_column">这是一个别样的文本工具，可以将文本转换成小型大写字母、颠倒、气泡、上标、全角等各种奇葩的字符。</p>
@@ -89,7 +100,7 @@
     
     <div class="thumbnail">
      <a href="intros/error">
-     <img src="images/Error.jpg"></a>
+     <img src="images/thumbnails/Error.jpg"></a>
       <h4>Error</h4>
       <p class="tag">简误</p>
       <p class="text_column">这是一个功能强大的整人程序，你可以用它制造出电脑死机、键盘失灵、蓝屏、闪屏、黑屏等各种逼真的假象。</p>
@@ -97,7 +108,7 @@
     
     <div class="thumbnail">
      <a href="intros/color">
-     <img src="images/Color.jpg"></a>
+     <img src="images/thumbnails/Color.jpg"></a>
       <h4>Color</h4>
       <p class="tag">简色</p>
       <p class="text_column">这是一款方便、快捷的拾色器，提供拾色、放大镜、色值转换、取色等诸多功能，支持RGB、HSB、HEX等多种色值。</p>
@@ -105,7 +116,7 @@
     
     <div class="thumbnail">
      <a href="intros/flatround">
-     <img src="images/Flat Round.jpg"></a>
+     <img src="images/thumbnails/Flat Round.jpg"></a>
       <h4>Flat Round</h4>
       <p class="tag">悦圆</p>
       <p class="text_column">这是一款美而圆润的英文字体，字符由环形和圆角矩形构成，支持常见的符号和大部分拉丁字母。</p>
@@ -113,7 +124,7 @@
     
     <div class="thumbnail">
      <a href="intros/titans">
-     <img src="images/Titans.jpg"></a>
+     <img src="images/thumbnails/Titans.jpg"></a>
       <h4>Titans</h4>
       <p class="tag">简数</p>
       <p class="text_column">这是一款强大的文本公式计算器，支持大多数函数与运算，并提供了诸多方便的功能，秒杀大多数计算器。</p>
@@ -121,7 +132,7 @@
     
     <div class="thumbnail">
      <a href="intros/piano">
-     <img src="images/Piano.jpg"></a>
+     <img src="images/thumbnails/Piano.jpg"></a>
       <h4>Piano</h4>
       <p class="tag">简音</p>
       <p class="text_column">这是一款钢琴弹奏程序，其支持e1(低音3)-a3(高音6)音符的弹奏，能完成大部分简单乐曲，但不支持升调。</p>
@@ -129,7 +140,7 @@
     
     <div class="thumbnail">
      <a href="intros/random">
-     <img src="images/Random.jpg"></a>
+     <img src="images/thumbnails/Random.jpg"></a>
       <h4>Random</h4>
       <p class="tag">简变</p>
       <p class="text_column">这是一个随机小工具，支持随机数和随机字符串，可以自定义随机区间和小数位数以及自定义文本内容。</p>
@@ -137,15 +148,15 @@
     
     <div class="thumbnail">
      <a href="feedback">
-     <img src="images/More.jpg"></a>
-      <h2 style="text-align: center;">反馈</h2>
+     <img src="images/thumbnails/More.png"></a>
+      <h2 style="text-align: center">反馈</h2>
       <p class="abouttp">对我提出反馈&建议</p>
     </div>
     
     <div class="thumbnail">
      <a href="about">
-     <img src="images/About.jpg"></a>
-      <h2 style="text-align: center;">关于</h2>
+     <img src="images/thumbnails/About.png"></a>
+      <h2 style="text-align: center">关于</h2>
       <p class="abouttp">关于Boredice</p>
     </div>
   </div>
@@ -156,8 +167,6 @@
 </div>
 	
 <script src="script/particle.js"></script>
-<script type="text/javascript">
-loadAllFunction();
-</script>
+<script>loadAllFunction();</script>
 </body>
 </html>

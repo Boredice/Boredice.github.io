@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <title>Browser Low</title>
-<link rel="shortcut icon" href="erroricon.ico">
+<link rel="shortcut icon" href="images/icons/erroricon.ico">
 <style>
 body {
 	background-color: #FFFFFF;
@@ -56,7 +56,7 @@ button:active {
 	if (search.indexOf("?iev=") !== -1)
 	{
 		search = search.replace("?iev=", "");
-		if (!isNaN(search) && search.length != 0 && search.indexOf(".") == -1 && parseInt(search) >= 1 && parseInt(search) <= 8)
+		if (!isNaN(search) && search.length != 0 && search.indexOf(".") == -1 && parseInt(search) >= 1 && parseInt(search) <= 9)
 		{
 			document.getElementById("txt_iev").innerHTML = "WTF? 你竟然还在使用 IE " + search + " ? <br>网站显示会发生严重异常<br>建议升级IE 11或使用Chrome";
 			if (parseInt(search) < 6)
