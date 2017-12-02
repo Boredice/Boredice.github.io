@@ -88,12 +88,32 @@ function voidDrag()
 		tagimg[i].draggable = false;
 	}
 }
+function formatNavtag()
+{
+	var navtag = document.getElementsByClassName("navtag");
+	for (var i = 0; i < navtag.length; i++)
+	{
+		navtag[i].style.opacity = 1;
+		if (navtag[i].innerHTML.indexOf("//") !== -1)
+		{
+			navtag[i].innerHTML = navtag[i].innerHTML.replace("//", "");
+			navtag[i].style.color = "#00ABFF";
+			navtag[i].style.fontWeight = "normal";
+		}
+	}
+}
+function fnRandom(min, max)
+{
+	var dbrandom = (max - min) * Math.random() + min + 1;
+	return parseInt(dbrandom);
+}
 function loadAllFunction()
 {
 	voidDrag();
 	loadTitle();
 	checkDebug();
 	loadNotice();
+	formatNavtag();
 }
 
 //Title & Icon

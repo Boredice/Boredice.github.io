@@ -3,16 +3,12 @@
 <head>
 <meta charset="utf-8">
 <title>Browser Low</title>
-<link rel="shortcut icon" href="images/icons/erroricon.ico">
 <style>
 body {
 	background-color: #FFFFFF;
-	margin: 0;
-	margin-top: 7%;
+	margin: 7% 0px 0px 0px;
 	text-align: center;
 	padding-top: 30px;
-	user-select: none;
-	font-family: "Microsoft YaHei";
 	cursor: default;
 }
 .title {
@@ -29,19 +25,7 @@ button {
 	margin: 20px 5px 20px 5px;
 	width: 120px;
 	padding: 10px 15px 10px 15px;
-	border-radius: 30px;
-	border: 2px solid #00ABFF;
-	color: #28ABFF;
 	font-size: 18px;
-	box-shadow: 0px 0px 20px #DDD;
-	background-color: white;
-	outline: 0;
-}
-button:hover {
-	background-color: rgba(0,171,255,0.3);
-}
-button:active {
-	background-color: rgba(0,171,255,0.6)
 }
 </style>
 </head>
@@ -58,10 +42,10 @@ button:active {
 		search = search.replace("?iev=", "");
 		if (!isNaN(search) && search.length != 0 && search.indexOf(".") == -1 && parseInt(search) >= 1 && parseInt(search) <= 9)
 		{
-			document.getElementById("txt_iev").innerHTML = "WTF? 你竟然还在使用 IE " + search + " ? <br>网站显示会发生严重异常<br>建议升级IE 11或使用Chrome";
+			document.getElementById("txt_iev").innerHTML = "WTF? 你竟然还在使用 IE " + search + " ？<br>网站显示会发生严重异常<br>建议升级IE 11或使用Chrome";
 			if (parseInt(search) < 6)
 			{
-				document.getElementById("txt_iev").innerHTML = "哎，看样子真是没救了，<br>你竟然在使用 IE " + search;
+				document.getElementById("txt_iev").innerHTML = "哎，看样子真是没救了，<br>你竟然在使用 IE " + search + "？？";
 				document.getElementById("btn_ctn").hidden = true;
 			}
 		}
