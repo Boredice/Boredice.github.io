@@ -1,186 +1,150 @@
 ﻿<!doctype html>
-
 <!--Boredice Website Of Github Pages-->
-
 <html>
 <head>
-
 <script src="script/script.js"></script>
 <noscript>
-<div class="tipbar">
-<span class="sptxt"><p>012</p>
-<a href="more/noscript" target="_blank">3</a></span>
-</div>
+<div class="tipbar"><span class="sptxt">
+  <p>012</p>
+  <a href="more/noscript" target="_blank">3</a></span></div>
 </noscript>
-
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keyword" content="Boredice">
 <meta name="descripting" content="This is Boredice's personal homepage.">
-<meta name="google-site-verification" content="-tAoS08rodmGL6ZHIQwuLqilmgEEvNSZ8RWqSHD-JYs">
-<meta name="baidu-site-verification" content="kp2A4Njk7U">
 <title>Boredice</title>
 <link href="css/homepage.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="images/icons/icon.ico">
-
-</head>
-<body>
+<style>
+.title {
+	margin-top: 150px;
+	color: #00ABFF;
+	text-align: center;
+	font-size: 53px;
+	line-height: 35px;
+	font-weight: lighter;
+	cursor: default;
+}
+.subtitle {
+	color: #A0A0A0;
+	text-align: center;
+	font-size: 18px;
+	font-weight: lighter;
+	cursor: default;
+}
+.contact {
+	color: #00ABFF;
+	transition: all 0.2s linear;
+}
+.contact:hover {
+	padding: 5px 10px;
+	border-radius: 50px;
+	background-color: #00ABFF;
+	color: white;
+	box-shadow: 0px 2px 15px #DDD;
+}
+hr {
+	width: 75%;
+	margin-top: 100px;
+	background-color: #DDD;
+	height: 2px;
+	border: 0;
+}
+.profilepic {
+	height: 240px;
+	width: 240px;
+	border-radius: 220px;
+	border: 2px solid #EEE;
+	box-shadow: 0px 5px 15px #DDD;
+	background-size: cover;
+	background-image: url("images/Repaint Profile Picture.png");
+}
+.profilepic2 {
+	border-radius: 220px;
+	border: 2px solid #EEE;
+	width: 100%;
+	height: 100%;
+	margin: -2px;
+	background-image: url("images/Profile Picture.jpg");
+	background-size: cover;
+	opacity: 0;
+	transition: opacity 0.5s ease;
+}
+.profilepic2:hover {
+	opacity: 1;
+}
+.thumbnail {
+	float: none;
+	display: inline-block;
+	height: 300px;
+}
+</style>
+</head><body>
 <canvas id="bgparticle" hidden="true"></canvas>
-
-<div class="container"> 
+<div class="container">
   <div class="gallery">
-   
     <header>
-	  <p><a href="javascript:refresh()" class="title">Boredice</a>
-	  <a class="navplaceholder">&nbsp;</a>
-	  <a class="navtag" href="about">ABOUT</a>
-	  <a class="navtag" href="other">OTHER</a>
-	  <a class="navtag" href="apps">//APPS</a>
-	  <a class="navtag" href="..">HOME</a>
-      </p>
+      <p><a href="javascript:refresh()" class="title">Boredice</a>
+		 <a class="navplaceholder">&nbsp;</a>
+		 <a class="navtag" href="other">OTHER</a>
+		 <a class="navtag" href="apps">APPS</a>
+		 <a class="navtag" href="..">//HOME</a></p>
     </header>
-	<div style="height: 70px"></div>
-
+    <div style="height: 70px"></div>
+    <p class="title">Hi, Boredicer!</p>
+    <p class="subtitle">This is Boredice's personal homepage.</p>
+  </div>
+	<div style="text-align: center;">
 	<div class="thumbnail">
      <a href="" id="noticea">
      <img src="images/thumbnails/Notice.png"></a>
       <h2 style="text-align: center">公告</h2>
-      <p class="abouttp">此地无银三百两</p>
     </div>
-	  
-    <div class="thumbnail" hidden="true">
-     <a href="more/activity">
-     <img src="images/thumbnails/More.png"></a>
-      <h2 style="text-align: center">活动</h2>
-      <p class="abouttp">活动内容概括</p>
-    </div>
-    
 	<div class="thumbnail">
-      <a href="javascript:soonAlert('CLock')">
-      <img src="images/thumbnails/More.png"></a>
-       <h4>CLock</h4>
-       <p class="tag">时钟屏保</p>
-       <p class="text_column">这是一个时钟屏幕保护程序，名称取于Clock与Lock的组合，即将推出，敬请期待。</p>
-     </div>
-	  
-    <div class="thumbnail">
-      <a href="javascript:soonAlert('Xuler')">
-      <img src="images/thumbnails/More.png"></a>
-       <h4>Exfolder</h4>
-       <p class="tag">特殊文件夹</p>
-       <p class="text_column">这是一个简单的创建和删除特殊文件夹的小工具，无指定中文名，即将推出，敬请期待。</p>
-     </div>
-
-    <div class="thumbnail">
-     <a href="javascript:soonAlert('Xuler')">
-     <img src="images/thumbnails/Xuler.png"></a>
-      <h4>Xuler</h4>
-      <p class="tag">简尺</p>
-      <p class="text_column">这是一个测量坐标及角度等的工具，即将推出，敬请期待。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="javascript:soonAlert('Findow')">
-     <img src="images/thumbnails/More.png"></a>
-      <h4>Findow</h4>
-      <p class="tag">简窗</p>
-      <p class="text_column">这是一个管理窗体的工具，可以获取和更改窗体的信息，即将推出，敬请期待。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="intros/sode">
-     <img src="images/thumbnails/Sode.jpg"></a>
-      <h4>Sode</h4>
-      <p class="tag">简码</p>
-      <p class="text_column">这是一个基于ZXing的二维码&条码工具，支持写码、读码和文码，支持多种码制。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="intros/nullfile">
-     <img src="images/thumbnails/Nullfile.jpg"></a>
-      <h4>Nullfile</h4>
-      <p class="tag">空文</p>
-      <p class="text_column">这是一个生成损坏文件的工具，你可以使用这个工具来生成指定大小的损坏文件。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="intros/sext">
-     <img src="images/thumbnails/Sext.jpg"></a>
-      <h4>Sext</h4>
-      <p class="tag">简文</p>
-      <p class="text_column">这是一个别样的文本工具，可以将文本转换成小型大写字母、颠倒、气泡、上标、全角等各种奇葩的字符。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="intros/error">
-     <img src="images/thumbnails/Error.jpg"></a>
-      <h4>Error</h4>
-      <p class="tag">简误</p>
-      <p class="text_column">这是一个功能强大的整人程序，你可以用它制造出电脑死机、键盘失灵、蓝屏、闪屏、黑屏等各种逼真的假象。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="intros/color">
-     <img src="images/thumbnails/Color.jpg"></a>
-      <h4>Color</h4>
-      <p class="tag">简色</p>
-      <p class="text_column">这是一款方便、快捷的拾色器，提供拾色、放大镜、色值转换、取色等诸多功能，支持RGB、HSB、HEX等多种色值。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="intros/flatround">
-     <img src="images/thumbnails/Flat Round.jpg"></a>
-      <h4>Flat Round</h4>
-      <p class="tag">悦圆</p>
-      <p class="text_column">这是一款美而圆润的英文字体，字符由环形和圆角矩形构成，支持常见的符号和大部分拉丁字母。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="intros/titans">
-     <img src="images/thumbnails/Titans.jpg"></a>
-      <h4>Titans</h4>
-      <p class="tag">简数</p>
-      <p class="text_column">这是一款强大的文本公式计算器，支持大多数函数与运算，并提供了诸多方便的功能，秒杀大多数计算器。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="intros/piano">
-     <img src="images/thumbnails/Piano.jpg"></a>
-      <h4>Piano</h4>
-      <p class="tag">简音</p>
-      <p class="text_column">这是一款钢琴弹奏程序，其支持e1(低音3)-a3(高音6)音符的弹奏，能完成大部分简单乐曲，但不支持升调。</p>
-    </div>
-    
-    <div class="thumbnail">
-     <a href="intros/random">
-     <img src="images/thumbnails/Random.jpg"></a>
-      <h4>Random</h4>
-      <p class="tag">简变</p>
-      <p class="text_column">这是一个随机小工具，支持随机数和随机字符串，可以自定义随机区间和小数位数以及自定义文本内容。</p>
-    </div>
-    
-    <div class="thumbnail">
      <a href="feedback">
      <img src="images/thumbnails/More.png"></a>
       <h2 style="text-align: center">反馈</h2>
-      <p class="abouttp">对我提出反馈&建议</p>
     </div>
-    
-    <div class="thumbnail">
-     <a href="about">
-     <img src="images/thumbnails/About.png"></a>
-      <h2 style="text-align: center">关于</h2>
-      <p class="abouttp">关于Boredice</p>
-    </div>
-  </div>
-
-  <div class="copyright">
-	  <strong>Boredice</strong> - 逗逼小骚年
-  </div>
+	</div>
+  <hr>
+  <table width="721" align="center" style="margin-top: 70px;">
+    <tr>
+      <td width="32"></td>
+      <td width="218"><div class="profilepic" draggable="false"><div class="profilepic2"></div></div></td>
+      <td width="344"><span style="color:#777777;font-size: 23px;font-weight:lighter">Boredice<br>
+        <br></span>
+		<span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">
+		一个热爱IT的小学生<br>
+        写写程序，做做设计，刷刷知乎，顺便玩会LOL<br>
+        熟练各种专业软件，会一小点儿编程语言<br>
+        生活如此浪，依然是班上的“学霸”<br>
+        <br></span>
+		<a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact">知乎</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://github.com/boredice" target="_blank" class="contact">Github</a>&nbsp;&nbsp;&nbsp;
+		<a href="mailto:2419029544@qq.com" class="contact">Email</a>&nbsp;&nbsp;&nbsp;
+		<a href="https://tieba.baidu.com/f?kw=boredice&ie=utf-8" target="_blank" class="contact">贴吧</a>&nbsp;&nbsp;&nbsp;
+		<a href="http://blog.csdn.net/qq_35277977" target="_blank" class="contact">CSDN</a></td>
+    </tr>
+  </table>
+  <span style="color: #AAA;text-align: center;line-height: 28px;">
+  <p style="margin-top: 65px;">有Bug&建议？<a href="comment" target="_blank" class="contact">反馈一下</a>吧！</p>
+  <p>By <a href="https://pages.github.com/" target="_blank" class="contact">Github Pages</a></p>
+  <p>此项目在<a href="https://github.com/boredice/boredice.github.io" target="_blank" class="contact">Github</a>上</p>
+  <p>粒子效果基于<a href="https://www.zhihu.com/question/38812154" target="_blank" class="contact">知乎某匿名用户的回答</a></p>
+  <p>网站设计纯原创，无半点抄袭</p>
+  <p>使用了<a href="http://changyan.kuaizhan.com" target="_blank" class="contact">搜狐畅言</a>评论系统</p>
+  <p>头像为知乎刘看山</p>
+  <p>查看Boredice的<a href="more/history" target="_blank" class="contact">最初版本页面</a></p>
+  <p>建于2017.6.17，正逢五下期末考试（hh）</p>
+  </span> 
 </div>
-	
-<script src="script/particle.js"></script>
-<script>loadAllFunction();</script>
+<script src="script/particle.js"></script> 
+<script>
+voidDrag();
+loadTitle();
+checkDebug();
+formatNavtag();
+</script>
 </body>
 </html>

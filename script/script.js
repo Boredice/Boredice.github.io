@@ -99,21 +99,10 @@ function formatNavtag()
 			navtag[i].innerHTML = navtag[i].innerHTML.replace("//", "");
 			navtag[i].style.color = "#00ABFF";
 			navtag[i].style.fontWeight = "normal";
+			navtag[i].style.borderBottom = "3px solid #00ABFF";
+			navtag[i].style.height = "82px";
 		}
 	}
-}
-function fnRandom(min, max)
-{
-	var dbrandom = (max - min) * Math.random() + min + 1;
-	return parseInt(dbrandom);
-}
-function loadAllFunction()
-{
-	voidDrag();
-	loadTitle();
-	checkDebug();
-	loadNotice();
-	formatNavtag();
 }
 
 //Title & Icon
@@ -127,17 +116,6 @@ function setTitle(bool)
 {
 	document.title = bool ? "Hi, Boredicer!" : "Boredice";
 	document.getElementsByTagName("link")[1].setAttribute("href", bool ? "images/icons/icon.ico" : "images/icons/voidicon.ico");
-}
-
-//Baidu Statistics
-if (!debug)
-{
-	var _hmt = _hmt || [];
-	var hm = document.createElement("script");
-	hm.src = "https://hm.baidu.com/hm.js?7e9a6e18dedc6b09b765fd1aac6591b4";
-	var s = document.getElementsByTagName("script")[0];
-	s.parentNode.onerror = function () {blurAlert("Error");};
-	s.parentNode.insertBefore(hm, s);
 }
 
 //Console Log
