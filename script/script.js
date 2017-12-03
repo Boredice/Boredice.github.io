@@ -1,4 +1,4 @@
-"use strict";
+﻿"use strict";
 
 //Update & Debug
 var updatedate = "";
@@ -7,7 +7,7 @@ if (updatedate !== "")
 	window.location.href = "update?date=" + updatedate;
 }
 var debug = false;
-if (window.location.href.indexOf("boredice.github.io" === -1))
+if (window.location.href.indexOf("boredice.github.io") === -1)
 {
 	debug = true;
 }
