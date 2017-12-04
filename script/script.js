@@ -7,7 +7,7 @@ if (updatedate !== "")
 	window.location.href = "update?date=" + updatedate;
 }
 var debug = false;
-if (window.location.href.indexOf("boredice.github.io") === -1)
+if (window.location.href.indexOf("https") === -1)
 {
 	debug = true;
 }
@@ -29,7 +29,7 @@ function checkDebug()
 
 //Notice Board
 var notice = 
-"Boredice把Random源代码误删了！(っ °Д °;)っ/n/没事干想做个Uwp版的Random，懒得做就直接把项目文件Shift+Delete了，结果删到旁边的WinformRandom了.../n/所以在近期，Xuler正式发布后，Random将重做啦！/n/将会加入更多新功能，如随机文件名，自定义规则随机，真随机等.../dn/对了，Xuler已经快做完了，敬请期待吧！/n/还有之前计划的Findow，额，Logo都设计好了，但不想管它了，近期内将不会开始开发。/dn/还有响应式网站设计，目前只有首页做到了，后续将会将其它页面适应移动端。/dn/发现一个惊天巨BU....G，INTROS中的网页引用JS时没有使用\"../\"，导致JS无法正常引用...";
+"Hi, Boredicer!/n/Boredice网站进行了一次大更新！ヾ(≧▽≦*)o/n/惊不惊喜？意不意外？喜欢吗，有建议就在反馈页面里说出来吧！/n/目前呢，正在继续更新网站，Xuler先不管了，Cnote也还在开发，CLock也先不管了";
 function loadNotice()
 {
 	if (notice.length === 0)
@@ -50,6 +50,22 @@ if (search !== "?bslow") {
     }
 }
 
+//Emoticons
+var emo_element;
+//34 emoticons (颜文字)
+var emo = ["ヾ(≧▽≦*)o", "( •̀ ω •́ )✧", "o(*￣▽￣*)ブ", "(＠_＠;)", "(ﾉ*･ω･)ﾉ", "(❤ ω ❤)", "\(@^0^@)/", "┗|｀O′|┛ ~~", "○( ＾皿＾)っ", "φ(゜▽゜*)♪", "(｡･∀･)ﾉ", "ヾ(•ω•`)o", "(´▽`ʃ♡ƪ)", "(✿◡‿◡)", "o(^▽^)o", "◑﹏◐", "(O _ O)", "Ψ(￣∀￣)Ψ", "( ఠൠఠ )ﾉ", "(✿◕‿◕✿)", "o(=•ェ•=)m", "(。・∀・)ノ", "( o=^•ェ•)o ┏━┓", "(～﹃～)~zZ", "(☆▽☆)", "( $ _ $ )", "(＞人＜；)", "O(∩_∩)O", "U•ェ•*U", "ε=ε=ε=(~￣▽￣)~", "( *︾▽︾)", "^(*￣(oo)￣)^", "┏ (゜ω゜)=☞", "(ಥ _ ಥ)"];
+function loadEmoticons()
+{
+	emo_element = document.getElementById("emoticons");
+	emo_element.href = "javascript:setEmoticons()";
+	setInterval(function(){setEmoticons();}, 1250);
+	setEmoticons();
+}
+function setEmoticons()
+{
+	emo_element.innerHTML = emo[random(0, emo.length - 1)];
+}
+
 //Functions
 function setBlur(bool)
 {
@@ -66,6 +82,11 @@ function blurAlert(msg)
 	setBlur(true);
 	setTimeout(function(){alert(msg);},50);
 	setTimeout(function(){setBlur(false);},50);
+}
+function random(min, max)
+{
+	var dbrandom = (max - min) * Math.random() + min + 1;
+	return parseInt(dbrandom);
 }
 function refresh()
 {
@@ -93,7 +114,7 @@ function formatNavtag()
 	var navtag = document.getElementsByClassName("navtag");
 	for (var i = 0; i < navtag.length; i++)
 	{
-		navtag[i].style.opacity = 1;
+		navtag[i].style.display = "inline-block";
 		if (navtag[i].innerHTML.indexOf("//") !== -1)
 		{
 			navtag[i].innerHTML = navtag[i].innerHTML.replace("//", "");

@@ -92,9 +92,8 @@ header .title {
 	font-size: 35px;
 }
 header .navtag {
-	opacity: 0;
+	display: none;
 	float: right;
-	display: inline-block;
 	color: #BEBEBE;
 	font-size: 20px;
 	margin-top: -26px;
@@ -123,6 +122,7 @@ header .navplaceholder {
 	width: 12%;
 	float: right;
 	cursor: default;
+	visibility: hidden;
 }
 
 /*Tipbar (Show messeages)*/
@@ -293,9 +293,7 @@ header .navplaceholder {
 /*Mobile phone, 1 column*/
 @media (max-width: 320px) {
 header .navtag {
-	font-size: 0px;
-	margin: 0px;
-	padding: 0px;
+	display: none;
 }
 .thumbnail {
 	width: 100%;
@@ -310,9 +308,7 @@ header .navtag {
 /*1 column*/
 @media (min-width: 321px) and (max-width: 687px) {
 header .navtag {
-	font-size: 0px;
-	margin: 0px;
-	padding: 0px;
+	display: none;
 }
 .thumbnail {
 	width: 100%;

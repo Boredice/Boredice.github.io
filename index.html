@@ -17,8 +17,7 @@
 <link href="css/homepage.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="images/icons/icon.ico">
 <style>
-.title {
-	margin-top: 150px;
+.t_title {
 	color: #00ABFF;
 	text-align: center;
 	font-size: 53px;
@@ -26,10 +25,10 @@
 	font-weight: lighter;
 	cursor: default;
 }
-.subtitle {
+.t_subtitle {
 	color: #A0A0A0;
 	text-align: center;
-	font-size: 18px;
+	font-size: 19px;
 	font-weight: lighter;
 	cursor: default;
 }
@@ -50,6 +49,7 @@ hr {
 	background-color: #DDD;
 	height: 2px;
 	border: 0;
+	box-shadow: 0px 3px 15px #DDD;
 }
 .profilepic {
 	height: 240px;
@@ -77,7 +77,13 @@ hr {
 .thumbnail {
 	float: none;
 	display: inline-block;
-	height: 300px;
+	height: 175px;
+	width: 175px;
+}
+.thumbnail h2 {
+	text-align: center;
+	margin-top: 15px;
+	cursor: default;
 }
 </style>
 </head><body>
@@ -92,21 +98,33 @@ hr {
 		 <a class="navtag" href="..">//HOME</a></p>
     </header>
     <div style="height: 70px"></div>
-    <p class="title">Hi, Boredicer!</p>
-    <p class="subtitle">This is Boredice's personal homepage.</p>
+	<p class="t_title" style="margin-top: 150px;margin-bottom: -20px;font-size: 45px;"><a id="emoticons" style="color: #00ABFF;">o(^▽^)o</a></p>
+    <p class="t_title">Hi, Boredicer!</p>
+    <p class="t_subtitle">This is Boredice's personal homepage.</p>
   </div>
-	<div style="text-align: center;">
+	<center>
 	<div class="thumbnail">
      <a href="" id="noticea">
      <img src="images/thumbnails/Notice.png"></a>
-      <h2 style="text-align: center">公告</h2>
+      <h2>公告</h2>
+    </div>
+	<div class="thumbnail" style="display: none">
+     <a href="more/activity">
+     <img src="images/thumbnails/More.png"></a>
+      <h2>活动</h2>
     </div>
 	<div class="thumbnail">
      <a href="feedback">
      <img src="images/thumbnails/More.png"></a>
-      <h2 style="text-align: center">反馈</h2>
+      <h2>反馈</h2>
     </div>
-	</div>
+	<div class="thumbnail">
+     <a href="#about">
+     <img src="images/thumbnails/About.png"></a>
+      <h2>关于</h2>
+    </div>
+	</center>
+  <a name="about"></a>
   <hr>
   <table width="721" align="center" style="margin-top: 70px;">
     <tr>
@@ -118,7 +136,7 @@ hr {
 		一个热爱IT的小学生<br>
         写写程序，做做设计，刷刷知乎，顺便玩会LOL<br>
         熟练各种专业软件，会一小点儿编程语言<br>
-        生活如此浪，依然是班上的“学霸”<br>
+        生活如此浪，考试照样进前三<br>
         <br></span>
 		<a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact">知乎</a>&nbsp;&nbsp;&nbsp;
 		<a href="https://github.com/boredice" target="_blank" class="contact">Github</a>&nbsp;&nbsp;&nbsp;
@@ -132,10 +150,10 @@ hr {
   <p>By <a href="https://pages.github.com/" target="_blank" class="contact">Github Pages</a></p>
   <p>此项目在<a href="https://github.com/boredice/boredice.github.io" target="_blank" class="contact">Github</a>上</p>
   <p>粒子效果基于<a href="https://www.zhihu.com/question/38812154" target="_blank" class="contact">知乎某匿名用户的回答</a></p>
-  <p>网站设计纯原创，无半点抄袭</p>
   <p>使用了<a href="http://changyan.kuaizhan.com" target="_blank" class="contact">搜狐畅言</a>评论系统</p>
-  <p>头像为知乎刘看山</p>
+  <p>头像为<a href="http://liukanshan.zhihu.com" target="_blank" class="contact">知乎刘看山</a></p>
   <p>查看Boredice的<a href="more/history" target="_blank" class="contact">最初版本页面</a></p>
+  <p>网站设计纯原创，无半点抄袭</p>
   <p>建于2017.6.17，正逢五下期末考试（hh）</p>
   </span> 
 </div>
@@ -145,6 +163,8 @@ voidDrag();
 loadTitle();
 checkDebug();
 formatNavtag();
+loadNotice();
+loadEmoticons();
 </script>
 </body>
 </html>
