@@ -19,7 +19,11 @@ function checkDebug()
 		var taga = document.getElementsByTagName("a");
 		for (var i = 0; i < taga.length; i++)
 		{
-			if (taga[i].href.indexOf("javascript:") === -1)
+			if (taga[i].href.endsWith("/"))
+			{
+				taga[i].href += "boredice.github.io/index.html";
+			}
+			else if (taga[i].href.indexOf("javascript:") === -1 && taga[i].href.indexOf("#") === -1)
 			{
 				taga[i].href += ".html";
 			}
@@ -29,16 +33,30 @@ function checkDebug()
 
 //Notice Board
 var notice = 
-"Hi, Boredicer!/n/Boredice网站进行了一次大更新！ヾ(≧▽≦*)o/n/惊不惊喜？意不意外？喜欢吗，有建议就在反馈页面里说出来吧！/n/目前呢，正在继续更新网站，Xuler先不管了，Cnote也还在开发，CLock也先不管了";
-function loadNotice()
+"Hi, Boredicer!\nBoredice网站进行了一次大更新！ヾ(≧▽≦*)o\n惊不惊喜？意不意外？喜欢吗，有建议就在反馈页面里说出来吧！\n目前呢，正在继续更新网站，Xuler先不管了，Cnote也还在开发，CLock也先不管了";
+if (notice.length === 0)
 {
-	if (notice.length === 0)
-	{
-		notice = "这里空空如也";
-	}
-	notice = notice.replace(/\/n\//g, "\\n").replace(/\/dn\//g, "\\n\\n");
-	var notice_a = document.getElementById("noticea");
-	notice_a.href = "javascript:blurAlert('公告板 NOTICE BOARD\\n\\n" + notice + "')";
+	notice = "这里空空如也";
+}
+function alertNotice()
+{
+	blurAlert("公告板 NOTICE BOARD\n\n" + notice);
+}
+
+//Goto Mobile Website
+function isMobile()
+{
+	var ua = navigator.userAgent,
+	    iPad = ua.match(/(iPad).*OS\s([\d_]+)/),
+		iPhone = !iPad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+		android = ua.match(/(Android)\s+([\d.]+)/),
+		mobile = iPhone || android;
+		//Windows Phone 已经不用考虑了...
+	return mobile;
+}
+if (isMobile())
+{
+	alert("你正在使用手机访问Boredice，网站暂未适配移动端，显示将会出现问题，所以暂时不允许访问，敬请谅解。");
 }
 
 //Fuck Internet Explorer 9
