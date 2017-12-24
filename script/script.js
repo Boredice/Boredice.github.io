@@ -31,9 +31,23 @@ function checkDebug()
 	}
 }
 
+//Memorial Day Gray
+var month = new Date().getMonth() + 1;
+var date = new Date().getDate();
+if (month === 12 && date === 13)
+{
+	//NJDTS...
+	document.getElementsByTagName("html")[0].style.filter = "grayscale()";
+}
+if (month === 5 && date === 12)
+{
+	//WCDDZ...
+	document.getElementsByTagName("html")[0].style.filter = "grayscale()";
+}
+
 //Notice Board
 var notice = 
-"Hi, Boredicer!\nBoredice网站进行了一次大更新！ヾ(≧▽≦*)o\n惊不惊喜？意不意外？喜欢吗，有建议就在反馈页面里说出来吧！\n目前呢，正在继续更新网站，Xuler先不管了，Cnote也还在开发，CLock也先不管了";
+"欢庆双dàn！\nMERRY CHRISTMAS & HAPPY NEW YEAR!";
 if (notice.length === 0)
 {
 	notice = "这里空空如也";
@@ -43,46 +57,10 @@ function alertNotice()
 	blurAlert("公告板 NOTICE BOARD\n\n" + notice);
 }
 
-//Goto Mobile Website
-function isMobile()
-{
-	var ua = navigator.userAgent,
-	    iPad = ua.match(/(iPad).*OS\s([\d_]+)/),
-		iPhone = !iPad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
-		android = ua.match(/(Android)\s+([\d.]+)/),
-		mobile = iPhone || android;
-		//Windows Phone 已经不用考虑了...
-	return mobile;
-}
-if (isMobile())
-{
-	alert("你正在使用手机访问Boredice，网站暂未适配移动端，显示将会出现问题，所以暂时不允许访问，敬请谅解。");
-}
-
 //Fuck Internet Explorer 9
-var search = window.location.search;
-if (search !== "?bslow") {
-    var ievs = parseInt(navigator.appVersion.split(";")[1].replace(/[]/g, "").replace("MSIE", ""));
-    if (navigator.appName === "Microsoft Internet Explorer" && ievs <= 9) {
-        window.location.href = "bslow?iev=" + ievs;
-    }
-}
-
-//Emoticons
-var emo_element;
-//34 emoticons (颜文字)
-var emo = ["ヾ(≧▽≦*)o", "( •̀ ω •́ )✧", "o(*￣▽￣*)ブ", "(＠_＠;)", "(ﾉ*･ω･)ﾉ", "(❤ ω ❤)", "\(@^0^@)/", "┗|｀O′|┛ ~~", "○( ＾皿＾)っ", "φ(゜▽゜*)♪", "(｡･∀･)ﾉ", "ヾ(•ω•`)o", "(´▽`ʃ♡ƪ)", "(✿◡‿◡)", "o(^▽^)o", "◑﹏◐", "(O _ O)", "Ψ(￣∀￣)Ψ", "( ఠൠఠ )ﾉ", "(✿◕‿◕✿)", "o(=•ェ•=)m", "(。・∀・)ノ", "( o=^•ェ•)o ┏━┓", "(～﹃～)~zZ", "(☆▽☆)", "( $ _ $ )", "(＞人＜；)", "O(∩_∩)O", "U•ェ•*U", "ε=ε=ε=(~￣▽￣)~", "( *︾▽︾)", "^(*￣(oo)￣)^", "┏ (゜ω゜)=☞", "(ಥ _ ಥ)"];
-function loadEmoticons()
-{
-	emo_element = document.getElementById("emoticons");
-	emo_element.href = "javascript:setEmoticons()";
-	setInterval(function(){setEmoticons();}, 1250);
-	setEmoticons();
-}
-function setEmoticons()
-{
-	emo_element.innerHTML = emo[random(0, emo.length - 1)];
-}
+var ievs = parseInt(navigator.appVersion.split(";")[1].replace(/[]/g, "").replace("MSIE", ""));
+if (navigator.appName === "Microsoft Internet Explorer" && ievs <= 9)
+	window.location.href = "bslow?iev=" + ievs;
 
 //Functions
 function setBlur(bool)
@@ -100,11 +78,6 @@ function blurAlert(msg)
 	setBlur(true);
 	setTimeout(function(){alert(msg);},50);
 	setTimeout(function(){setBlur(false);},50);
-}
-function random(min, max)
-{
-	var dbrandom = (max - min) * Math.random() + min + 1;
-	return parseInt(dbrandom);
 }
 function refresh()
 {
@@ -143,7 +116,6 @@ function formatNavtag()
 		}
 	}
 }
-
 //Title & Icon
 function loadTitle()
 {

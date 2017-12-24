@@ -70,12 +70,12 @@ header {
 	height: 75px;
 	position: fixed;
 	z-index: 99;
-	margin-top: -10px;
 	left: 0px;
 	padding-left: 6%;
 	padding-top: 10px;
 	background-color: rgba(255,255,255,0.8);
 	user-select: none;
+	top: 0px;
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.1);
 	transition: all 0.2s linear;
 }
@@ -204,17 +204,17 @@ header .navplaceholder {
 	border-radius: 16px;
 	padding-top: 20px;
 	border-bottom: 3px solid #DDD;
-	box-shadow: 0px 10px 30px #EEE;
+	box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
 	transition: all 0.3s ease;
 }
 .thumbnail:hover {
-	box-shadow: 0px 10px 32.5px #DDD;
+	box-shadow: 0px 10px 32.5px rgba(0,0,0,0.2);
 	background-color: #FDFDFD;
 	border-bottom: 3px solid #77BDFF;
 	border-radius: 13px;
 }
 .thumbnail:active {
-	box-shadow: 0px 10px 35px #BFBFBF;
+	box-shadow: 0px 10px 35px rgba(0,0,0,0.3);
 	background-color: #FEFEFE;
 	border-radius: 10px;
 }
