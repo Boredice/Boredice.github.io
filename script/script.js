@@ -63,7 +63,7 @@ if (month === 5 && date === 12)
 
 //Notice Board
 var notice = 
-"马上期末考试了啊啊啊啊！网站先不管了寒假再说！";
+"期末考试考完了了啊啊啊啊！网站先不管了等会寒假再说！";
 if (notice.length === 0)
 {
 	notice = "这里空空如也";
