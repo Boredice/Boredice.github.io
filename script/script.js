@@ -1,7 +1,23 @@
 ﻿"use strict";
 
+//Cursor Light
+function loadCursorLight()
+{
+	var body = document.getElementsByTagName("body")[0];
+	var cursorlight = document.createElement("div");
+	cursorlight.className = "cursorlight";
+	body.appendChild(cursorlight);
+	document.onmousemove = function(ev){updateCursorLight(ev);};
+}
+function updateCursorLight(ev)
+{
+	var cursorlight = document.getElementsByClassName("cursorlight")[0];
+	cursorlight.style.left = ev.clientX - 1 + "px";
+	cursorlight.style.top = ev.clientY - 1 + "px";
+}
+
 //Update & Debug
-var updatedate = "";
+var updatedate = "1.28";
 if (updatedate !== "")
 {
 	window.location.href = "update?date=" + updatedate;
@@ -47,7 +63,7 @@ if (month === 5 && date === 12)
 
 //Notice Board
 var notice = 
-"欢庆双dàn！\nMERRY CHRISTMAS & HAPPY NEW YEAR!";
+"马上期末考试了啊啊啊啊！网站先不管了寒假再说！";
 if (notice.length === 0)
 {
 	notice = "这里空空如也";

@@ -87,9 +87,14 @@ hr {
 	height: 175px;
 	width: 175px;
 	color: silver;
+	background-color: rgba(255,255,255,0.5);
 }
 .thumbnail:hover {
 	color: #00ABFF;
+	background-color: rgba(255,255,255,0.8);
+}
+.thumbnail:active {
+	background-color: white;
 }
 .thumbnail h2 {
 	text-align: center;
@@ -98,16 +103,12 @@ hr {
 	color: inherit;
 }
 .gallery {
-	border-radius: 15px;
 	margin-top: 115px;
-	background-color: rgba(255,255,255,0.5);
 	text-shadow: -1px 0px 2px white, 0px 1px 2px white, 1px 0px 2px white, 0px -1px 2px white;
-	/*大多数浏览器不支持*/
-	backdrop-filter: blur(5px);
 }
 </style>
 </head><body>
-<img class="background" src="images/Snow Lake.png" width="100%">
+<img class="background" src="images/Snow Lake - Bright.png" width="100%">
 <header>
   <p><a href="javascript:refresh()" class="title">Boredice</a> <a class="navplaceholder">&nbsp;</a> <a class="navtag" href="other">OTHER</a> <a class="navtag" href="apps">APPS</a> <a class="navtag" href="..">//HOME</a></p>
 </header>
@@ -160,9 +161,9 @@ hr {
     <p>网站设计纯原创，无半点抄袭</p>
     <p>建于2017.6.17，正逢五下期末考试（hh）</p>
     </span>
+<div style="height: 100px"></div>
+<p style="font-size: 20px; color: #00ABFF;text-align: center;">到底了~<br>＼(o '◡' o)／</p>
 </div>
-<div style="height: 200px"></div>
-<p style="font-size: 20px; color: #FFF;text-align: center;">到底了~<br>(o '◡' o)</p>
 </div>
 <script src="script/emoticons.js"></script> 
 <script>
@@ -170,6 +171,7 @@ voidDrag();
 loadTitle();
 checkDebug();
 formatNavtag();
+loadCursorLight();
 </script>
 </body>
 </html>

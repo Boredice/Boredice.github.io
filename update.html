@@ -1,5 +1,5 @@
 ﻿<!doctype html>
-<!--此网页为网站升级页面，需要时将script/script.js中网页跳转语句的注释去掉-->
+<!--此网页为网站升级页面，需要时将script/script.js中updatedate变量填写为m.d格式的日期-->
 <html>
 <head>
 <meta charset="utf-8">
@@ -94,7 +94,7 @@ body {
 	color: #28ABFF;
 	transition: all 0.2s linear;
 	font-size: 18px;
-	box-shadow: 0px 0px 20px #DDD;
+	box-shadow: 0px 0px 20px #8DD9FF;
 	cursor: pointer;
 }
 .button:hover {
@@ -114,8 +114,8 @@ body {
 <div class="container">
   <div class="hgt">
     <p class="title">Update</p>
-    <p class="text">Boredice正更新维护中</p>
-    <!--这个一开始写8月4日，后来改成8月15日，现在又改成9月15日。。最后改成了自定义。。。。-->
+    <p class="text" hidden="true">Boredice正更新维护中</p>
+	<p class="text">考 试 原 因 考 完 更 新</p>
     <p class="text" id="txt_date"></p>
     <a href="javascript:window.history.back();" draggable="false">
     <div class="button" align="center">返回</div>
