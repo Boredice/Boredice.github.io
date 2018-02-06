@@ -17,7 +17,7 @@ function updateCursorLight(ev)
 }
 
 //Update & Debug
-var updatedate = "1.28";
+var updatedate = "";
 if (updatedate !== "")
 {
 	window.location.href = "update?date=" + updatedate;
@@ -63,7 +63,7 @@ if (month === 5 && date === 12)
 
 //Notice Board
 var notice = 
-"期末考试考完了了啊啊啊啊！网站先不管了等会寒假再说！";
+"网站先暂时开放，马上要进行外观上的大更新";
 if (notice.length === 0)
 {
 	notice = "这里空空如也";
