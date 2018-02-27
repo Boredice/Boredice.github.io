@@ -1,5 +1,9 @@
+@font-face {
+	font-family: "Ubuntu";
+	src: url("https://boredice.github.io/fonts/Ubuntu/Ubuntu.woff");
+}
 body {
-	font-family: "Micrsoft Yahei", "Heiti SC";
+	font-family: "Ubuntu", "Micrsoft Yahei";
 }
 ::selection {
 	background-color: #00CDCD;
