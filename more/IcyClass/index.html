@@ -1,0 +1,24 @@
+<!doctype html>
+<!--by IcyFlame-->
+<html>
+<head>
+<meta charset="utf-8">
+<link href="css/IcyClass.css" rel="stylesheet" type="text/css">
+<title>IcyClass - Beta</title>
+</head>
+<body>
+	<canvas id="shareCanvas" width="400" height="300" hidden="true"></canvas>
+	<img id="shareImage" hidden="true">
+	<div id="shareLink" href=""></div>
+	<p class="title">IcyClass - Beta<button class="navBtn" onClick="share()">分享</button><button class="navBtn" onClick="reset()">重置</button></p>
+	<hr>
+	<!--单个学生模板，要改的话改完复制到JS里，再稍作修改-->
+	<div class="student" hidden="true"><p class="name">占位学生</p><p class="likeAndUnlike"><button class="likeBtn">赞</button><span class="likeCount">0</span><button class="unlikeBtn">踩</button></p></div>
+	<!--稍后在JS中将会再此容器内循环添加学生-->
+	<div id="container">
+		<div id="studentContainer"></div>
+		<div id="topListContainer"><p id="topList"></p></div>
+	</div>
+</body>
+<script src="script/script.js"></script>
+</html>

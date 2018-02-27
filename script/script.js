@@ -116,22 +116,6 @@ function voidDrag()
 		tagimg[i].draggable = false;
 	}
 }
-function formatNavtag()
-{
-	var navtag = document.getElementsByClassName("navtag");
-	for (var i = 0; i < navtag.length; i++)
-	{
-		navtag[i].style.display = "inline-block";
-		if (navtag[i].innerHTML.indexOf("//") !== -1)
-		{
-			navtag[i].innerHTML = navtag[i].innerHTML.replace("//", "");
-			navtag[i].style.color = "#00ABFF";
-			navtag[i].style.fontWeight = "normal";
-			navtag[i].style.borderBottom = "3px solid #00ABFF";
-			navtag[i].style.height = "82px";
-		}
-	}
-}
 //Title & Icon
 function loadTitle()
 {
