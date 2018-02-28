@@ -1,4 +1,5 @@
 "use strict";
+//名称列表
 var names = [
 	"孙云辰",
 	"孙唯",
@@ -40,26 +41,30 @@ var names = [
 	"江振",
 	"李昊勋"
 ];
+//循环添加单个学生卡片
 for (var i = 0; i < names.length; i++)
 {
 	document.getElementById("studentContainer").innerHTML += 
 		"<div class=\"student\"><p class=\"name\">" + names[i] + 
-		"</p><p class=\"likeAndUnlike\"><button class=\"likeBtn\" onClick=\"likeStudent('" + names[i] + "')\">赞</button><span class=\"likeCount\" id=\"" + names[i] + 
-		"LikeCount\">0</span><button class=\"unlikeBtn\" onClick=\"unlikeStudent('" + names[i] + "')\">踩</button></p></div>";
+		"</p><p class=\"likeAndUnlike\"><button class=\"likeBtn\" onClick=\"likeStudent('" + names[i] + "')\"><i class=\"fa fa-thumbs-o-up\"></i></button><span class=\"likeCount\" id=\"" + names[i] + 
+		"LikeCount\">0</span><button class=\"unlikeBtn\" onClick=\"unlikeStudent('" + names[i] + "')\"><i class=\"fa fa-thumbs-o-down\"></i></button></p></div>";
 }
+//赞
 function likeStudent(name)
 {
 	document.getElementById(name + "LikeCount").innerHTML = parseInt(document.getElementById(name + "LikeCount").innerHTML) + 1;
 	sortTopList();
 }
+//踩
 function unlikeStudent(name)
 {
 	document.getElementById(name + "LikeCount").innerHTML = parseInt(document.getElementById(name + "LikeCount").innerHTML) - 1;
 	sortTopList();
 }
+//排行
 function sortTopList()
 {
-	//我也不知道为什么全是0分时贾欣海排第一
+	//我也不知道为什么Chrome内核下，全是0分时贾欣海排第一
 	var topList = [];
 	for (var i = 0; i < names.length; i++)
 	{
@@ -88,13 +93,14 @@ function sortTopList()
 	document.getElementById("topList").innerHTML = topListStr;
 }
 sortTopList();
+//分享
 function share()
 {
 	var shareImage = document.getElementById("shareImage");
 	if (shareImage.hidden === false)
 	{
 		shareImage.hidden = true;
-		document.getElementsByClassName("navBtn")[0].innerHTML = "分享";
+		document.getElementsByClassName("navBtn")[0].innerHTML = "<i class=\"fa fa-share-alt\"></i>&nbsp;分享";
 		document.getElementById("topListContainer").style.top = "100px";
 		return;
 	}
@@ -123,10 +129,35 @@ function share()
 	}
 	shareImage.src = c.toDataURL("image/png");
 	shareImage.hidden = false;
-	document.getElementsByClassName("navBtn")[0].innerHTML = "关闭";
+	document.getElementsByClassName("navBtn")[0].innerHTML = "<i class=\"fa fa-close\"></i>&nbsp;关闭";
 	document.getElementById("topListContainer").style.top = "410px";
 }
+//重置
 function reset()
 {
 	location.reload();
 }
+
+//神兽保平安 (Consolas字体)-->
+/*
+    ╭─╮       ╭─╮
+ ╭──╯ ┴───────╯ ┴──╮
+ │                 │
+ │       ───       │   ╔══════════════╗
+ │  ─┰┘       └┰─  │   ║              ║
+ │                 │  /║  FUCK BUGS!  ║
+ │       ─┴─       │ / ║              ║
+ │                 │/  ╚══════════════╝
+ ╰───╮         ╭───╯
+     │   ───   │
+     │    ─    │
+     │         │
+     │         ╰──────────────╮
+     │                        │
+     │                        ├─╮
+     │                        ┌─╯
+     │                        │
+     ╰─┐  ┬  ╭───────┬──┬  ╭──╯
+       │ ─┤ ─┤       │ ─┤ ─┤
+       ╰──┴──╯       ╰──┴──╯
+*/

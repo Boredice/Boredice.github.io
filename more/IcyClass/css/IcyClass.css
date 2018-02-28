@@ -1,9 +1,10 @@
 @font-face {
 	font-family: "Ubuntu";
-	src: url("https://boredice.github.io/fonts/Ubuntu/Ubuntu.woff");
+	src: url("../../../fonts/Ubuntu/Ubuntu.woff");
 }
 body {
 	font-family: "Ubuntu", "Micrsoft Yahei";
+	-webkit-user-select: return false;
 }
 ::selection {
 	background-color: #00CDCD;
@@ -24,11 +25,11 @@ hr {
 	border-radius: 10px;
 	float: right;
 	margin-top: -8px;
-	margin-right: 8px;
+	margin-right: 12px;
 	font-size: 17px;
 	color: #00CDCD;
 	background-color: white;
-	padding: 6px 20px;
+	padding: 6px 12px;
 	border: 2px solid #00CDCD;
 	outline: 0;
 	transition: all 0.1s linear;
@@ -89,8 +90,8 @@ hr {
 }
 .student .likeCount {
 	font-size: 20px;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 8px;
+	margin-right: 8px;
 }
 #container {
 	width: 100%;
