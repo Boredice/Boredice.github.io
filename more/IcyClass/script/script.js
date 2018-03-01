@@ -1,5 +1,5 @@
 "use strict";
-//名称列表
+//名称及座位
 var names = [
 	"孙云辰",
 	"孙唯",
@@ -41,13 +41,79 @@ var names = [
 	"江振",
 	"李昊勋"
 ];
+var seats = [
+	"#",
+	"贾欣海",
+	"#",
+	"夏锦鹏",
+	"程子豪",
+	"#",
+	"*",
+	"吴冠谕",
+	"李纪伟",
+	"王馨妍",
+	"高怡沁",
+	"刘思萱",
+	"王雨彤",
+	"*",
+	"江振",
+	"刘思怡",
+	"徐冉",
+	"于铭哲",
+	"许欣蔚",
+	"戚繁延",
+	"*",
+	"业凡",
+	"钱锋",
+	"杜勇",
+	"朱宇航",
+	"徐沫瑶",
+	"孙云辰",
+	"*",
+	"黄陶欣",
+	"张波",
+	"邓卓",
+	"钱俊杰",
+	"丁文杰",
+	"祝晗",
+	"*",
+	"刘浩",
+	"陈航宇",
+	"蔡文杰",
+	"张俊杰",
+	"孙唯",
+	"王靖",
+	"*",
+	"李昊勋",
+	"王思源",
+	"戴安瑞",
+	"樊冉冉",
+	"李琳",
+	"郭雨璐"
+];
 //循环添加单个学生卡片
-for (var i = 0; i < names.length; i++)
+for (var i = 0; i < seats.length; i++)
 {
-	document.getElementById("studentContainer").innerHTML += 
-		"<div class=\"student\"><p class=\"name\">" + names[i] + 
-		"</p><p class=\"likeAndUnlike\"><button class=\"likeBtn\" onClick=\"likeStudent('" + names[i] + "')\"><i class=\"fa fa-thumbs-o-up\"></i></button><span class=\"likeCount\" id=\"" + names[i] + 
-		"LikeCount\">0</span><button class=\"unlikeBtn\" onClick=\"unlikeStudent('" + names[i] + "')\"><i class=\"fa fa-thumbs-o-down\"></i></button></p></div>";
+	if (seats[i] == "#")
+	{
+		//占位符
+		document.getElementById("studentContainer").innerHTML += 
+		"<div class=\"student\" style=\"opacity: 0;\"></div>";
+	}
+	else if (seats[i] == "*")
+	{
+		//换行符
+		document.getElementById("studentContainer").innerHTML += 
+		"<br>";
+
+	}
+	else
+	{
+		document.getElementById("studentContainer").innerHTML += 
+		"<div class=\"student\"><p class=\"name\">" + seats[i] + 
+		"</p><p class=\"likeAndUnlike\"><button class=\"likeBtn\" onClick=\"likeStudent('" + seats[i] + "')\"><i class=\"fa fa-thumbs-o-up\"></i></button><span class=\"likeCount\" id=\"" + seats[i] + 
+		"LikeCount\">0</span><button class=\"unlikeBtn\" onClick=\"unlikeStudent('" + seats[i] + "')\"><i class=\"fa fa-thumbs-o-down\"></i></button></p></div>";
+	}
 }
 //赞
 function likeStudent(name)
