@@ -37,7 +37,7 @@ function checkDebug()
 		{
 			if (taga[i].href.endsWith("/"))
 			{
-				taga[i].href += "boredice.github.io/index.html";
+				taga[i].href += "icyqjj.github.io/index.html";
 			}
 			else if (taga[i].href.indexOf("javascript:") === -1 && taga[i].href.indexOf("#") === -1)
 			{
@@ -63,7 +63,7 @@ if (month === 5 && date === 12)
 
 //Notice Board
 var notice = 
-"网站先暂时开放，马上要进行外观上的大更新";
+"网站改名中，原Boredice，现IcyFlame，该用户名被注册了所以网址是icyqjj.github.io";
 if (notice.length === 0)
 {
 	notice = "这里空空如也";
@@ -125,7 +125,7 @@ function loadTitle()
 }
 function setTitle(bool)
 {
-	document.title = bool ? "Hi, Boredicer!" : "Boredice";
+	document.title = bool ? "Hi, IcyFlamer!" : "IcyFlame";
 	document.getElementsByTagName("link")[1].setAttribute("href", bool ? "images/icons/icon.ico" : "images/icons/voidicon.ico");
 }
 
