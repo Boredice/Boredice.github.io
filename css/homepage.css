@@ -260,7 +260,7 @@ header .navplaceholder {
 .thumbnail:hover {
 	box-shadow: 0px 10px 32.5px rgba(0,0,0,0.2);
 	background-color: #FDFDFD;
-	border-bottom: 3px solid #77BDFF;
+	border-bottom: 3px solid #00CDCD;
 	border-radius: 13px;
 }
 .thumbnail:active {
@@ -281,7 +281,7 @@ header .navplaceholder {
 	font-weight: 400;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	color: #77BDFF;
+	color: #00CDCD;
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -290,7 +290,7 @@ header .navplaceholder {
 	font-weight: 400;
 	margin-top: 49px;
 	margin-bottom: 7px;
-	color: #77BDFF;
+	color: #00CDCD;
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;

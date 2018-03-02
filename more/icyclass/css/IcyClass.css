@@ -3,6 +3,7 @@
 	src: url("../../../fonts/Ubuntu/Ubuntu.woff");
 }
 body {
+	cursor: default;
 	font-family: "Ubuntu", "Micrsoft Yahei";
 	-webkit-user-select: return false;
 }
@@ -13,7 +14,7 @@ body {
 .title {
 	padding-left: 8px;
 	color: #00CDCD;
-	font-size: 24px;
+	font-size: 28px;
 	line-height: 18px;
 }
 hr {
@@ -21,7 +22,21 @@ hr {
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
 	margin-bottom: 15px;
 }
+.classIndexSelect {
+	outline: 0;
+	border-radius: 10px;
+	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
+	border: 2px solid #00CDCD;
+	padding: 6px 12px;
+	color: #00CDCD;
+	margin-left: 12px;
+	margin-top: -8px;
+	margin-bottom: 0px;
+	font-size: 17px;
+	transition: all 0.2s linear;
+}
 .navBtn {
+	cursor: pointer;
 	border-radius: 10px;
 	float: right;
 	margin-top: -8px;
@@ -61,6 +76,7 @@ hr {
 	text-align: center;
 }
 .student .likeBtn {
+	cursor: pointer;
 	border-radius: 10px;
 	font-size: 17px;
 	color: #00CDCD;
@@ -76,6 +92,7 @@ hr {
 	box-shadow: 0px 5px 20px rgba(0,205,205,0.30);
 }
 .student .unlikeBtn {
+	cursor: pointer;
 	border-radius: 10px;
 	font-size: 17px;
 	color: #00CDCD;
@@ -103,6 +120,7 @@ hr {
 	float: left;
 	width: calc(100% - 135px);
 	white-space: nowrap;
+	margin-top: -30px;
 }
 #topListContainer {
 	border-radius: 10px;

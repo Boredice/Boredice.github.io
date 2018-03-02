@@ -5,16 +5,35 @@
 <meta charset="utf-8">
 <link href="css/IcyClass.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
-<title>IcyClass - Beta</title>
+<link rel="shortcut icon" href="images/icon.ico">
+<title>IcyClass</title>
 <style>
 </style>
 </head>
 <body>
 	<!--分享时绘制排行榜的画布-->
-	<canvas id="shareCanvas" width="400" height="300" hidden></canvas>
-	<img id="shareImage" hidden="true">
+	<canvas id="shareCanvas" width="400" height="330" hidden></canvas>
+	<div id="shareContainer" hidden>
+	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="editRemark()"><i class="fa fa-edit"></i>&nbsp;&nbsp;备注</button>
+	<select class="classIndexSelect">
+		<option value="语文课" selected disabled>请选择当前课程</option>
+		<option value="上午第一节语文课">上午第一节课</option>
+		<option value="上午第二节语文课">上午第二节课</option>
+		<option value="上午第三节语文课">上午第三节课</option>
+		<option value="上午第四节语文课">上午第四节课</option>
+		<option value="下午第一节语文课">下午第一节课</option>
+		<option value="下午第二节语文课">下午第二节课</option>
+		<option value="下午第三节语文课">下午第三节课</option>
+	</select>
+	<br>
+	<img id="shareImage" title="复制或拖动该图片到TIM、QQ及微信以分享排行榜">
+	</div>
 	<div id="shareLink" href=""></div>
-	<p class="title">IcyClass - Beta<button class="navBtn" onClick="share()"><i class="fa fa-share-alt"></i>&nbsp;&nbsp;分享</button><button class="navBtn" onClick="reset()"><i class="fa fa-refresh"></i>&nbsp;&nbsp;重置</button></p>
+	<p class="title">
+		IcyClass
+		<button class="navBtn" onClick="share()"><i class="fa fa-share-alt"></i>&nbsp;&nbsp;分享</button>
+		<button class="navBtn" onClick="reset()"><i class="fa fa-refresh"></i>&nbsp;&nbsp;重置</button>
+	</p>
 	<hr>
 	<!--稍后在JS中将会再此容器内循环添加学生-->
 	<div id="container">
