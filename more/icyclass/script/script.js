@@ -170,6 +170,12 @@ function sortTopList()
 	}
 	document.getElementById("topList").innerHTML = topListStr;
 	console.log("成功排序了排行榜，第一名为" + firstTopList);
+	if (document.getElementById("shareContainer").hidden === false)
+	{
+		//刷新分享图
+		document.getElementById("shareContainer").hidden = true;
+		share();
+	}
 }
 sortTopList();
 var remark = "";
@@ -181,7 +187,7 @@ function share()
 	if (shareContainer.hidden === false)
 	{
 		shareContainer.hidden = true;
-		document.getElementsByClassName("navBtn")[1].innerHTML = "<i class=\"fa fa-share-alt\"></i>&nbsp;分享";
+		document.getElementById("shareBtn").innerHTML = "<i class=\"fa fa-share-alt\"></i>&nbsp;分享";
 		document.getElementById("topListContainer").style.top = "100px";
 		return;
 	}
@@ -217,14 +223,14 @@ function share()
 	ctx.fillText(remark, x, y + 255);
 	shareImage.src = c.toDataURL("image/png");
 	shareContainer.hidden = false;
-	document.getElementsByClassName("navBtn")[1].innerHTML = "<i class=\"fa fa-close\"></i>&nbsp;关闭";
-	document.getElementById("topListContainer").style.top = "496px";
+	document.getElementById("shareBtn").innerHTML = "<i class=\"fa fa-close\"></i>&nbsp;关闭";
+	document.getElementById("topListContainer").style.top = "528px";
 	console.log("成功绘制Canvas，转换为Base64并显示");
 }
 //编辑备注
 function editRemark()
 {
-	var remark2 = prompt("修改分享备注（可留空）：");
+	var remark2 = prompt("修改分享备注（可留空）：", remark);
 	if (remark2 === null)
 	{
 		return false;
@@ -244,8 +250,16 @@ function reset()
 	console.log("成功重置分数");
 	sortTopList();
 }
+//下载
+function download()
+{
+	var filename = new Date().getMonth() + 1 + "月" + new Date().getDate() + "日" + document.getElementsByClassName("classIndexSelect")[0].value + "排行榜";
+	var content = filename + "\r\n\r\n" + remark + (remark === "" ? "" : "\r\n\r\n") + document.getElementById("topList").innerHTML.replace(/<br>/g, "\r\n");
+	var blob = new Blob([content], {type: "text/plain; charset = utf-8"});
+	saveAs(blob, filename + ".txt");
+}
 
-//神兽保平安 (Consolas字体)-->
+//神兽保佑代码永无BUG ~(￣▽￣)~ (Consolas字体)-->
 /*
     ╭─╮       ╭─╮
  ╭──╯ ┴───────╯ ┴──╮

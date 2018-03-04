@@ -14,6 +14,7 @@
 	<!--分享时绘制排行榜的画布-->
 	<canvas id="shareCanvas" width="400" height="330" hidden></canvas>
 	<div id="shareContainer" hidden>
+	<p style="margin-left: 4px; margin-bottom: 4px; color: #666;">可以修改并复制粘贴或拖动下面的图片到QQ、TIM，或者将数据以文本文件下载到本地</p>
 	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="editRemark()"><i class="fa fa-edit"></i>&nbsp;&nbsp;备注</button>
 	<select class="classIndexSelect">
 		<option value="语文课" selected disabled>请选择当前课程</option>
@@ -25,13 +26,14 @@
 		<option value="下午第二节语文课">下午第二节课</option>
 		<option value="下午第三节语文课">下午第三节课</option>
 	</select>
+	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="download()"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;下载</button>
 	<br>
-	<img id="shareImage" title="复制或拖动该图片到TIM、QQ及微信以分享排行榜">
+	<img id="shareImage" title="复制或拖动该图片到QQ、TIM以分享排行榜">
 	</div>
 	<div id="shareLink" href=""></div>
 	<p class="title">
 		IcyClass
-		<button class="navBtn" onClick="share()"><i class="fa fa-share-alt"></i>&nbsp;&nbsp;分享</button>
+		<button class="navBtn" id="shareBtn" onClick="share()"><i class="fa fa-share-alt"></i>&nbsp;&nbsp;分享</button>
 		<button class="navBtn" onClick="reset()"><i class="fa fa-refresh"></i>&nbsp;&nbsp;重置</button>
 	</p>
 	<hr>
@@ -40,7 +42,7 @@
 		<div id="studentContainer"></div>
 		<div id="topListContainer"><p style="margin-left: 15px; color: #00CDCD;"><i class="fa fa-trophy"></i>&nbsp;&nbsp;排行榜</p><p id="topList"></p></div>
 	</div>
-
 </body>
 <script src="script/script.js"></script>
+<script src="script/FileSaver.js"></script>
 </html>
