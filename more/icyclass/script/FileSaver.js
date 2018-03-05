@@ -13,7 +13,7 @@
 
 /*! @source http://purl.eligrey.com/github/FileSaver.js/blob/master/src/FileSaver.js */
 
-/*文件保存脚本（出处见上）*/
+/*文件保存脚本（出处见上，不是我写的）*/
 
 var saveAs = saveAs || (function(view) {
 	"use strict";
