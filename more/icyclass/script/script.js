@@ -253,7 +253,7 @@ function share()
 	shareContainer.hidden = false;
 	for (var i = 0; i < shareContainer.children.length; i++)
 	{
-		//刷新一下，Edge浏览器某些情况下会不显示一些子元素
+		//刷新一下，因为Edge浏览器某些情况下会不显示一些子元素
 		shareContainer.children[i].hidden = true;
 		shareContainer.children[i].hidden = false;
 	}

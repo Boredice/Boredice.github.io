@@ -76,12 +76,14 @@ hr {
 }
 .navBtn:hover {
 	border-radius: 7.5px;
-	background-color: rgba(0,205,205,0.05);
+	/*background-color: rgba(0,205,205,0.05);*/
+	background-color: #F2FCFC;
 	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
 }
 .navBtn:active {
 	border-radius: 7.5px;
-	background-color: rgba(0,205,205,0.10);
+	/*background-color: rgba(0,205,205,0.10);*/
+	background-color: #E5FAFA;
 	box-shadow: 0px 5px 25px rgba(0,205,205,0.30);
 }
 .student {
