@@ -88,7 +88,10 @@ img {
 	font-family: UbuntuR;
 	src: url('../fonts/Ubuntu/Ubuntu.woff');
 }
-
+@font-face {
+	font-family: "Montserrat Light";
+	src: url('../fonts/Montserrat Light.woff')
+}
 /*Body*/
 body {
 	font-family: "Ubuntu", "Microsoft Yahei";
@@ -119,6 +122,7 @@ header:active {
 	background-color: rgba(255,255,255,0.7);
 }
 header .title {
+	font-family: "Montserrat Light";
 	color: #00CDCD;
 	font-size: 32px;
 	line-height: 15px;
