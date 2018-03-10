@@ -108,10 +108,30 @@ HTML {
 <canvas id="bgparticle" hidden="true"></canvas>
  <div class="container">
  <img src="https://icyqjj.github.io/images/404.gif" width="334px" draggable="false"> 
-  <p class="text">从前有座山，山里有座庙<br>庙里有个页面，现在找不到</p>
+  <p class="text">页面找不到啦！</p>
+  <div class="button" align="center" style="width: 75px;" onClick="document.getElementsByClassName('text')[0].innerHTML = texts[random(-1,texts.length - 1)];">换一个</div>
   <a href="https://icyqjj.github.io" draggable="false">
   <div class="button" align="center">回到主页</div>
   </a> </div>
-    <script type="text/javascript" src="https://icyqjj.github.io/script/particle.js"></script>
+  <script type="text/javascript" src="https://icyqjj.github.io/script/particle.js"></script>
+  <script>
+	  var texts = [
+		  "从前有座山，山里有座庙<br>庙里有个页面，现在找不到",
+		  "此地无页面三百两<br>隔壁王二不曾偷",
+		  "雾霾太大，连页面都看不见了",
+		  "曾经有一份真正的页面<br>放在我面前，我没有珍惜<br>等我失去的时候，我才后悔莫及",
+		  "天空飘来五个字：<br>页面未找到",
+		  "谁把页面偷走了？<br>是他，是他，就是他<br>我们的朋友小哪吒",
+		  "你似乎来到了<br>没有页面存在的荒原",
+		  "你看你，东西收拾得乱七八糟的<br>现在连页面都找不到了",
+		  "这个页面登上了MH370<br>已经回不来了"
+	  ]
+	  function random(min, max)
+	  {
+		  var dbrandom = (max - min) * Math.random() + min + 1;
+		  return parseInt(dbrandom);
+	  }
+	  document.getElementsByClassName("text")[0].innerHTML = texts[random(-1,texts.length - 1)];
+  </script>
 </body>
 </html>

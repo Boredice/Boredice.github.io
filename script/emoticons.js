@@ -63,7 +63,7 @@ setEmoticons();
 
 function setEmoticons()
 {
-	emo_element.innerHTML = emo[random(0, emo.length - 1)];
+	emo_element.innerHTML = emo[random(-1, emo.length - 1)];
 }
 
 function random(min, max)
