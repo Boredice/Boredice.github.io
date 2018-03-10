@@ -6,7 +6,7 @@ permalink: 404.html
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Boredice 404</title>
+<title>IcyFlame 404</title>
 <link rel="shortcut icon" href="https://icyqjj.github.io/images/icons/erroricon.ico">
 <style>
 body {
@@ -52,6 +52,18 @@ HTML {
 	text-align: center;
 	font-family: 'Microsoft YaHei';
 	line-height: 35px;
+	animation: containerMove 1s;
+}
+@keyframes containerMove
+{
+	from {
+		opacity: 0;
+		margin-top: -20px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0px;
+	}
 }
 @font-face {
 	font-family: 'Empty';
@@ -63,16 +75,8 @@ HTML {
 	color: #00CDCD;
 	font-size: 28px;
 	font-family: 'Microsoft YaHei';
+	line-height: 42px;
 	cursor: default;
-}
-.text:hover {
-	text-shadow: 2.5px 2.5px 10px #DDD;
-}
-.text:active {
-	text-shadow: 5px 5px 15px #BBB;
-	font-size: 30px;
-	margin-top: 31px;
-	margin-bottom: 25px;
 }
 .button {
 	display: inline-block;
@@ -84,7 +88,7 @@ HTML {
 	color: #00CDCD;
 	transition: all 0.2s linear;
 	font-size: 18px;
-	box-shadow: 0px 0px 20px #DDD;
+	box-shadow: 0px 0px 20px rgba(0,205,205,0.5);
 	cursor: pointer;
 	line-height: 25px;
 }
@@ -104,9 +108,8 @@ HTML {
 <canvas id="bgparticle" hidden="true"></canvas>
  <div class="container">
  <img src="https://icyqjj.github.io/images/404.gif" width="334px" draggable="false"> 
-  <!--加四个空格以使其看起来更居中-->
-  <p class="text">&nbsp;&nbsp;&nbsp;&nbsp;此地无银三百两。。</p>
-  <a href=".." draggable="false">
+  <p class="text">从前有座山，山里有座庙<br>庙里有个页面，现在找不到</p>
+  <a href="https://icyqjj.github.io" draggable="false">
   <div class="button" align="center">回到主页</div>
   </a> </div>
     <script type="text/javascript" src="https://icyqjj.github.io/script/particle.js"></script>
