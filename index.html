@@ -45,12 +45,24 @@
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
+	animation: bgBlur 1s;
+}
+@keyframes bgBlur
+{
+	from {
+		opacity: 0.5;
+		filter: blur(12px);
+	}
+	to {
+		opacity: 1;
+		filter: blur(0px);
+	}
 }
 .t_title {
 	color: #00CDCD;
 	text-align: center;
 	font-size: 53px;
-	line-height: 35px;
+	line-height: 45px;
 	font-weight: lighter;
 	cursor: default;
 }
@@ -72,6 +84,16 @@
 	color: white;
 	box-shadow: 0px 2px 15px rgba(0,0,0,0.15);
 	text-shadow: 0px 0px 0px #FFF;
+	animation: contactScale 0.5s infinite alternate;
+}
+@keyframes contactScale
+{
+	from {
+		padding: 3px 6px;
+	}
+	to {
+		padding: 8px 12px;
+	}
 }
 hr {
 	width: 75%;
@@ -82,8 +104,8 @@ hr {
 	box-shadow: 0px 3px 15px rgba(0,0,0,0.15);
 }
 .profilepic {
-	height: 180px;
-	width: 180px;
+	height: 160px;
+	width: 160px;
 	border-radius: 220px;
 	border: 2px solid #EEE;
 	box-shadow: 0px 5px 15px rgba(0,0,0,0.15);
@@ -160,15 +182,14 @@ hr {
     </center>
     <a name="about"></a>
     <hr>
-    <table width="721" align="center" style="margin-top: 70px;">
+    <table width="500" align="center" style="margin-top: 70px;" class="aboutTable">
       <tr>
-        <td width="32"></td>
-        <td width="160"><div class="profilepic" draggable="false">
+        <td width="160" class="profileTable"><div class="profilepic" draggable="false">
             <div class="profilepic2"></div>
           </div></td>
-        <td width="344"><span style="color:#777777;font-size: 23px;font-weight:lighter">IcyFlame<br>
+        <td width="250"><span style="color:#777777;font-size: 23px;font-weight:lighter">IcyFlame<br>
           <br>
-          </span><span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter"> 嗯...介绍就免了吧？<br>
+          </span><span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">嗯...介绍就免了吧？<br>
           <br>
           </span><a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact">知乎</a>&nbsp;&nbsp;&nbsp;
 			<a href="https://github.com/boredice" target="_blank" class="contact">Github</a>&nbsp;&nbsp;&nbsp;
@@ -199,7 +220,6 @@ hr {
 voidDrag();
 loadTitle();
 checkDebug();
-formatNavtag();
 loadCursorLight();
 </script>
 </body>

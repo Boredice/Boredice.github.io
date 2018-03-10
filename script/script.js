@@ -1,5 +1,15 @@
 ﻿"use strict";
 
+//Mobile
+/*function isMobile()
+{
+	return /Android|WebOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent);
+}
+if (isMobile())
+{
+	window.location.href = "more/mobile.html";
+}*/
+
 //Cursor Light
 function loadCursorLight()
 {
@@ -73,9 +83,9 @@ function alertNotice()
 	blurAlert("公告板 NOTICE BOARD\n\n" + notice);
 }
 
-//Fuck Internet Explorer 9
+//Fuck Internet Explorer 8
 var ievs = parseInt(navigator.appVersion.split(";")[1].replace(/[]/g, "").replace("MSIE", ""));
-if (navigator.appName === "Microsoft Internet Explorer" && ievs <= 9)
+if (navigator.appName === "Microsoft Internet Explorer" && ievs < 9)
 	window.location.href = "bslow?iev=" + ievs;
 
 //Functions
