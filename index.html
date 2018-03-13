@@ -1,6 +1,6 @@
 ﻿<!doctype html>
-<!--IcyFlame Website Of Github Pages-->
-<!--This Alpaca Blesses The Code Without Bugs (Consolas Font)-->
+<!--IcyFlame 个人网站 - Github Pages-->
+<!--这只神兽会保佑代码无BUG的 (滑稽) (Consolas 字体)-->
 <!--
     ╭─╮       ╭─╮
  ╭──╯ ┴───────╯ ┴──╮
@@ -45,16 +45,19 @@
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
-	animation: bgBlur 1s;
+	animation: bgAnim 1s;
+	transition: all 0.75s ease;
 }
-@keyframes bgBlur
+@keyframes bgAnim
 {
 	from {
 		opacity: 0.5;
+		bottom: -25px;
 		filter: blur(12px);
 	}
 	to {
 		opacity: 1;
+		bottom: 0px;
 		filter: blur(0px);
 	}
 }
@@ -152,18 +155,19 @@ hr {
 	text-shadow: -1px 0px 2px white, 0px 1px 2px white, 1px 0px 2px white, 0px -1px 2px white;
 }
 </style>
-</head><body>
+</head>
+<body style="background-color: white;" onLoad="loadHeaderScroll();">
 <img class="background" src="images/Background.png" width="100%">
 <header>
-  <p><a href="javascript:refresh()" class="title">IcyFlame</a>
+  <nav><a href="javascript:refresh()" class="title">IcyFlame</a>
 	  <a class="navplaceholder">&nbsp;</a>
 	  <a class="navtag" href="other">OTHER</a>
 	  <a class="navtag" href="apps">APPS</a>
-	  <a class="nownavtag" href="..">HOME</a></p>
+	  <a class="nownavtag" href="..">HOME</a></nav>
 </header>
 <div class="container">
   <div class="gallery">
-    <p class="t_title" style="margin-top: 20px;margin-bottom: -20px;font-size: 45px;"><a id="emoticons" style="color: #00CDCD;">o(^▽^)o</a></p>
+    <p class="t_title" style="margin-top: 20px;margin-bottom: -20px;font-size: 45px;" id="emoticons">o(^▽^)o</p>
     <p class="t_title">Hi, IcyFlamer!</p>
     <p class="t_subtitle">This is IcyFlame's personal homepage.</p>
     <center>
@@ -198,7 +202,7 @@ hr {
 			<a href="http://blog.csdn.net/qq_35277977" target="_blank" class="contact">CSDN</a></td>
       </tr>
     </table>
-    <span style="color: #AAA;text-align: center;line-height: 28px;">
+    <footer style="color: #AAA;text-align: center;line-height: 28px;">
     <p style="margin-top: 65px;">有Bug&建议？<a href="comment" target="_blank" class="contact">反馈一下</a>吧！</p>
     <p>By <a href="https://pages.github.com/" target="_blank" class="contact">Github Pages</a></p>
     <p>此项目在<a href="https://github.com/icyqjj/icyqjj.github.io" target="_blank" class="contact">Github</a>上</p>
@@ -210,17 +214,17 @@ hr {
     <p>网站设计纯原创，无半点抄袭</p>
 	<p>备案是不用备的，有没有侵权我也不知道</p>
     <p>建于2017.6.17，正逢五下期末考试（hh）</p>
-    </span>
+    </footer>
 <div style="height: 100px"></div>
 <p style="font-size: 20px; color: #00CDCD;text-align: center;">到底了~<br>＼(o '◡' o)／</p>
 </div>
 </div>
 <script src="script/emoticons.js"></script> 
 <script>
-voidDrag();
-loadTitle();
-checkDebug();
-loadCursorLight();
+	voidDrag();
+	loadTitle();
+	checkDebug();
+	loadCursorLight();
 </script>
 </body>
 </html>

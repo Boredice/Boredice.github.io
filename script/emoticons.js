@@ -1,6 +1,6 @@
 "use strict";
 
-//53个颜文字
+//颜文字大全
 var emo = [
 	"ヾ(≧▽≦*)o",
 	"( •̀ ω •́ )✧",
@@ -54,11 +54,26 @@ var emo = [
 	"(⊙_⊙)？",
 	"（；´д｀）ゞ",
 	"╮（╯＿╰）╭",
+	"(๑•̀ㅂ•́)و✧",
+	"♪(^∇^*)",
+	"o(〃'▽'〃)o",
+	"=￣ω￣=",
+	"o(￣ヘ￣o＃)",
+	"\(\"▔□▔)/",
+	"(O ^ ~ ^ O)",
+	"(=^･ｪ･^=)",
+	"(´･_･`)",
+	"(×_×;)",
+	"|･ω･｀) ",
+	"(´∀｀)♡ ",
+	"(づ￣ ³￣)づ ",
+	"（・∀・）",
+	"＼(o￣∇￣o)/",
+	"(◐ o ◑ )"
 ];
 
 var emo_element = document.getElementById("emoticons");
-emo_element.href = "javascript:setEmoticons()";
-setInterval(function(){setEmoticons();}, 1250);
+setInterval(function(){setEmoticons();}, 1500);
 setEmoticons();
 
 function setEmoticons()

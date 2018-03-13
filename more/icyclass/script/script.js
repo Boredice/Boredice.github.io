@@ -95,17 +95,15 @@ document.getElementById("shareCount").innerHTML = names.length;
 //循环添加单个学生卡片
 for (var i = 0; i < seats.length; i++)
 {
-	if (seats[i] == "#")
+	if (seats[i] === "#")
 	{
 		//占位符
-		document.getElementById("studentContainer").innerHTML += 
-		"<div class=\"student\" style=\"opacity: 0;\"></div>";
+		document.getElementById("studentContainer").innerHTML += "<div class=\"student\" style=\"opacity: 0; animation: placeHolderStudentMove 1s;\"></div>";
 	}
-	else if (seats[i] == "*")
+	else if (seats[i] === "*")
 	{
 		//换行符
-		document.getElementById("studentContainer").innerHTML += 
-		"<br>";
+		document.getElementById("studentContainer").innerHTML += "<br>";
 	}
 	else
 	{
@@ -115,11 +113,6 @@ for (var i = 0; i < seats.length; i++)
 		"LikeCount\">0</span><button class=\"unlikeBtn\" onClick=\"unlikeStudent('" + seats[i] + "')\" title=\"给" + seats[i] + "点踩\"><i class=\"fa fa-thumbs-o-down\"></i></button></p></div>";
 	}
 }
-console.log("成功添加" + names.length + "位学生");
-document.getElementsByClassName("classIndexSelect")[0].onchange = function() {
-	document.getElementById("shareContainer").hidden = true;
-	share();
-};
 //赞
 function likeStudent(name)
 {
@@ -336,27 +329,3 @@ function shareCountMinus()
 	console.log("成功减少分享数量");
 	share();
 }
-
-//神兽保佑代码永无BUG ~(￣▽￣)~ (Consolas字体)
-/*
-    ╭─╮       ╭─╮
- ╭──╯ ┴───────╯ ┴──╮
- │                 │
- │       ───       │   ╔══════════════╗
- │  ─┰┘       └┰─  │   ║              ║
- │                 │  /║  FUCK BUGS!  ║
- │       ─┴─       │ / ║              ║
- │                 │/  ╚══════════════╝
- ╰───╮         ╭───╯
-     │   ───   │
-     │    ─    │
-     │         │
-     │         ╰──────────────╮
-     │                        │
-     │                        ├─╮
-     │                        ┌─╯
-     │                        │
-     ╰─┐  ┬  ╭───────┬──┬  ╭──╯
-       │ ─┤ ─┤       │ ─┤ ─┤
-       ╰──┴──╯       ╰──┴──╯
-*/

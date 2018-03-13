@@ -22,14 +22,14 @@
 <link rel="shortcut icon" href="images/icons/icon.ico">
 
 </head>
-<body>
+<body onLoad="loadHeaderScroll();">
 <canvas id="bgparticle" hidden="true"></canvas>
 
 <header>
-  <p><a href="javascript:refresh()" class="title">IcyFlame</a><a class="navplaceholder">&nbsp;</a>
+  <nav><a href="javascript:refresh()" class="title">IcyFlame</a><a class="navplaceholder">&nbsp;</a>
 	  <a class="nownavtag" href="other">OTHER</a>
 	  <a class="navtag" href="apps">APPS</a>
-	  <a class="navtag" href="..">HOME</a></p>
+	  <a class="navtag" href="..">HOME</a></nav>
 </header>
 	
 <div class="container"> 
@@ -62,7 +62,7 @@
      </div>
 	  
     <div class="thumbnail">
-     <a href="intros/flatround">
+     <a href="article/flatround">
      <img src="images/thumbnails/Flat Round.jpg"></a>
       <h4>Flat Round</h4>
       <p class="tag">悦圆</p>
@@ -70,17 +70,17 @@
     </div>
   </div>
 
-  <div class="copyright">
+  <footer class="copyright">
 	  <strong>IcyFlame</strong> - Github Pages
-  </div>
+  </footer>
 </div>
 	
 <script src="script/particle.js"></script>
 <script>
-voidDrag();
-loadTitle();
-checkDebug();
-loadCursorLight();
+	voidDrag();
+	loadTitle();
+	checkDebug();
+	loadCursorLight();
 </script>
 </body>
 </html>

@@ -22,30 +22,47 @@
 <link rel="shortcut icon" href="images/icons/icon.ico">
 
 </head>
-<body>
+<body onLoad="loadHeaderScroll();">
 <canvas id="bgparticle" hidden="true"></canvas>
 
 <header>
-  <p><a href="javascript:refresh()" class="title">IcyFlame</a><a class="navplaceholder">&nbsp;</a>
+  <nav><a href="javascript:refresh()" class="title">IcyFlame</a>
+	  <a class="navplaceholder">&nbsp;</a>
 	  <a class="navtag" href="other">OTHER</a>
 	  <a class="nownavtag" href="apps">APPS</a>
-	  <a class="navtag" href="..">HOME</a></p>
+	  <a class="navtag" href="..">HOME</a></nav>
 </header>
+
 <div class="container"> 
   <div class="gallery">
-   
 	<div style="height: 70px"></div>
 	
 	<div class="thumbnail">
-      <a href="javascript:soonAlert('BackTime')">
+      <a href="javascript:soonAlert('Sext新版')">
+      <img src="images/thumbnails/Sext.jpg"></a>
+       <h4>Sext (新版)</h4>
+       <p class="tag">简文</p>
+       <p class="text_column">Sext新版，会有更多花样文本、字符串处理以及更多关于文本的功能。即将推出，敬请期待。</p>
+    </div>
+	
+	<div class="thumbnail">
+      <a href="javascript:soonAlert('X Unknown')">
+      <img src="images/thumbnails/Random.jpg"></a>
+       <h4>X Unknown (新版)</h4>
+       <p class="tag">未知X</p>
+       <p class="text_column">随机工具，用来替代Random的（要不是其代码被误删），有很多功能，整合了Random.org中的小组件。即将推出，敬请期待。</p>
+    </div>
+	
+	<div class="thumbnail">
+      <a href="javascript:soonAlert('WeChat Jump Cheater')">
       <img src="images/thumbnails/More.png"></a>
-       <h4>WeChat Jump Cheater</h4>
+       <h4>WeChat Jump Cheater</h4> 
        <p class="tag">微信跳一跳作弊器</p>
        <p class="text_column">基于ADB，这个嘛获取截图有点慢，需要手动点，不适合手残连一百分都跳不过去的人。即将推出，敬请期待。</p>
     </div>
 	  
 	<div class="thumbnail">
-      <a href="javascript:soonAlert('BackTime')">
+      <a href="javascript:soonAlert('JumpToJump')">
       <img src="images/thumbnails/More.png"></a>
        <h4>JumpToJump</h4>
        <p class="tag">跳至</p>
@@ -85,7 +102,7 @@
     </div>
     
     <div class="thumbnail">
-     <a href="intros/sode">
+     <a href="article/sode">
      <img src="images/thumbnails/Sode.jpg"></a>
       <h4>Sode</h4>
       <p class="tag">简码</p>
@@ -93,7 +110,7 @@
     </div>
     
     <div class="thumbnail">
-     <a href="intros/nullfile">
+     <a href="article/nullfile">
      <img src="images/thumbnails/Nullfile.jpg"></a>
       <h4>Nullfile</h4>
       <p class="tag">空文</p>
@@ -101,7 +118,7 @@
     </div>
     
     <div class="thumbnail">
-     <a href="intros/sext">
+     <a href="article/sext">
      <img src="images/thumbnails/Sext.jpg"></a>
       <h4>Sext</h4>
       <p class="tag">简文</p>
@@ -109,7 +126,7 @@
     </div>
     
     <div class="thumbnail">
-     <a href="intros/error">
+     <a href="article/error">
      <img src="images/thumbnails/Error.jpg"></a>
       <h4>Error</h4>
       <p class="tag">简误</p>
@@ -117,7 +134,7 @@
     </div>
     
     <div class="thumbnail">
-     <a href="intros/color">
+     <a href="article/color">
      <img src="images/thumbnails/Color.jpg"></a>
       <h4>Color</h4>
       <p class="tag">简色</p>
@@ -125,7 +142,7 @@
     </div>
     
     <div class="thumbnail">
-     <a href="intros/titans">
+     <a href="article/titans">
      <img src="images/thumbnails/Titans.jpg"></a>
       <h4>Titans</h4>
       <p class="tag">简数</p>
@@ -133,7 +150,7 @@
     </div>
     
     <div class="thumbnail">
-     <a href="intros/piano">
+     <a href="article/piano">
      <img src="images/thumbnails/Piano.jpg"></a>
       <h4>Piano</h4>
       <p class="tag">简音</p>
@@ -141,7 +158,7 @@
     </div>
     
     <div class="thumbnail">
-     <a href="intros/random">
+     <a href="article/random">
      <img src="images/thumbnails/Random.jpg"></a>
       <h4>Random</h4>
       <p class="tag">简变</p>
@@ -149,17 +166,17 @@
     </div>
   </div>
 
-  <div class="copyright">
+  <footer class="copyright">
 	  <strong>IcyFlame</strong> - Github Pages
-  </div>
+  </footer>
 </div>
 	
 <script src="script/particle.js"></script>
 <script>
-voidDrag();
-loadTitle();
-checkDebug();
-loadCursorLight();
+	voidDrag();
+	loadTitle();
+	checkDebug();
+	loadCursorLight();
 </script>
 </body>
 </html>

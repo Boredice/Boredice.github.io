@@ -1,10 +1,12 @@
 @font-face {
-	font-family: "Ubuntu";
-	src: url("../../../fonts/Ubuntu/Ubuntu.woff");
+	font-family: "Montserrat Light";
+	src: url('../../../fonts/Montserrat Light Min.woff')
+}
+* {
+	font-family: "Montserrat Light", "Microsoft Yahei";
 }
 body {
 	cursor: default;
-	font-family: "Ubuntu", "Micrsoft Yahei";
 	background-color: #FAFAFA;
 }
 ::selection {
@@ -98,6 +100,29 @@ hr {
 	min-width: 150px;
 	display: inline-block;
 	transition: all 0.1s linear;
+	animation: studentMove 1s;
+}
+@keyframes studentMove {
+	from {
+		opacity: 0;
+		margin-top: -10px;
+		margin-left: -7px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 5px;
+		margin-left: 8px;
+	}
+}
+@keyframes placeHolderStudentMove {
+	from {
+		margin-top: -10px;
+		margin-left: -7px;
+	}
+	to {
+		margin-top: 5px;
+		margin-left: 8px;
+	}
 }
 .student .name {
 	font-size: 18px;
@@ -177,6 +202,17 @@ hr {
 	top: 100px;
 	left: calc(100% - 135px);
 	width: 125px;
+	animation: topListMove 1s;
+}
+@keyframes topListMove {
+	from {
+		margin-top: -50px;
+		opacity: 0;
+	}
+	to {
+		margin-top: 0px;
+		opacity: 1;
+	}
 }
 #topList {
 	margin-left: 15px;

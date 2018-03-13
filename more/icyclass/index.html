@@ -1,5 +1,30 @@
 <!doctype html>
-<!--by IcyFlame [QJJ]-->
+<!--by IcyFlame [Qian Junjie]-->
+<!--神兽保佑代码永无BUG ~(￣▽￣)~ (Consolas字体)-->
+<!--
+    ╭─╮       ╭─╮
+ ╭──╯ ┴───────╯ ┴──╮
+ │                 │
+ │       ───       │   ╔══════════════╗
+ │  ─┰┘       └┰─  │   ║              ║
+ │                 │  /║  FUCK BUGS!  ║
+ │       ─┴─       │ / ║              ║
+ │                 │/  ╚══════════════╝
+ ╰───╮         ╭───╯
+     │   ───   │
+     │    ─    │
+     │         │
+     │         ╰──────────────╮
+     │                        │
+     │                        ├─╮
+     │                        ┌─╯
+     │                        │
+     ╰─┐  ┬  ╭───────┬──┬  ╭──╯
+       │ ─┤ ─┤       │ ─┤ ─┤
+       ╰──┴──╯       ╰──┴──╯
+-->
+<!--实测加载完成需要约300KB-->
+
 <html>
 <head>
 <meta charset="utf-8">
@@ -40,11 +65,14 @@
 	<a href="javascript:shareCountPlus()" style="color: #00CDCD; margin-right: 4px;"><i class="fa fa-plus"></i></a>
 	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="download()" oncontextmenu="downloadImage();return false;" title="下载当前排行榜的文本文档，鼠标右键单击以下载图片"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;下载</button>
 	<br>
+	<!--然而这并没有什么卵用-->
 	<img id="shareImage" title="复制或拖动该图片到班级群以分享排行榜">
 	</div>
-	<!--稍后在JS中将会再此容器内循环添加学生-->
+	<!--分栏容器-->
 	<div id="container">
+		<!--稍后在JS中将会在此容器内循环添加学生-->
 		<div id="studentContainer"></div>
+		<!--排行榜-->
 		<div id="topListContainer"><p style="margin-left: 15px; color: #00CDCD;"><i class="fa fa-trophy"></i>&nbsp;&nbsp;排行榜</p><p id="topList"></p></div>
 	</div>
 </body>
