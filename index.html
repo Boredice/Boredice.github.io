@@ -29,7 +29,7 @@
 <noscript>
 <div class="tipbar">
   <p>你似乎禁用了JavaScript脚本，这将会导致本页面异常，请启用（本页面特别安全）(^_^)</p>
-	<a href="more/noscript" target="_blank">如何启用？</a></div>
+  <a href="more/noscript" target="_blank">如何启用？</a></div>
 </noscript>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -37,8 +37,9 @@
 <meta name="keyword" content="IcyFlame">
 <meta name="descripting" content="This is IcyFlame's personal homepage.">
 <title>IcyFlame</title>
-<link href="css/homepage.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="images/icons/icon.ico">
+<link rel="stylesheet" href="css/homepage.css">
+<link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
 <style>
 .background {
 	z-index: -1;
@@ -48,18 +49,17 @@
 	animation: bgAnim 1s;
 	transition: all 0.75s ease;
 }
-@keyframes bgAnim
-{
-	from {
-		opacity: 0.5;
-		bottom: -25px;
-		filter: blur(12px);
-	}
-	to {
-		opacity: 1;
-		bottom: 0px;
-		filter: blur(0px);
-	}
+@keyframes bgAnim {
+ from {
+ opacity: 0.5;
+ bottom: -25px;
+ filter: blur(12px);
+}
+ to {
+ opacity: 1;
+ bottom: 0px;
+ filter: blur(0px);
+}
 }
 .t_title {
 	color: #00CDCD;
@@ -81,22 +81,13 @@
 	transition: all 0.2s linear;
 }
 .contact:hover {
-	padding: 5px 10px;
+	opacity: 1;
+	padding: 6px 11px;
 	border-radius: 50px;
 	background-color: #00CDCD;
 	color: white;
 	box-shadow: 0px 2px 15px rgba(0,0,0,0.15);
 	text-shadow: 0px 0px 0px #FFF;
-	animation: contactScale 0.5s infinite alternate;
-}
-@keyframes contactScale
-{
-	from {
-		padding: 3px 6px;
-	}
-	to {
-		padding: 8px 12px;
-	}
 }
 hr {
 	width: 75%;
@@ -156,11 +147,12 @@ hr {
 }
 </style>
 </head>
-<body style="background-color: white;" onLoad="loadHeaderScroll();">
+<body style="background-color: white;">
 <img class="background" src="images/Background.png" width="100%">
 <header>
   <nav><a href="javascript:refresh()" class="title">IcyFlame</a>
 	  <a class="navplaceholder">&nbsp;</a>
+	  <a class="navtag" href="more/comingsoon">BLOGS</a>
 	  <a class="navtag" href="other">OTHER</a>
 	  <a class="navtag" href="apps">APPS</a>
 	  <a class="nownavtag" href="..">HOME</a></nav>
@@ -188,39 +180,37 @@ hr {
     <hr>
     <table width="500" align="center" style="margin-top: 70px;" class="aboutTable">
       <tr>
-        <td width="160" class="profileTable"><div class="profilepic" draggable="false">
+        <td width="160" class="profileTable">
+		  <div class="profilepic" draggable="false">
             <div class="profilepic2"></div>
-          </div></td>
-        <td width="250"><span style="color:#777777;font-size: 23px;font-weight:lighter">IcyFlame<br>
-          <br>
-          </span><span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">嗯...介绍就免了吧？<br>
-          <br>
-          </span><a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact">知乎</a>&nbsp;&nbsp;&nbsp;
-			<a href="https://github.com/boredice" target="_blank" class="contact">Github</a>&nbsp;&nbsp;&nbsp;
-			<a href="mailto:2419029544@qq.com" class="contact">Email</a>&nbsp;&nbsp;&nbsp;
-			<a href="https://tieba.baidu.com/f?kw=boredice&ie=utf-8" target="_blank" class="contact">贴吧</a>&nbsp;&nbsp;&nbsp;
-			<a href="http://blog.csdn.net/qq_35277977" target="_blank" class="contact">CSDN</a></td>
+          </div>
+		</td>
+        <td width="250">
+		  <span style="color:#777777;font-size: 23px;font-weight:lighter">IcyFlame<br><br></span>
+		  <span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">嗯...介绍就免了吧？<br><br></span>
+		  <a href="https://github.com/boredice" target="_blank" class="contact"><i class="fab fa-github" style="font-size: 22px;vertical-align: -3px;"></i>&nbsp;Github</a>&nbsp;&nbsp;&nbsp;
+		  <a href="mailto:2419029544@qq.com" class="contact"><i class="far fa-envelope" style="font-size: 19px;vertical-align: -1px;"></i>&nbsp;Email</a>&nbsp;&nbsp;&nbsp;
+		  <a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact">知乎</a>&nbsp;&nbsp;&nbsp;
+		  <a href="http://blog.csdn.net/qq_35277977" target="_blank" class="contact">CSDN</a></td>
       </tr>
     </table>
     <footer style="color: #AAA;text-align: center;line-height: 28px;">
-    <p style="margin-top: 65px;">有Bug&建议？<a href="comment" target="_blank" class="contact">反馈一下</a>吧！</p>
-    <p>By <a href="https://pages.github.com/" target="_blank" class="contact">Github Pages</a></p>
-    <p>此项目在<a href="https://github.com/icyqjj/icyqjj.github.io" target="_blank" class="contact">Github</a>上</p>
-    <p>粒子效果基于<a href="https://www.zhihu.com/question/38812154" target="_blank" class="contact">知乎某匿名用户的回答</a></p>
-    <p>使用了<a href="http://changyan.kuaizhan.com" target="_blank" class="contact">搜狐畅言</a>评论系统</p>
-    <p>头像为<a href="http://liukanshan.zhihu.com" target="_blank" class="contact">知乎刘看山</a></p>
-    <p>查看IcyFlame(原Boredice)的<a href="more/history" target="_blank" class="contact">最初版本页面</a></p>
-	<p>背景出处不详</p>
-    <p>网站设计纯原创，无半点抄袭</p>
-	<p>备案是不用备的，有没有侵权我也不知道</p>
-    <p>建于2017.6.17，正逢五下期末考试（hh）</p>
+      <p style="margin-top: 65px;"><i class="far fa-comments"></i>&nbsp;有Bug&amp;建议？<a href="comment" target="_blank" class="contact">反馈一下</a>吧！</p>
+      <p><i class="fab fa-github"></i>&nbsp;此网站项目在<a href="https://github.com/icyqjj/icyqjj.github.io" target="_blank" class="contact">Github</a>上</p>
+      <p>粒子效果基于<a href="https://www.zhihu.com/question/38812154" target="_blank" class="contact">知乎某匿名用户的回答</a></p>
+      <p>使用了<a href="http://changyan.kuaizhan.com" target="_blank" class="contact">搜狐畅言</a>评论系统</p>
+      <p>头像为<a href="http://liukanshan.zhihu.com" target="_blank" class="contact">知乎刘看山</a></p>
+      <p>查看网站的<a href="more/history" target="_blank" class="contact">最初页面</a></p>
+      <p>建于2017.6.17，正逢五下期末考试（hh）</p>
+	  <p>By <a href="https://pages.github.com/" target="_blank" class="contact">Github Pages</a></p>
     </footer>
-<div style="height: 100px"></div>
-<p style="font-size: 20px; color: #00CDCD;text-align: center;">到底了~<br>＼(o '◡' o)／</p>
-</div>
+    <div style="height: 50px"></div>
+    <p style="font-size: 20px; color: #00CDCD;text-align: center;">到底了~<br>＼(o '◡' o)／</p>
+  </div>
 </div>
 <script src="script/emoticons.js"></script> 
 <script>
+	window.onload = function(){loadHeaderScroll();};
 	voidDrag();
 	loadTitle();
 	checkDebug();

@@ -29,8 +29,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/IcyClass.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="../../font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/IcyClass.css">
+<link rel="stylesheet" href="../../font-awesome/css/fontawesome-all.min.css">
 <link rel="shortcut icon" href="images/icon.ico">
 <title>IcyClass</title>
 <style>
@@ -41,14 +41,14 @@
 	<header>
 	<p class="title">
 		IcyClass
-		<button class="navBtn" id="shareBtn" onClick="share()" title="打开或关闭分享面板" style="margin-right: 18px;"><i class="fa fa-share-alt"></i>&nbsp;&nbsp;分享</button>
-		<button class="navBtn" onClick="reset()" title="重置所有点赞及分享设置"><i class="fa fa-refresh"></i>&nbsp;&nbsp;重置</button>
+		<button class="navBtn" id="shareBtn" onClick="share()" title="打开或关闭分享面板" style="margin-right: 18px;"><i class="fa fa-share-alt"></i>&nbsp;分享</button>
+		<button class="navBtn" onClick="reset()" title="重置所有点赞及分享设置"><i class="fa fa-sync"></i>&nbsp;重置</button>
 	</p>
 	</header>
 	<div style="margin-top: 85px;"></div>
 	<div id="shareContainer" hidden>
 	<p style="margin-bottom: 4px; color: #666;">可以修改并复制粘贴或拖动下面的图片到班级群，或者将数据以文本文件下载到本地</p>
-	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="editRemark()" title="给本节课写点备注和评价"><i class="fa fa-edit"></i>&nbsp;&nbsp;备注</button>
+	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="editRemark()" title="给本节课写点备注和评价"><i class="fa fa-edit"></i>&nbsp;备注</button>
 	<select class="classIndexSelect">
 		<option value="语文课" selected disabled>请选择当前课程</option>
 		<option value="上午第一节语文课">上午第一节课</option>
@@ -63,7 +63,7 @@
 	<a href="javascript:shareCountMinus()" style="color: #00CDCD;"><i class="fa fa-minus"></i></a>
 	<span id="shareCount" style="font-size: 17px; color: #00CDCD;"></span>
 	<a href="javascript:shareCountPlus()" style="color: #00CDCD; margin-right: 4px;"><i class="fa fa-plus"></i></a>
-	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="download()" oncontextmenu="downloadImage();return false;" title="下载当前排行榜的文本文档，鼠标右键单击以下载图片"><i class="fa fa-arrow-down"></i>&nbsp;&nbsp;下载</button>
+	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="download()" oncontextmenu="downloadImage();return false;" title="下载当前排行榜的文本文档，鼠标右键单击以下载图片"><i class="fa fa-arrow-down"></i>&nbsp;下载</button>
 	<br>
 	<!--然而这并没有什么卵用-->
 	<img id="shareImage" title="复制或拖动该图片到班级群以分享排行榜">

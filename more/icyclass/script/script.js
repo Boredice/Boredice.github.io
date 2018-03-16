@@ -98,7 +98,8 @@ for (var i = 0; i < seats.length; i++)
 	if (seats[i] === "#")
 	{
 		//占位符
-		document.getElementById("studentContainer").innerHTML += "<div class=\"student\" style=\"opacity: 0; animation: placeHolderStudentMove 1s;\"></div>";
+		document.getElementById("studentContainer").innerHTML +=
+			"<div class=\"student\" style=\"opacity: 0; animation: placeHolderStudentMove 1s;\"></div>";
 	}
 	else if (seats[i] === "*")
 	{
@@ -108,11 +109,16 @@ for (var i = 0; i < seats.length; i++)
 	else
 	{
 		document.getElementById("studentContainer").innerHTML += 
-		"<div class=\"student\"><p class=\"name\">" + seats[i] + 
-		"</p><p class=\"likeAndUnlike\"><button class=\"likeBtn\" onClick=\"likeStudent('" + seats[i] + "')\" title=\"给" + seats[i] + "点赞\"><i class=\"fa fa-thumbs-o-up\"></i></button><span class=\"likeCount\" id=\"" + seats[i] + 
-		"LikeCount\">0</span><button class=\"unlikeBtn\" onClick=\"unlikeStudent('" + seats[i] + "')\" title=\"给" + seats[i] + "点踩\"><i class=\"fa fa-thumbs-o-down\"></i></button></p></div>";
+			"<div class=\"student\"><p class=\"name\">" + seats[i] + "</p>" +
+			"<p class=\"likeAndUnlike\">" +
+			"<button class=\"likeBtn\" onClick=\"likeStudent('" + seats[i] + "')\" title=\"给" + seats[i] + "点赞\">" +
+			"<i class=\"far fa-thumbs-up\"></i></button>" +
+			"<span class=\"likeCount\" id=\"" + seats[i] + "LikeCount\">0</span>" +
+			"<button class=\"unlikeBtn\" onClick=\"unlikeStudent('" + seats[i] + "')\" title=\"给" + seats[i] + "点踩\">" +
+			"<i class=\"far fa-thumbs-down\"></i></button></p></div>";
 	}
 }
+
 //赞
 function likeStudent(name)
 {
@@ -250,7 +256,7 @@ function share()
 		shareContainer.children[i].hidden = true;
 		shareContainer.children[i].hidden = false;
 	}
-	document.getElementById("shareBtn").innerHTML = "<i class=\"fa fa-close\"></i>&nbsp;关闭";
+	document.getElementById("shareBtn").innerHTML = "<i class=\"fa fa-times\"></i>&nbsp;关闭";
 	console.log("成功绘制Canvas，转换为Base64并显示");
 }
 //编辑备注

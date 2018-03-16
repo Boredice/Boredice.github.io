@@ -1,4 +1,19 @@
-﻿.background {
+﻿@font-face {
+	font-family: Ubuntu;
+	font-weight: normal;
+	src: url('../fonts/Ubuntu/Ubuntu.woff');
+}
+@font-face {
+	font-family: Ubuntu;
+	font-weight: lighter;
+	src: url('../fonts/Ubuntu/Ubuntu Light.woff');
+}
+@font-face {
+	font-family: Ubuntu;
+	font-weight: bold;
+	src: url('../fonts/Ubuntu/Ubuntu Bold.woff');
+}
+.background {
 	width: 100%;
 	height: 300px;
 	padding-top: 70px;
@@ -109,7 +124,7 @@ HTML {
 	background-color: #FFFFFF;
 }
 body {
-	font-family: "Microsoft YaHei";
+	font-family: "Ubuntu", "Microsoft YaHei";
 	line-height: 35px;
 	font-size: 14px;
 	margin: 0px;

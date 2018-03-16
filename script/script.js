@@ -42,17 +42,17 @@ function IEVersion() {
     if (isIE) {
         var reIE = new RegExp("MSIE (\\d+\\.\\d+);");
         reIE.test(userAgent);
-        var fIEVersion = parseFloat(RegExp["$1"]);
-        if(fIEVersion == 7) {
+        var fIEVersion = parseFloat(RegExp[".$1"]);
+        if (fIEVersion === 7) {
             return 7;
         }
-		else if(fIEVersion == 8) {
+		else if (fIEVersion === 8) {
             return 8;
         }
-		else if(fIEVersion == 9) {
+		else if (fIEVersion === 9) {
             return 9;
         }
-		else if(fIEVersion == 10) {
+		else if (fIEVersion === 10) {
             return 10;
         }
 		else {
@@ -144,12 +144,12 @@ function linkTo(href) {
 }
 function voidDrag() {
 	var taga = document.getElementsByTagName("a");
-	for (var i = 0; i < taga.length; i++) {
-		taga[i].draggable = false;
+	for (var ia = 0; ia < taga.length; ia++) {
+		taga[ia].draggable = false;
 	}
 	var tagimg = document.getElementsByTagName("img");
-	for (var i = 0; i < tagimg.length; i++) {
-		tagimg[i].draggable = false;
+	for (var ii = 0; ii < tagimg.length; ii++) {
+		tagimg[ii].draggable = false;
 	}
 }
 
@@ -165,7 +165,7 @@ function loadTitle() {
 }
 function setTitle(bool) {
 	document.title = bool ? "Hi, IcyFlamer!" : "IcyFlame";
-	document.getElementsByTagName("link")[1].setAttribute("href", bool ? "images/icons/icon.ico" : "images/icons/voidicon.ico");
+	document.getElementsByTagName("link")[0].setAttribute("href", bool ? "images/icons/icon.ico" : "images/icons/voidicon.ico");
 }
 
 //Console Log

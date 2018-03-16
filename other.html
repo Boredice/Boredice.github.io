@@ -1,4 +1,4 @@
-﻿<!doctype html>
+﻿	<!doctype html>
 
 <!--IcyFlame Website Of Github Pages-->
 
@@ -18,15 +18,16 @@
 <meta name="keyword" content="IcyFlame">
 <meta name="descripting" content="This is IcyFlame's personal homepage.">
 <title>IcyFlame</title>
-<link href="css/homepage.css" rel="stylesheet" type="text/css">
 <link rel="shortcut icon" href="images/icons/icon.ico">
+<link href="css/homepage.css" rel="stylesheet" type="text/css">
 
 </head>
-<body onLoad="loadHeaderScroll();">
+<body>
 <canvas id="bgparticle" hidden="true"></canvas>
 
 <header>
   <nav><a href="javascript:refresh()" class="title">IcyFlame</a><a class="navplaceholder">&nbsp;</a>
+	  <a class="navtag" href="more/comingsoon">BLOGS</a>
 	  <a class="nownavtag" href="other">OTHER</a>
 	  <a class="navtag" href="apps">APPS</a>
 	  <a class="navtag" href="..">HOME</a></nav>
@@ -77,6 +78,7 @@
 	
 <script src="script/particle.js"></script>
 <script>
+	window.onload = function(){loadHeaderScroll();};
 	voidDrag();
 	loadTitle();
 	checkDebug();
