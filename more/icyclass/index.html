@@ -1,30 +1,5 @@
 <!doctype html>
-<!--by IcyFlame [Qian Junjie]-->
-<!--神兽保佑代码永无BUG ~(￣▽￣)~ (Consolas字体)-->
-<!--
-    ╭─╮       ╭─╮
- ╭──╯ ┴───────╯ ┴──╮
- │                 │
- │       ───       │   ╔══════════════╗
- │  ─┰┘       └┰─  │   ║              ║
- │                 │  /║  FUCK BUGS!  ║
- │       ─┴─       │ / ║              ║
- │                 │/  ╚══════════════╝
- ╰───╮         ╭───╯
-     │   ───   │
-     │    ─    │
-     │         │
-     │         ╰──────────────╮
-     │                        │
-     │                        ├─╮
-     │                        ┌─╯
-     │                        │
-     ╰─┐  ┬  ╭───────┬──┬  ╭──╯
-       │ ─┤ ─┤       │ ─┤ ─┤
-       ╰──┴──╯       ╰──┴──╯
--->
-<!--实测加载完成需要约300KB-->
-
+<!--by IcyFlame-->
 <html>
 <head>
 <meta charset="utf-8">
@@ -39,44 +14,18 @@
 <body>
 	<canvas id="shareCanvas" width="365" height="0" hidden></canvas>
 	<header>
-	<p class="title">
-		IcyClass
-		<button class="navBtn" id="shareBtn" onClick="share()" title="打开或关闭分享面板" style="margin-right: 18px;"><i class="fa fa-share-alt"></i>&nbsp;分享</button>
-		<button class="navBtn" onClick="reset()" title="重置所有点赞及分享设置"><i class="fa fa-sync"></i>&nbsp;重置</button>
-	</p>
+	<p class="title">IcyClass</p>
 	</header>
 	<div style="margin-top: 85px;"></div>
-	<div id="shareContainer" hidden>
-	<p style="margin-bottom: 4px; color: #666;">可以修改并复制粘贴或拖动下面的图片到班级群，或者将数据以文本文件下载到本地</p>
-	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="editRemark()" title="给本节课写点备注和评价"><i class="fa fa-edit"></i>&nbsp;备注</button>
-	<select class="classIndexSelect">
-		<option value="语文课" selected disabled>请选择当前课程</option>
-		<option value="上午第一节语文课">上午第一节课</option>
-		<option value="上午第二节语文课">上午第二节课</option>
-		<option value="上午第三节语文课">上午第三节课</option>
-		<option value="上午第四节语文课">上午第四节课</option>
-		<option value="下午第一节语文课">下午第一节课</option>
-		<option value="下午第二节语文课">下午第二节课</option>
-		<option value="下午第三节语文课">下午第三节课</option>
-	</select>
-	<span style="font-size: 17px; color: #00CDCD; margin-left: 4px;">数量：</span>
-	<a href="javascript:shareCountMinus()" style="color: #00CDCD;"><i class="fa fa-minus"></i></a>
-	<span id="shareCount" style="font-size: 17px; color: #00CDCD;"></span>
-	<a href="javascript:shareCountPlus()" style="color: #00CDCD; margin-right: 4px;"><i class="fa fa-plus"></i></a>
-	<button class="navBtn" style="float: none; margin: 8px 4px;" onClick="download()" oncontextmenu="downloadImage();return false;" title="下载当前排行榜的文本文档，鼠标右键单击以下载图片"><i class="fa fa-arrow-down"></i>&nbsp;下载</button>
-	<br>
-	<!--然而这并没有什么卵用-->
-	<img id="shareImage" title="复制或拖动该图片到班级群以分享排行榜">
-	</div>
+	<!--分享功能全删了，没用-->
 	<!--分栏容器-->
 	<div id="container">
 		<!--稍后在JS中将会在此容器内循环添加学生-->
 		<div id="studentContainer"></div>
 		<!--排行榜-->
-		<div id="topListContainer"><p style="margin-left: 15px; color: #00CDCD;"><i class="fa fa-trophy"></i>&nbsp;&nbsp;排行榜</p><p id="topList"></p></div>
+		<div id="topListContainer"><p style="margin-left: 15px; color: #00ABFF;"><i class="fa fa-trophy"></i>&nbsp;&nbsp;排行榜<button class="moreBtn" onClick="topListMore()" hidden>···</button></p>
+		<p style="color: #00ABFF;margin:-10px auto -10px 15px;" title="举手过和回答过问题的人数"><i class="far fa-user"></i>&nbsp;&nbsp;<span id="speakCount">0</span></p><p id="topList"></p></div>
 	</div>
 </body>
 <script src="script/script.js"></script>
-<script src="script/FileSaver.js"></script>
-<script src="script/CanvasToBlob.js"></script>
 </html>

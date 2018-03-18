@@ -8,9 +8,10 @@
 body {
 	cursor: default;
 	background-color: #FAFAFA;
+	-webkit-user-select: none;
 }
 ::selection {
-	background-color: #00CDCD;
+	background-color: #00ABFF;
 	color: white;
 }
 header {
@@ -21,17 +22,37 @@ header {
 	margin: 0px;
 	width: 100%;
 	background-color: white;
-	border-bottom: 2px solid #00CDCD;
-	box-shadow: 0px 2px 12px rgba(0, 205, 205, 0.20);
+	border-bottom: 2px solid #00ABFF;
+	box-shadow: 0px 2px 12px rgba(0, 171, 255, 0.20);
+	animation: headerAnim 1s;
+}
+@keyframes headerAnim {
+	from {
+		opacity: 0;
+		height: 0px;
+		border-bottom: 10px solid white;
+		border-bottom-left-radius: 50px;
+		border-bottom-right-radius: 50px;
+		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+	}
+	to {
+		opacity: 1;
+		height: 68px;
+		border-bottom: 2px solid #00ABFF;
+		border-bottom-left-radius: 0px;
+		border-bottom-right-radius: 0px;
+		box-shadow: 0px 2px 12px rgba(0, 171, 255, 0.20);
+	} 
 }
 header .title {
 	padding-left: 18px;
-	color: #00CDCD;
+	color: #00ABFF;
 	font-size: 28px;
 	line-height: 8px;
 }
 hr {
-	border: 1px solid #00CDCD;
+	border: 1px solid #00ABFF;
+	background-color: rgba(0,171,255,1.00);
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
 	margin-bottom: 15px;
 }
@@ -41,9 +62,9 @@ hr {
 	outline: 0;
 	border-radius: 10px;
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
-	border: 2px solid #00CDCD;
+	border: 2px solid #00ABFF;
 	padding: 6px 12px;
-	color: #00CDCD;
+	color: #00ABFF;
 	margin: -8px 6px 0px 6px;
 	font-size: 17px;
 	transition: all 0.2s linear;
@@ -54,9 +75,9 @@ hr {
 	outline: 0;
 	border-radius: 10px;
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
-	border: 2px solid #00CDCD;
+	border: 2px solid #00ABFF;
 	padding: 0px 12px;
-	color: #00CDCD;
+	color: #00ABFF;
 	margin: -8px 6px 0px 6px;
 	font-size: 17px;
 	transition: all 0.1s linear;
@@ -68,10 +89,10 @@ hr {
 	float: right;
 	margin: -14px 6px 0px 6px;
 	font-size: 17px;
-	color: #00CDCD;
+	color: #00ABFF;
 	background-color: white;
 	padding: 6px 12px;
-	border: 2px solid #00CDCD;
+	border: 2px solid #00ABFF;
 	outline: 0;
 	transition: all 0.1s linear;
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
@@ -88,12 +109,38 @@ hr {
 	background-color: #E5FAFA;
 	box-shadow: 0px 5px 25px rgba(0,205,205,0.30);
 }
+.moreBtn {
+	height: 38px;
+	cursor: pointer;
+	border-radius: 10px;
+	color: #00ABFF;
+	background-color: white;
+	transition: all 0.1s linear;
+	padding: 2px 5px;
+	font-size: 15px;
+	font-weight: bolder;
+	border: 0;
+	outline: 0;
+	box-shadow: 0px 0px 0px white;
+}
+.moreBtn:hover {
+	border-radius: 7.5px;
+	/*background-color: rgba(0,205,205,0.05);*/
+	background-color: #F2FCFC;
+	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
+}
+.moreBtn:active {
+	border-radius: 7.5px;
+	/*background-color: rgba(0,205,205,0.10);*/
+	background-color: #E5FAFA;
+	box-shadow: 0px 5px 25px rgba(0,205,205,0.30);
+}
 .student {
 	background-color: white;
 	margin: 5px 8px;
 	border-radius: 10px;
-	border: 2px solid #00CDCD;
-	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
+	border: 2px solid #CCC;
+	box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
 	height: 110px;
 	width: 150px;
 	width: calc(16.6% - 24px);
@@ -105,23 +152,19 @@ hr {
 @keyframes studentMove {
 	from {
 		opacity: 0;
-		margin-top: -10px;
-		margin-left: -7px;
+		margin-top: -15px;
 	}
 	to {
 		opacity: 1;
 		margin-top: 5px;
-		margin-left: 8px;
 	}
 }
 @keyframes placeHolderStudentMove {
 	from {
-		margin-top: -10px;
-		margin-left: -7px;
+		margin-top: -15px;
 	}
 	to {
 		margin-top: 5px;
-		margin-left: 8px;
 	}
 }
 .student .name {
@@ -137,10 +180,10 @@ hr {
 	cursor: pointer;
 	border-radius: 10px;
 	font-size: 17px;
-	color: #00CDCD;
+	color: #00ABFF;
 	background-color: white;
 	padding: 8px 12px;
-	border: 2px solid #00CDCD;
+	border: 2px solid #00ABFF;
 	outline: 0;
 	transition: all 0.1s linear;
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
@@ -159,10 +202,10 @@ hr {
 	cursor: pointer;
 	border-radius: 10px;
 	font-size: 17px;
-	color: #00CDCD;
+	color: #00ABFF;
 	background-color: white;
 	padding: 8px 12px;
-	border: 2px solid #00CDCD;
+	border: 2px solid #00ABFF;
 	outline: 0;
 	transition: all 0.1s linear;
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
@@ -188,39 +231,44 @@ hr {
 #studentContainer {
 	overflow-x: auto;
 	float: left;
-	width: calc(100% - 135px);
+	width: calc(100% - 150px);
 	white-space: nowrap;
 	margin-top: -30px;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
 }
 #topListContainer {
 	background-color: white;
 	border-radius: 10px;
-	border: 2px solid #00CDCD;
-	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
+	border: 2px solid #CCC;
+	box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
 	float: right;
-	position: absolute;
+	margin-top: 15px;
+	/*position: absolute;
 	top: 100px;
-	left: calc(100% - 135px);
-	width: 125px;
+	left: calc(100% - 150px);*/
+	width: 140px;
 	animation: topListMove 1s;
+	padding-bottom: 10px;
 }
 @keyframes topListMove {
 	from {
-		margin-top: -50px;
+		margin-top: -15px;
 		opacity: 0;
 	}
 	to {
-		margin-top: 0px;
+		margin-top: 15px;
 		opacity: 1;
 	}
 }
 #topList {
 	margin-left: 15px;
-	color: #333;
+	color: #555;
 	line-height: 25px;
+	margin-bottom: 3px;
 }
 #shareContainer {
 	padding-left: 18px;
 	padding-bottom: 12px;
-	border-bottom: 2px solid #00CDCD;
+	border-bottom: 2px solid #00ABFF;
 }

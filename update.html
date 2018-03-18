@@ -12,6 +12,8 @@ body {
 	margin: 0;
 	margin-top: 7%;
 	text-align: center;
+	user-select: none;
+	background-color: #FBFBFB;
 }
 img {
 	transition: opacity 0.2s ease-in-out;
@@ -56,9 +58,19 @@ HTML {
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
-}
-.hgt {
+	animation: containerMove 1s;
 	padding-top: 30px;
+}
+@keyframes containerMove
+{
+	from {
+		opacity: 0;
+		margin-top: -20px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0px;
+	}
 }
 .title {
 	line-height: 12px;
@@ -69,10 +81,6 @@ HTML {
 	font-size: 70px;
 	cursor: default;
 }
-.title:active {
-	font-size: 75px;
-	line-height: 5px;
-}
 .text {
 	line-height: 15px;
 	font-weight: lighter;
@@ -82,46 +90,48 @@ HTML {
 	font-size: 24px;
 	cursor: default;
 }
-.text:active {
-	font-size: 27px;
-}
 .button {
 	display: inline-block;
 	margin: 20px 5px 20px 5px;
 	width: 80px;
 	padding: 10px 15px 10px 15px;
-	border-radius: 30px;
-	border: 2px solid #00CDCD;
-	color: #00CDCD;
+	border-radius: 15px;
+	border-bottom: 5px solid #00BBBB;
+	background-color: #00CFCF;
+	color: white;
 	transition: all 0.2s linear;
 	font-size: 18px;
-	box-shadow: 0px 0px 20px #8DD9FF;
+	box-shadow: 0px 5px 20px rgba(0,205,205,0.6);
 	cursor: pointer;
+	-webkit-user-select: none;
 }
 .button:hover {
-	background-color: #00CDCD;
 	color: white;
+	background-color: rgba(0,207,207,0.9);
+	color: rgba(255,255,255,0.9);
+	border-bottom: 5px solid #00C5C5;
+
 }
 .button:active {
+	margin-top: 23px;
 	border-radius: 15px;
-	color: rgba(255,255,255,0.7);
-	border: 2px solid #00CDCD;
-	background: rgba(0,205,205,0.7);
+	color: rgba(255,255,255,0.8);
+	border-bottom: 2px solid #00CDCD;
+	background-color: rgba(0,207,207,0.8);
 }
 </style>
 </head>
 <body>
 <canvas id="bgparticle" hidden="true"></canvas>
 <div class="container">
-  <div class="hgt">
-    <p class="title">Update</p>
-    <p class="text">IcyFlame正更新维护中</p>
-    <p class="text" id="txt_date"></p>
-    <a href="javascript:window.history.back();" draggable="false">
-    <div class="button" align="center">返回</div>
-    </a>
-    <script src="script/particle.js"></script>
-    <script type="text/javascript">
+  <p class="title">Update</p>
+  <p class="text">IcyFlame正更新维护中</p>
+  <p class="text" id="txt_date"></p>
+  <a href="javascript:window.history.back();" draggable="false">
+  <div class="button" align="center">返回</div>
+  </a>
+  <script src="script/particle.js"></script>
+  <script type="text/javascript">
 	//并没有什么卵用的检测日期
 	var date = window.location.search;
 	if (date !== "" && date.indexOf(".") !== -1 && date.indexOf("?date=") !== -1 && (date.length === 9 || date.length === 10 || date.length === 11))
@@ -141,8 +151,7 @@ HTML {
 			document.getElementById("txt_date").innerHTML = innerhtml;
 		}
 	}
-</script>
-  </div>
+  </script>
 </div>
 </body>
 </html>
