@@ -140,10 +140,12 @@ function unlikeStudent(name)
 function sortTopList()
 {
 	var topList = [];
+	//添加 张XX (0) 格式的学生到排行榜
 	for (var i = 0; i < names.length; i++)
 	{
 		topList.push(names[i] + " " + document.getElementById(names[i] + "LikeCount").innerHTML);
 	}
+	//按分数排序
 	topList.sort(function (y,x){
 		var iy = parseInt(y.substring(y.indexOf(" ")));
 		var ix = parseInt(x.substring(x.indexOf(" ")));
@@ -155,27 +157,54 @@ function sortTopList()
 			return 0;
 		}
 	});
+	//排行榜字符串
 	var topListStr = "";
+	//排行榜第一名
 	var firstTopList = "";
+	//举手发言人数
 	var speakCount = 0;
+	//最高点赞数
+	var bestLikeCount = "-1";
 	for (var i = 0; i < topList.length; i++)
 	{
+		//去除点赞数，只保留名字
 		topList[i] = topList[i].substring(0, topList[i].indexOf(" "));
+		//当前学生名字
 		var name = topList[i];
+		//当前学生的点赞数
+		var likeCount = document.getElementById(name + "LikeCount").innerHTML;
 		if (i === 0)
 		{
+			//排行榜第一名
 			firstTopList = name;
+			if (parseInt(likeCount) > 0)
+			{
+				//排行榜第一名 如果点赞数非0 则显示个小蓝点表示最高分
+				topListStr += "<span style=\"color: #00ABFF; font-size: 15px; margin-right: 5px;\">●</span>";
+				bestLikeCount = likeCount;
+			}
 		}
-		var likeCount = document.getElementById(name + "LikeCount").innerHTML;
-		topList[i] = (i + 1) + " " + topList[i];
-		topList[i] += " (" + likeCount + ")";
+		else if (likeCount === bestLikeCount)
+		{
+			//第一名非0情况下的以下名次 如果与第一名点赞数相同 则也显示个小蓝点
+			topListStr += "<span style=\"color: #00ABFF; font-size: 15px; margin-right: 5px;\">●</span>";
+		}
+		//添加名次和点赞数 比如 1 李XX (5)
+		topList[i] = (i + 1) + " " + topList[i] + " (" + likeCount + ")";
 		if (parseInt(likeCount) > 0)
 		{
-			topListStr += i === topList.length - 1 ? topList[i] : topList[i] + "<br>";
+			//大于0分的学生 如果是最后一个名字 则不换行
+			topListStr += (i === topList.length - 1 ? topList[i] : topList[i] + "<br>");
 			speakCount++;
+		}
+		else
+		{
+			//0分的学生 名字颜色改为灰色 如果是最后一个名字 则不换行
+			topListStr += "<span style=\"color:#888;\">" + (i === topList.length - 1 ? topList[i] + "</span>" : topList[i] + "</span><br>");
 		}
 	}
 	document.getElementById("speakCount").innerHTML = speakCount;
+	document.getElementById("unspeakCount").innerHTML = names.length - speakCount;
 	document.getElementById("topList").innerHTML = topListStr;
 	console.log("成功排序了排行榜，第一名为" + firstTopList);
 }

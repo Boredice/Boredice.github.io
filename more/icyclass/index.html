@@ -5,14 +5,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="css/IcyClass.css">
-<link rel="stylesheet" href="../../font-awesome/css/fontawesome-all.min.css">
+<!--Font Awesome 图标字体库-->
+<link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
 <link rel="shortcut icon" href="images/icon.ico">
 <title>IcyClass</title>
 <style>
 </style>
 </head>
 <body>
-	<canvas id="shareCanvas" width="365" height="0" hidden></canvas>
 	<header>
 	<p class="title">IcyClass</p>
 	</header>
@@ -20,11 +20,14 @@
 	<!--分享功能全删了，没用-->
 	<!--分栏容器-->
 	<div id="container">
-		<!--稍后在JS中将会在此容器内循环添加学生-->
+		<!--学生容器，会在JS里循环添加学生-->
 		<div id="studentContainer"></div>
 		<!--排行榜-->
-		<div id="topListContainer"><p style="margin-left: 15px; color: #00ABFF;"><i class="fa fa-trophy"></i>&nbsp;&nbsp;排行榜<button class="moreBtn" onClick="topListMore()" hidden>···</button></p>
-		<p style="color: #00ABFF;margin:-10px auto -10px 15px;" title="举手过和回答过问题的人数"><i class="far fa-user"></i>&nbsp;&nbsp;<span id="speakCount">0</span></p><p id="topList"></p></div>
+		<div id="topListContainer"><p style="margin-left: 15px; color: #00ABFF;"><i class="fa fa-trophy"></i>&nbsp;&nbsp;排行榜</p>
+		<p style="color: #00ABFF;margin:-10px auto -10px 15px;" title="已回答和未回答问题的人数">
+			<i class="fa fa-user"></i>&nbsp;&nbsp;<span id="speakCount">0</span>&nbsp;&nbsp;
+			<i class="far fa-user"></i>&nbsp;&nbsp;<span id="unspeakCount">0</span></p>
+			<p id="topList"></p></div>
 	</div>
 </body>
 <script src="script/script.js"></script>

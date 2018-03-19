@@ -189,12 +189,10 @@ hr {
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
 }
 .likeBtn:hover {
-	border-radius: 7.5px;
 	background-color: rgba(0,205,205,0.05);
 	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
 }
 .likeBtn:active {
-	border-radius: 7.5px;
 	background-color: rgba(0,205,205,0.10);
 	box-shadow: 0px 5px 20px rgba(0,205,205,0.30);
 }
@@ -211,12 +209,10 @@ hr {
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
 }
 .unlikeBtn:hover {
-	border-radius: 7.5px;
 	background-color: rgba(0,205,205,0.05);
 	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
 }
 .unlikeBtn:active {
-	border-radius: 7.5px;
 	background-color: rgba(0,205,205,0.10);
 	box-shadow: 0px 5px 20px rgba(0,205,205,0.30);
 }
