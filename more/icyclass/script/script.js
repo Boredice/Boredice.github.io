@@ -177,20 +177,29 @@ function sortTopList()
 		{
 			//排行榜第一名
 			firstTopList = name;
-			if (parseInt(likeCount) > 0)
+			//加了小蓝点 视觉上太乱了 所以去掉了
+			/*if (parseInt(likeCount) > 0)
 			{
 				//排行榜第一名 如果点赞数非0 则显示个小蓝点表示最高分
 				topListStr += "<span style=\"color: #00ABFF; font-size: 15px; margin-right: 5px;\">●</span>";
 				bestLikeCount = likeCount;
-			}
+			}*/
 		}
-		else if (likeCount === bestLikeCount)
+		/*else if (likeCount === bestLikeCount)
 		{
 			//第一名非0情况下的以下名次 如果与第一名点赞数相同 则也显示个小蓝点
 			topListStr += "<span style=\"color: #00ABFF; font-size: 15px; margin-right: 5px;\">●</span>";
-		}
+		}*/
 		//添加名次和点赞数 比如 1 李XX (5)
-		topList[i] = (i + 1) + " " + topList[i] + " (" + likeCount + ")";
+		if (likeCount === "0")
+		{
+			//如果是零分就不显示名次
+			topList[i] = topList[i] + " (0)";
+		}
+		else
+		{
+			topList[i] = (i + 1) + " " + topList[i] + " (" + likeCount + ")";
+		}
 		if (parseInt(likeCount) > 0)
 		{
 			//大于0分的学生 如果是最后一个名字 则不换行

@@ -30,9 +30,7 @@ header {
 	from {
 		opacity: 0;
 		height: 0px;
-		border-bottom: 10px solid white;
-		border-bottom-left-radius: 50px;
-		border-bottom-right-radius: 50px;
+		border-bottom: 5px solid white;
 		box-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
 	}
 	to {
@@ -45,42 +43,10 @@ header {
 	} 
 }
 header .title {
-	padding-left: 18px;
+	padding-left: 28px;
 	color: #00ABFF;
 	font-size: 28px;
 	line-height: 8px;
-}
-hr {
-	border: 1px solid #00ABFF;
-	background-color: rgba(0,171,255,1.00);
-	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
-	margin-bottom: 15px;
-}
-.classIndexSelect {
-	cursor: pointer;
-	height: 38px;
-	outline: 0;
-	border-radius: 10px;
-	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
-	border: 2px solid #00ABFF;
-	padding: 6px 12px;
-	color: #00ABFF;
-	margin: -8px 6px 0px 6px;
-	font-size: 17px;
-	transition: all 0.2s linear;
-}
-.studentEndsWithTop {
-	cursor: pointer;
-	height: 38px;
-	outline: 0;
-	border-radius: 10px;
-	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
-	border: 2px solid #00ABFF;
-	padding: 0px 12px;
-	color: #00ABFF;
-	margin: -8px 6px 0px 6px;
-	font-size: 17px;
-	transition: all 0.1s linear;
 }
 .navBtn {
 	height: 38px;
@@ -94,43 +60,15 @@ hr {
 	padding: 6px 12px;
 	border: 2px solid #00ABFF;
 	outline: 0;
-	transition: all 0.1s linear;
+	transition: all 0.1s ease;
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
 }
 .navBtn:hover {
-	border-radius: 7.5px;
 	/*background-color: rgba(0,205,205,0.05);*/
 	background-color: #F2FCFC;
 	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
 }
 .navBtn:active {
-	border-radius: 7.5px;
-	/*background-color: rgba(0,205,205,0.10);*/
-	background-color: #E5FAFA;
-	box-shadow: 0px 5px 25px rgba(0,205,205,0.30);
-}
-.moreBtn {
-	height: 38px;
-	cursor: pointer;
-	border-radius: 10px;
-	color: #00ABFF;
-	background-color: white;
-	transition: all 0.1s linear;
-	padding: 2px 5px;
-	font-size: 15px;
-	font-weight: bolder;
-	border: 0;
-	outline: 0;
-	box-shadow: 0px 0px 0px white;
-}
-.moreBtn:hover {
-	border-radius: 7.5px;
-	/*background-color: rgba(0,205,205,0.05);*/
-	background-color: #F2FCFC;
-	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
-}
-.moreBtn:active {
-	border-radius: 7.5px;
 	/*background-color: rgba(0,205,205,0.10);*/
 	background-color: #E5FAFA;
 	box-shadow: 0px 5px 25px rgba(0,205,205,0.30);
@@ -138,7 +76,7 @@ hr {
 .student {
 	background-color: white;
 	margin: 5px 8px;
-	border-radius: 10px;
+	border-radius: 8px;
 	border: 2px solid #CCC;
 	box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
 	height: 110px;
@@ -146,7 +84,7 @@ hr {
 	width: calc(16.6% - 24px);
 	min-width: 150px;
 	display: inline-block;
-	transition: all 0.1s linear;
+	transition: all 0.1s ease;
 	animation: studentMove 1s;
 }
 @keyframes studentMove {
@@ -177,43 +115,44 @@ hr {
 	text-align: center;
 }
 .likeBtn {
+	display: inline-block;
 	cursor: pointer;
-	border-radius: 10px;
+	border-radius: 8px;
 	font-size: 17px;
 	color: #00ABFF;
 	background-color: white;
 	padding: 8px 12px;
 	border: 2px solid #00ABFF;
 	outline: 0;
-	transition: all 0.1s linear;
+	transition: all 0.2s ease;
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
 }
 .likeBtn:hover {
-	background-color: rgba(0,205,205,0.05);
+	background-color: rgba(0,205,205,0.1);
 	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
 }
 .likeBtn:active {
-	background-color: rgba(0,205,205,0.10);
+	background-color: rgba(0,205,205,0.2);
 	box-shadow: 0px 5px 20px rgba(0,205,205,0.30);
 }
 .unlikeBtn {
 	cursor: pointer;
-	border-radius: 10px;
+	border-radius: 8px;
 	font-size: 17px;
 	color: #00ABFF;
 	background-color: white;
 	padding: 8px 12px;
 	border: 2px solid #00ABFF;
 	outline: 0;
-	transition: all 0.1s linear;
+	transition: all 0.3s ease;
 	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
 }
 .unlikeBtn:hover {
-	background-color: rgba(0,205,205,0.05);
+	background-color: rgba(0,205,205,0.1);
 	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
 }
 .unlikeBtn:active {
-	background-color: rgba(0,205,205,0.10);
+	background-color: rgba(0,205,205,0.2);
 	box-shadow: 0px 5px 20px rgba(0,205,205,0.30);
 }
 .likeCount {
@@ -235,25 +174,25 @@ hr {
 }
 #topListContainer {
 	background-color: white;
-	border-radius: 10px;
-	border: 2px solid #CCC;
-	box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
+	box-shadow: 0px 2px 12px rgba(0, 171, 255, 0.20);
 	float: right;
-	margin-top: 15px;
-	/*position: absolute;
-	top: 100px;
-	left: calc(100% - 150px);*/
 	width: 140px;
+	border-left: 2px solid #00ABFF;
+	margin: -15px -8px 0px 0px;
+	padding: 10px 0px 10px 5px;
 	animation: topListMove 1s;
-	padding-bottom: 10px;
+	animation-delay: 0.2s;
+	animation-fill-mode: forwards;
+	opacity: 0.01;
+	z-index: -1;
 }
 @keyframes topListMove {
 	from {
-		margin-top: -15px;
+		margin-right: -148px;
 		opacity: 0;
 	}
 	to {
-		margin-top: 15px;
+		margin-right: -8px;
 		opacity: 1;
 	}
 }

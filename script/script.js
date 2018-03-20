@@ -69,7 +69,7 @@ function IEVersion() {
 }
 if (IEVersion() !== -1 && IEVersion() < 9) {
 	//Fuck IE 8
-	window.location.href = "bslow?iev=" + IEVersion();
+	window.location.href = "bslow";
 }
 
 //Cursor Light
