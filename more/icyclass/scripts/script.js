@@ -83,23 +83,23 @@ var seats = [
 	"蔡文杰",
 	"张俊杰",
 	"孙唯",
-	"王靖",
+	"郭雨璐",
 	"*",
 	"李昊勋",
 	"王思源",
 	"戴安瑞",
 	"樊冉冉",
 	"李琳",
-	"郭雨璐"
+	"王靖"
 ];
-//循环添加单个学生卡片
+//添加学生
 for (var i = 0; i < seats.length; i++)
 {
 	if (seats[i] === "#")
 	{
 		//占位符
 		document.getElementById("studentContainer").innerHTML +=
-			"<div class=\"student\" style=\"opacity: 0; animation: placeHolderStudentMove 1s;\"></div>";
+			"<div class=\"student\" style=\"opacity: 0; animation: placeHolderStudentMove 1s; cursor: default; pointer-events: none;\"></div>";
 	}
 	else if (seats[i] === "*")
 	{
@@ -108,14 +108,12 @@ for (var i = 0; i < seats.length; i++)
 	}
 	else
 	{
+		//学生
 		document.getElementById("studentContainer").innerHTML += 
-			"<div class=\"student\"><p class=\"name\">" + seats[i] + "</p>" +
+			"<div class=\"student\" onclick=\"likeStudent('" + seats[i] + "')\" oncontextmenu=\"unlikeStudent('" + seats[i] + "');return false\"><p class=\"name\">" + seats[i] + "</p>" +
 			"<p class=\"likeAndUnlike\">" +
-			"<button class=\"likeBtn\" onClick=\"likeStudent('" + seats[i] + "')\" title=\"给" + seats[i] + "点赞\">" +
-			"<i class=\"far fa-thumbs-up\"></i></button>" +
-			"<span class=\"likeCount\" id=\"" + seats[i] + "LikeCount\">0</span>" +
-			"<button class=\"unlikeBtn\" onClick=\"unlikeStudent('" + seats[i] + "')\" title=\"给" + seats[i] + "点踩\">" +
-			"<i class=\"far fa-thumbs-down\"></i></button></p></div>";
+			"<i class=\"far fa-thumbs-up\"></i><span class=\"likeCount\" id=\"" + seats[i] + "LikeCount\">0</span>" +
+			"</p></div>";
 	}
 }
 //赞

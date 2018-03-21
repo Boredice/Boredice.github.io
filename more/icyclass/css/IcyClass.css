@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "Montserrat Light";
-	src: url('../../../fonts/Montserrat Light Min.woff')
+	src: url("../fonts/Montserrat Light Min.woff")
 }
 * {
 	font-family: "Montserrat Light", "Microsoft Yahei";
@@ -9,10 +9,6 @@ body {
 	cursor: default;
 	background-color: #FAFAFA;
 	-webkit-user-select: none;
-}
-::selection {
-	background-color: #00ABFF;
-	color: white;
 }
 header {
 	position: absolute;
@@ -48,44 +44,23 @@ header .title {
 	font-size: 28px;
 	line-height: 8px;
 }
-.navBtn {
-	height: 38px;
-	cursor: pointer;
-	border-radius: 10px;
-	float: right;
-	margin: -14px 6px 0px 6px;
-	font-size: 17px;
-	color: #00ABFF;
-	background-color: white;
-	padding: 6px 12px;
-	border: 2px solid #00ABFF;
-	outline: 0;
-	transition: all 0.1s ease;
-	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
-}
-.navBtn:hover {
-	/*background-color: rgba(0,205,205,0.05);*/
-	background-color: #F2FCFC;
-	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
-}
-.navBtn:active {
-	/*background-color: rgba(0,205,205,0.10);*/
-	background-color: #E5FAFA;
-	box-shadow: 0px 5px 25px rgba(0,205,205,0.30);
-}
 .student {
 	background-color: white;
 	margin: 5px 8px;
 	border-radius: 8px;
 	border: 2px solid #CCC;
-	box-shadow: 0px 3px 10px rgba(0,0,0,0.15);
-	height: 110px;
-	width: 150px;
+	box-shadow: 0px 2px 15px rgba(0,0,0,0.15);
+	height: 100px;
 	width: calc(16.6% - 24px);
-	min-width: 150px;
+	min-width: 100px;
 	display: inline-block;
-	transition: all 0.1s ease;
+	transition: all 0.2s ease;
 	animation: studentMove 1s;
+	cursor: pointer;
+}
+.student:hover {
+	border-color: #00ABFF;
+	box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
 }
 @keyframes studentMove {
 	from {
@@ -106,59 +81,18 @@ header .title {
 	}
 }
 .student .name {
-	font-size: 18px;
+	font-size: 20px;
 	text-align: center;
 	color: #555;
 }
 .likeAndUnlike {
 	margin-top: -10px;
 	text-align: center;
-}
-.likeBtn {
-	display: inline-block;
-	cursor: pointer;
-	border-radius: 8px;
-	font-size: 17px;
 	color: #00ABFF;
-	background-color: white;
-	padding: 8px 12px;
-	border: 2px solid #00ABFF;
-	outline: 0;
-	transition: all 0.2s ease;
-	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
-}
-.likeBtn:hover {
-	background-color: rgba(0,205,205,0.1);
-	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
-}
-.likeBtn:active {
-	background-color: rgba(0,205,205,0.2);
-	box-shadow: 0px 5px 20px rgba(0,205,205,0.30);
-}
-.unlikeBtn {
-	cursor: pointer;
-	border-radius: 8px;
-	font-size: 17px;
-	color: #00ABFF;
-	background-color: white;
-	padding: 8px 12px;
-	border: 2px solid #00ABFF;
-	outline: 0;
-	transition: all 0.3s ease;
-	box-shadow: 0px 3px 10px rgba(0,205,205,0.30);
-}
-.unlikeBtn:hover {
-	background-color: rgba(0,205,205,0.1);
-	box-shadow: 0px 4px 15px rgba(0,205,205,0.30);
-}
-.unlikeBtn:active {
-	background-color: rgba(0,205,205,0.2);
-	box-shadow: 0px 5px 20px rgba(0,205,205,0.30);
+	font-size: 20px;
 }
 .likeCount {
-	font-size: 20px;
-	margin-left: 8px;
-	margin-right: 8px;
+	margin-left: 6px;
 }
 #container {
 	width: 100%;
@@ -171,6 +105,7 @@ header .title {
 	margin-top: -30px;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
+	margin-left: 10px;
 }
 #topListContainer {
 	background-color: white;
@@ -201,9 +136,4 @@ header .title {
 	color: #555;
 	line-height: 25px;
 	margin-bottom: 3px;
-}
-#shareContainer {
-	padding-left: 18px;
-	padding-bottom: 12px;
-	border-bottom: 2px solid #00ABFF;
 }
