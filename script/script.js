@@ -106,7 +106,7 @@ function checkDebug() {
 		for (var i = 0; i < taga.length; i++) {
 			if (taga[i].href.endsWith("/")) {
 				taga[i].href += "icyqjj.github.io/index.html";
-			} else if (taga[i].href.indexOf("javascript:") === -1 && taga[i].href.indexOf("#") === -1) {
+			} else if (taga[i].href.indexOf("javascript:") === -1 && taga[i].href.indexOf("http://") === -1 && taga[i].href.indexOf("https://") === -1 && taga[i].href.indexOf("#") === -1) {
 				taga[i].href += ".html";
 			}
 		}
