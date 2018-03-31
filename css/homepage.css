@@ -116,7 +116,7 @@ header:hover {
 header .title {
 	font-family: "Montserrat Light";
 	color: #00CDCD;
-	font-size: 32px;
+	font-size: 28px;
 	line-height: 15px;
 	animation: titleMove 1s;
 }
