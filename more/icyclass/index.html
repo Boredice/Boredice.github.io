@@ -16,8 +16,7 @@
 	<header>
 	<p class="title">IcyClass</p>
 	</header>
-	<div style="margin-top: 85px;"></div>
-	<!--分享功能全删了，没用-->
+	<div id="headerPlaceHolder" style="margin-top: 85px;"></div>
 	<!--分栏容器-->
 	<div id="container">
 		<!--学生容器，会在JS里循环添加学生-->
@@ -30,6 +29,7 @@
 			<i class="far fa-user"></i>&nbsp;&nbsp;<span id="unspeakCount">0</span></p>
 			<p id="topList"></p>
 		</div>
+		<div class="topListBtn" onClick="showHideTopList();"><i class="fa fa-eye"></i>&nbsp;显示/隐藏排行榜</div>
 	</div>
 </body>
 <script src="scripts/script.js"></script>
