@@ -216,16 +216,3 @@ function sortTopList()
 	console.log("成功排序了排行榜，第一名为" + firstTopList);
 }
 sortTopList();
-var isTopListVisible = false;
-function showHideTopList()
-{
-	if (!isTopListVisible)
-	{
-		document.getElementById("topListContainer").style.display = "block";
-	}
-	else
-	{
-		document.getElementById("topListContainer").style.display = "none";
-	}
-	isTopListVisible = !isTopListVisible;
-}
