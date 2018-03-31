@@ -174,7 +174,7 @@ function voidDrag() {
 }
 
 //Title & Icon
-function loadTitle() {
+/*function loadTitle() {
 	setTitle(true);
 	window.onblur = function () {
 		setTitle(false);
@@ -186,7 +186,7 @@ function loadTitle() {
 function setTitle(bool) {
 	document.title = bool ? "Hi, IcyFlamer!" : "IcyFlame";
 	document.getElementsByTagName("link")[0].setAttribute("href", bool ? "images/icons/icon.ico" : "images/icons/voidicon.ico");
-}
+}*/
 
 //Console Log
 if (!debug) {
