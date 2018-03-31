@@ -1,6 +1,5 @@
 ﻿"use strict";
 /* jshint unused:false */
-
 //Browser
 /*function isMobile()
 {
@@ -70,6 +69,27 @@ function IEVersion() {
 if (IEVersion() !== -1 && IEVersion() < 9) {
 	//Fuck IE 8
 	window.location.href = "bslow";
+}
+
+//Menu
+var ismenushowing = false;
+function showHideMenu()
+{
+	var cover = document.getElementsByClassName("mainmenucover")[0];
+	var menu = document.getElementsByClassName("mainmenu")[0];
+	if (!ismenushowing)
+	{
+		menu.style.left = "0px";
+		cover.style.opacity = "1";
+		cover.style.pointerEvents = "auto";
+	}
+	else
+	{
+		menu.style.left = "-225px";
+		cover.style.opacity = "0";
+		cover.style.pointerEvents = "none";
+	}
+	ismenushowing = !ismenushowing;
 }
 
 //Cursor Light
@@ -194,16 +214,16 @@ function headerScroll() {
 	//我一开始还以为多难呢，没想到几行代码轻松搞定
 	var header = document.getElementsByTagName("header")[0];
 	//又强行搭趟车（滑稽）
-	var bgimg = document.getElementsByClassName("background")[0];
+	/*var bgimg = document.getElementsByClassName("background")[0];
 	if (bgimg !== undefined)
 	{
-		bgimg.style.bottom = 0 - window.scrollY / 8 + "px";
-	}
+		bgimg.style.bottom = 50 - window.scrollY / 8 + "px";
+	}*/
 	if (window.scrollY - lastScrollY > 0 && window.scrollY > 165)
 	{
 		//往下滚动，隐藏导航栏（加个165表示在页面顶部滚动不隐藏）
 		header.style.transition = "";
-		header.style.top = "-70px";
+		header.style.top = "-80px";
 	}
 	else if (window.scrollY - lastScrollY < 0)
 	{

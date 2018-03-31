@@ -42,13 +42,33 @@
 <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
 <style>
 .background {
+	opacity: 1;
 	z-index: -1;
 	position: fixed;
+	top: 0px;
 	left: 0px;
-	bottom: 0px;
 	animation: bgAnim 1s;
 	transition: all 0.75s ease;
+	height: 100%;
 }
+.backgroundMobile {
+	opacity: 1;
+	z-index: -1;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	animation: bgAnim 1s;
+	display: none;
+}
+@media (min-width: 0px) and (max-width: 687px) {
+	.backgroundMobile {
+		display: block;
+	}
+	.background {
+		display: none;
+	}
+}
+
 @keyframes bgAnim {
  from {
  opacity: 0.5;
@@ -147,16 +167,28 @@ hr {
 }
 </style>
 </head>
-<body style="background-color: white;">
-<img class="background" src="images/Background.png" width="100%">
+<body>
+<!--这俩背景图的自适应到现在都弄不好。。-->
+<!--打死我也不会告诉你这图是从http://im.qq.com/macqq/上盗的-->
+<img class="background" src="images/Background.jpg" width="100%"></img>
+<img class="backgroundMobile" src="images/Mobile Background.jpg" width="100%"></img>
 <header>
   <nav><a href="javascript:refresh()" class="title">IcyFlame</a>
-	  <a class="navplaceholder">&nbsp;</a>
-	  <a class="navtag" href="https://icyqjj.github.io/blog">BLOGS</a>
-	  <a class="navtag" href="other">OTHER</a>
-	  <a class="navtag" href="apps">APPS</i></a>
-	  <a class="nownavtag" href="..">HOME</a></nav>
+	<a class="navplaceholder">&nbsp;</a>
+	<a class="menuBtn" href="javascript:showHideMenu();"><i class="fa fa-bars"></i></a>
+	<a class="navtag" href="https://icyqjj.github.io/blog">BLOGS</a>
+	<a class="navtag" href="other">OTHER</a>
+	<a class="navtag" href="apps">APPS</a>
+	<a class="nownavtag" href="..">HOME</a></nav>
 </header>
+<div class="mainmenucover" onClick="javascript:showHideMenu();"></div>
+<div class="mainmenu">
+	<p style="color: #00CDCD; font-size: 28px; font-family: 'Montserrat Light'; margin: 25px auto 15px 15px;">IcyFlame</p>
+	<a class="menuitem" style="color: #00CDCD; border-left: 4px solid #00CDCD;" href="..">HOME</a>
+	<a class="menuitem" href="apps">APPS</a>
+	<a class="menuitem" href="other">OTHER</a>
+	<a class="menuitem" href="https://icyqjj.github.io/blog">BLOGS</a>
+</div>
 <div class="container">
   <div class="gallery">
     <p class="t_title" style="margin-top: 20px;margin-bottom: -20px;font-size: 45px;" id="emoticons">o(^▽^)o</p>
@@ -208,7 +240,7 @@ hr {
     <p style="font-size: 20px; color: #00CDCD;text-align: center;">到底了~<br>＼(o '◡' o)／</p>
   </div>
 </div>
-<script src="script/emoticons.js"></script> 
+<script src="script/emoticons.js"></script>
 <script>
 	window.onload = function(){loadHeaderScroll();};
 	voidDrag();
