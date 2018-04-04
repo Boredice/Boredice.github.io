@@ -268,10 +268,11 @@ header .navplaceholder {
 	color: orange;
 	padding: 1px 15px;
 	margin: 75px auto -75px auto;
-	border-radius: 30px;
+	border-radius: 20px;
 	cursor: default;
 	text-align: center;
 	user-select: none;
+	box-shadow: 0px 4px 18px rgba(255,200,50,0.4);
 }
 .tipbar p {
 	display: inline-block;
@@ -358,10 +359,6 @@ header .navplaceholder {
 	background-color: #FEFEFE;
 	border-bottom: 3px solid #00CDCD;
 }
-.thumbnail:active {
-	box-shadow: 0px 10px 35px rgba(0,0,0,0.3);
-	background-color: #FFF;
-}
 .thumbnail .text_column {
 	width: 90%;
 	text-align: left;
@@ -418,10 +415,9 @@ header .navplaceholder {
 	text-align: center;
 	padding-top: 20px;
 	padding-bottom: 20px;
-	color: #C3C3C3;
-	font-weight: lighter;
+	color: #AAA;
 	letter-spacing: 2px;
-	border-top-width: 2px;
+	font-size: 18px;
 }
 
 /*Self-adaptation*/

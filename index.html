@@ -41,6 +41,9 @@
 <link rel="stylesheet" href="css/homepage.css">
 <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
 <style>
+body {
+	background-color: white;
+}
 .background {
 	opacity: 1;
 	z-index: -1;
@@ -81,12 +84,16 @@
  filter: blur(0px);
 }
 }
+@font-face {
+	font-family: UbuntuL;
+	src: url('fonts/Ubuntu/Ubuntu Light.woff');
+}
 .t_title {
 	color: #00CDCD;
 	text-align: center;
 	font-size: 53px;
 	line-height: 45px;
-	font-weight: lighter;
+	font-family: UbuntuL;
 	cursor: default;
 }
 .t_subtitle {
@@ -96,14 +103,15 @@
 	font-weight: lighter;
 	cursor: default;
 }
-.contact {
+.link {
+	border-radius: 24px;
 	color: #00CDCD;
-	transition: all 0.2s linear;
+	transition: all 0.3s ease;
 }
-.contact:hover {
+.link:hover {
 	opacity: 1;
 	padding: 6px 11px;
-	border-radius: 50px;
+	border-radius: 12px;
 	background-color: #00CDCD;
 	color: white;
 	box-shadow: 0px 2px 15px rgba(0,0,0,0.15);
@@ -169,14 +177,14 @@ hr {
 </head>
 <body>
 <!--这俩背景图的自适应到现在都弄不好。。-->
-<!--打死我也不会告诉你这图是从http://im.qq.com/macqq/上盗的-->
-<img class="background" src="images/Background.jpg" width="100%"></img>
-<img class="backgroundMobile" src="images/Mobile Background.jpg" width="100%"></img>
+<!--打死我也不会告诉你这图是从http://im.qq.com/macqq/上“盗”的-->
+<img class="background" src="images/Background.jpg" width="100%">
+<img class="backgroundMobile" src="images/Mobile Background.jpg" width="100%">
 <header>
   <nav><a href="javascript:refresh()" class="title">IcyFlame</a>
 	<a class="navplaceholder">&nbsp;</a>
 	<a class="menuBtn" href="javascript:showHideMenu();"><i class="fa fa-bars"></i></a>
-	<a class="navtag" href="https://icyqjj.github.io/blog">BLOGS</a>
+	<a class="navtag" href="http://icyflame.cn/blog">BLOGS</a>
 	<a class="navtag" href="other">OTHER</a>
 	<a class="navtag" href="apps">APPS</a>
 	<a class="nownavtag" href="..">HOME</a></nav>
@@ -220,24 +228,22 @@ hr {
         <td width="250">
 		  <span style="color:#777777;font-size: 23px;font-weight:lighter">IcyFlame<br><br></span>
 		  <span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">嗯...介绍就免了吧？<br><br></span>
-		  <a href="https://github.com/boredice" target="_blank" class="contact"><i class="fab fa-github" style="font-size: 22px;vertical-align: -3px;"></i>&nbsp;Github</a>&nbsp;&nbsp;&nbsp;
-		  <a href="mailto:2419029544@qq.com" class="contact"><i class="far fa-envelope" style="font-size: 19px;vertical-align: -1px;"></i>&nbsp;Email</a>&nbsp;&nbsp;&nbsp;
-		  <a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="contact">知乎</a>&nbsp;&nbsp;&nbsp;
-		  <a href="http://blog.csdn.net/qq_35277977" target="_blank" class="contact">CSDN</a></td>
+		  <a href="https://github.com/boredice" target="_blank" class="link"><i class="fab fa-github" style="font-size: 22px;vertical-align: -3px;"></i>&nbsp;Github</a>&nbsp;&nbsp;&nbsp;
+		  <a href="mailto:2419029544@qq.com" class="link"><i class="far fa-envelope" style="font-size: 19px;vertical-align: -1px;"></i>&nbsp;Email</a>&nbsp;&nbsp;&nbsp;
+		  <a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="link">知乎</a>&nbsp;&nbsp;&nbsp;
+		  <a href="http://blog.csdn.net/qq_35277977" target="_blank" class="link">CSDN</a></td>
       </tr>
     </table>
     <footer style="color: #AAA;text-align: center;line-height: 28px;">
-      <p style="margin-top: 65px;"><i class="far fa-comments"></i>&nbsp;有Bug&amp;建议？<a href="comment" target="_blank" class="contact">反馈一下</a>吧！</p>
-      <p><i class="fab fa-github"></i>&nbsp;此网站项目在<a href="https://github.com/icyqjj/icyqjj.github.io" target="_blank" class="contact">Github</a>上</p>
-      <p>粒子效果基于<a href="https://www.zhihu.com/question/38812154" target="_blank" class="contact">知乎某匿名用户的回答</a></p>
-      <p>使用了<a href="http://changyan.kuaizhan.com" target="_blank" class="contact">搜狐畅言</a>评论系统</p>
-      <p>头像为<a href="http://liukanshan.zhihu.com" target="_blank" class="contact">知乎刘看山</a></p>
-      <p>查看网站的<a href="more/history" target="_blank" class="contact">最初页面</a></p>
+      <p style="margin-top: 65px;"><i class="far fa-comments"></i>&nbsp;有Bug&amp;建议？<a href="comment" target="_blank" class="link">反馈一下</a>吧！</p>
+      <p><i class="fab fa-github"></i>&nbsp;此网站项目在<a href="https://github.com/icyqjj/icyqjj.github.io" target="_blank" class="link">Github</a>上</p>
+      <p>粒子效果基于<a href="https://www.zhihu.com/question/38812154" target="_blank" class="link">知乎某匿名用户的回答</a></p>
+      <p>使用了<a href="http://changyan.kuaizhan.com" target="_blank" class="link">搜狐畅言</a>评论系统</p>
+      <p>头像为<a href="http://liukanshan.zhihu.com" target="_blank" class="link">知乎刘看山</a></p>
+      <p>查看网站的<a href="more/history" target="_blank" class="link">最初页面</a></p>
       <p>建于2017.6.17，正逢五下期末考试（hh）</p>
-	  <p>By <a href="https://pages.github.com/" target="_blank" class="contact">Github Pages</a></p>
+	  <p>Powered by <a href="https://pages.github.com/" target="_blank" class="link">Github Pages</a></p>
     </footer>
-    <div style="height: 50px"></div>
-    <p style="font-size: 20px; color: #00CDCD;text-align: center;">到底了~<br>＼(o '◡' o)／</p>
   </div>
 </div>
 <script src="script/emoticons.js"></script>
