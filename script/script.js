@@ -125,7 +125,7 @@ function checkDebug() {
 		var taga = document.getElementsByTagName("a");
 		for (var i = 0; i < taga.length; i++) {
 			if (taga[i].href.endsWith("/")) {
-				taga[i].href += "icyqjj.github.io/index.html";
+				taga[i].href += "icy-flame.github.io/index.html";
 			} else if (taga[i].href.indexOf("javascript:") === -1 && taga[i].href.indexOf("http://") === -1 && taga[i].href.indexOf("https://") === -1 && taga[i].href.indexOf("#") === -1) {
 				taga[i].href += ".html";
 			}
@@ -190,7 +190,7 @@ function setTitle(bool) {
 
 //Console Log
 if (!debug) {
-	console.log("                                                                  88    88                          \r\n88888888                                                          88    88                          \r\n88      88                                                        88                                \r\n88      88                                                        88                                \r\n88      88        88888888      88  88      888888        8888888888    88      888888      888888  \r\n88888888        88      8888    8888      88      88    88      8888    88    88          88      88\r\n88      8888    88        88    88        8888888888    88        88    88    88          8888888888\r\n88        88    88        88    88        88            88        88    88    88          88        \r\n88      8888    88      8888    88        88            88      8888    88    88          88        \r\n8888888888        88888888      88          888888        8888888888    88      888888      888888  ");
+	console.log("　　　　　　　　　　　　　　　　　　　　　　　龖\r\n　龖　　　　　　　　　　　　　　　龖龖龖龖龖　龖\r\n　龖　　　　　　　　　　　　　　　龖　　　　　龖\r\n　龖　　　　　　　　　　　　　　　龖　　　　　龖\r\n　龖　　　　龖龖龖　龖　　　　龖　龖　　　　　龖　　　龖龖龖　　　龖　龖龖　　龖龖龖　　　龖龖龖\r\n　龖　　　龖　　　　　龖　　　龖　龖龖龖龖龖　龖　　　　　　龖　　龖龖　　龖龖　　龖　　龖　　　龖\r\n　龖　　　龖　　　　　龖　　龖　　龖　　　　　龖　　　龖龖龖龖　　龖　　　龖　　　龖　　龖龖龖龖龖\r\n　龖　　　龖　　　　　　龖　龖　　龖　　　　　龖　　龖　　　龖　　龖　　　龖　　　龖　　龖\r\n　龖　　　龖　　　　　　龖龖　　　龖　　　　　龖　　龖　　龖龖　　龖　　　龖　　　龖　　龖\r\n　龖　　　　龖龖龖　　　龖龖　　　龖　　　　　龖　　龖龖龖　龖　　龖　　　龖　　　龖　　　龖龖龖\r\n　　　　　　　　　　　　龖\r\n　　　　　　　　　　　　龖\r\n　　　　　　　　　　龖龖");
 	console.log("哈哈，竟然有人看我代码了嘛，给你个彩蛋吧！（请将控制台调宽）");
 }
 
