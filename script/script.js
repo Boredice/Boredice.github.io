@@ -7,7 +7,8 @@
 }
 if (isMobile())
 {
-	window.location.href = "more/mobile.html";
+	//blurAlert("Mobile");
+	//window.location.href = "more/mobile.html";
 }*/
 function getBrowser() {
 	//Opera和Edge就不管了
