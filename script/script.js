@@ -236,7 +236,6 @@ function headerScroll() {
 //Category
 var showSoonChecked = true;
 function showHideSoon() {
-	alert("666");
 	showSoonChecked = !showSoonChecked;
 	document.getElementById("showSoon").className = showSoonChecked ? "far fa-check-square" : "far fa-square";
 	var thumbnails = document.getElementsByClassName("thumbnail");
