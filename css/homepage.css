@@ -399,6 +399,13 @@ header .navplaceholder {
 	max-height: 200px;
 	/*border-radius: 8px 8px 0px 0px;*/
 }
+.comingsoon-thumbnail-img {
+	filter: blur(6px);
+	transition: 0.5s all ease;
+}
+.comingsoon-thumbnail-img:hover {
+	filter: none;
+}
 .thumbnail .tag {
 	color: #909090;
 	padding-bottom: 4px;
