@@ -17,10 +17,38 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="keyword" content="IcyFlame">
 <meta name="descripting" content="This is IcyFlame's personal homepage.">
-<title>IcyFlame Apps</title>
+<title>IcyFlame - All Contents</title>
 <link rel="shortcut icon" href="images/icons/icon.ico">
 <link rel="stylesheet" href="css/homepage.css">
 <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
+
+<style>
+	.category {
+		color: #999;
+		font-size: 15px;
+		border-radius: 8px;
+		margin: 0px 0px;
+		transition: 0.3s ease all;
+		user-select: none;
+		cursor: pointer;
+		padding: 5px 8px;
+	}
+	.category:hover {
+		background-color: #00CDCD;
+		color: white;
+	}
+	.nowCategory {
+		color: white;
+		background-color: #00CDCD;
+		font-size: 15px;
+		border-radius: 8px;
+		margin: 0px 0px;
+		padding: 5px 8px;
+		transition: 0.3s ease all;
+		user-select: none;
+		cursor: pointer;
+	}
+</style>
 
 </head>
 <body>
@@ -31,16 +59,14 @@
 	  <a class="navplaceholder">&nbsp;</a>
 	  <a class="menuBtn" href="javascript:showHideMenu();"><i class="fa fa-bars"></i></a>
 	  <a class="navtag" href="http://blog.icyflame.cn">BLOGS</a>
-	  <a class="navtag" href="other">OTHER</a>
-	  <a class="nownavtag" href="apps">APPS</a>
+	  <a class="nownavtag" href="all">ALL</a>
 	  <a class="navtag" href="..">HOME</a></nav>
 </header>
 <div class="mainmenucover" onClick="javascript:showHideMenu();"></div>
 <div class="mainmenu">
 	<p style="color: #00CDCD; font-size: 28px; font-family: 'Montserrat Light'; margin: 25px auto 15px 15px;">IcyFlame</p>
 	<a class="menuitem" href="..">HOME</a>
-	<a class="menuitem" style="color: #00CDCD; border-left: 4px solid #00CDCD;" href="apps">APPS</a>
-	<a class="menuitem" href="other">OTHER</a>
+	<a class="menuitem" style="color: #00CDCD; border-left: 4px solid #00CDCD;" href="all">ALL</a>
 	<a class="menuitem" href="http://blog.icyflame.cn">BLOGS</a>
 </div>
 
@@ -48,7 +74,13 @@
   <div class="gallery">
 	<div style="height: 70px"></div>
 	
-	<div class="thumbnail">
+	<br><a class="nowCategory" onClick="changeCategory('全部');" id="category全部">全部</a>
+	  <a class="category" onClick="changeCategory('软件');" id="category软件">软件</a>
+	  <a class="category" onClick="changeCategory('网页');" id="category网页">网页</a>
+	  <a class="category" onClick="changeCategory('字体');" id="category字体">字体</a>
+	  <a onClick="showHideSoon();" style="cursor: pointer; margin-left: 12px; user-select: none;" title="显示/隐藏未完成的内容（即模糊图片并有着禁止图标的内容）"><i class="far fa-check-square" style="color: #999;" id="showSoon"></i>&nbsp;<i class="fa fa-ban" style="color: #00CDCD;"></i></a><br>
+	
+	<div class="thumbnail" data-category="软件" data-soon="">
       <a href="javascript:soonAlert('Sext新版')">
       <img src="images/thumbnails/Sext.jpg" class="comingsoon-thumbnail-img"></a>
        <h4><i class="fa fa-ban"></i>&nbsp;Sext (新版)</h4>
@@ -56,7 +88,7 @@
        <p class="text_column">Sext新版，会有更多花样文本、字符串处理以及更多关于文本的功能。</p>
     </div>
 	
-	<div class="thumbnail">
+	<div class="thumbnail" data-category="软件" data-soon="">
       <a href="javascript:soonAlert('X Unknown')">
       <img src="images/thumbnails/Random.jpg" class="comingsoon-thumbnail-img"></a>
        <h4><i class="fa fa-ban"></i>&nbsp;X Unknown (新版)</h4>
@@ -64,7 +96,7 @@
        <p class="text_column">随机工具，用来替代Random的（要不是其代码被误删），有很多功能，整合了Random.org中的小组件。</p>
     </div>
 	
-	<div class="thumbnail">
+	<div class="thumbnail" data-category="软件" data-soon="">
       <a href="javascript:soonAlert('WeChat Jump Cheater')">
       <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
        <h4><i class="fa fa-ban"></i>&nbsp;WeChat Jump Cheater</h4> 
@@ -72,7 +104,7 @@
        <p class="text_column">基于ADB，这个嘛获取截图有点慢，需要手动点，不适合手残连一百分都跳不过去的人。</p>
     </div>
 	  
-	<div class="thumbnail">
+	<div class="thumbnail" data-category="软件" data-soon="">
       <a href="javascript:soonAlert('JumpToJump')">
       <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
        <h4><i class="fa fa-ban"></i>&nbsp;JumpToJump</h4>
@@ -80,7 +112,7 @@
        <p class="text_column">C#WinForm实现的PC端2D版微信跳一跳（或者是欢乐跳瓶）游戏。</p>
     </div>
 	
-	<div class="thumbnail">
+	<div class="thumbnail" data-category="软件" data-soon="">
       <a href="javascript:soonAlert('BackTime')">
       <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
        <h4><i class="fa fa-ban"></i>&nbsp;BackTime</h4>
@@ -88,7 +120,7 @@
        <p class="text_column">这是一个桌面时钟，能“嵌”在桌面壁纸里的桌面时钟！</p>
     </div>
 	  
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件" data-soon="">
       <a href="javascript:soonAlert('Exfolder')">
       <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
        <h4><i class="fa fa-ban"></i>&nbsp;Exfolder</h4>
@@ -96,7 +128,7 @@
        <p class="text_column">这是一个简单的创建和删除特殊文件夹的小工具。</p>
      </div>
 
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件" data-soon="">
      <a href="javascript:soonAlert('Xuler')">
      <img src="images/thumbnails/Xuler.png" class="comingsoon-thumbnail-img"></a>
       <h4><i class="fa fa-ban"></i>&nbsp;Xuler</h4>
@@ -104,7 +136,7 @@
       <p class="text_column">这是一个测量坐标及角度等的工具。</p>
     </div>
     
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件" data-soon="">
      <a href="javascript:soonAlert('Findow')">
      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
       <h4><i class="fa fa-ban"></i>&nbsp;Findow</h4>
@@ -112,7 +144,15 @@
       <p class="text_column">这是一个管理窗体的工具，可以获取和更改窗体的信息。</p>
     </div>
     
-    <div class="thumbnail">
+	<div class="thumbnail" data-category="软件" data-soon="">
+      <a href="javascript:soonAlert('CLock')">
+      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
+       <h4><i class="fa fa-ban"></i>&nbsp;CLock</h4>
+       <p class="tag">时锁</p>
+       <p class="text_column">这是一个时钟屏幕保护程序，名称取于Clock与Lock的组合，即将推出，敬请期待。</p>
+    </div>
+	  
+    <div class="thumbnail" data-category="软件">
      <a href="article/sode">
      <img src="images/thumbnails/Sode.jpg"></a>
       <h4>Sode</h4>
@@ -120,7 +160,7 @@
       <p class="text_column">这是一个基于ZXing的二维码&条码工具，支持写码、读码和文码，支持多种码制。</p>
     </div>
     
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件">
      <a href="article/nullfile">
      <img src="images/thumbnails/Nullfile.jpg"></a>
       <h4>Nullfile</h4>
@@ -128,7 +168,7 @@
       <p class="text_column">这是一个生成损坏文件的工具，你可以使用这个工具来生成指定大小的损坏文件。</p>
     </div>
     
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件">
      <a href="article/sext">
      <img src="images/thumbnails/Sext.jpg"></a>
       <h4>Sext</h4>
@@ -136,7 +176,7 @@
       <p class="text_column">这是一个别样的文本工具，可以将文本转换成小型大写字母、颠倒、气泡、上标、全角等各种奇葩的字符。</p>
     </div>
     
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件">
      <a href="article/error">
      <img src="images/thumbnails/Error.jpg"></a>
       <h4>Error</h4>
@@ -144,7 +184,7 @@
       <p class="text_column">这是一个功能强大的整人程序，你可以用它制造出电脑死机、键盘失灵、蓝屏、闪屏、黑屏等各种逼真的假象。</p>
     </div>
     
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件">
      <a href="article/color">
      <img src="images/thumbnails/Color.jpg"></a>
       <h4>Color</h4>
@@ -152,7 +192,7 @@
       <p class="text_column">这是一款方便、快捷的拾色器，提供拾色、放大镜、色值转换、取色等诸多功能，支持RGB、HSB、HEX等多种色值。</p>
     </div>
     
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件">
      <a href="article/titans">
      <img src="images/thumbnails/Titans.jpg"></a>
       <h4>Titans</h4>
@@ -160,7 +200,7 @@
       <p class="text_column">这是一款强大的文本公式计算器，支持大多数函数与运算，并提供了诸多方便的功能，秒杀大多数计算器。</p>
     </div>
     
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件">
      <a href="article/piano">
      <img src="images/thumbnails/Piano.jpg"></a>
       <h4>Piano</h4>
@@ -168,13 +208,28 @@
       <p class="text_column">这是一款钢琴弹奏程序，其支持e1(低音3)-a3(高音6)音符的弹奏，能完成大部分简单乐曲，但不支持升调。</p>
     </div>
     
-    <div class="thumbnail">
+    <div class="thumbnail" data-category="软件">
      <a href="article/random">
      <img src="images/thumbnails/Random.jpg"></a>
       <h4>Random</h4>
       <p class="tag">简变</p>
       <p class="text_column">这是一个随机小工具，支持随机数和随机字符串，可以自定义随机区间和小数位数以及自定义文本内容。</p>
     </div>
+	  
+	<div class="thumbnail" data-category="网页">
+      <img src="more/icyclass/images/icon.png" style="width: 72px; height: 72px; padding: 60px 0px; pointer-events: none;">
+       <h4>IcyClass</h4>
+       <p class="tag">冰课</p>
+       <p class="text_column">这个就不用说了吧。无法直接进入，请输入具体网址。</p>
+    </div>
+	  	  
+    <div class="thumbnail" data-category="字体">
+     <a href="article/flatround">
+     <img src="images/thumbnails/Flat Round.jpg"></a>
+      <h4>Flat Round</h4>
+      <p class="tag">悦圆</p>
+      <p class="text_column">这是一款英文字体，字符由环形和圆角矩形构成，支持常见的符号和大部分拉丁字母（说实话真不怎么好看，以后出个新的）。</p>
+	</div>
   </div>
 
   <footer class="copyright">

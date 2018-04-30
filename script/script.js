@@ -127,7 +127,7 @@ function checkDebug() {
 		for (var i = 0; i < taga.length; i++) {
 			if (taga[i].href.endsWith("/")) {
 				taga[i].href += "icy-flame.github.io/index.html";
-			} else if (taga[i].href.indexOf("javascript:") === -1 && taga[i].href.indexOf("http://") === -1 && taga[i].href.indexOf("https://") === -1 && taga[i].href.indexOf("#") === -1) {
+			} else if (taga[i].href.indexOf("javascript:") === -1 && taga[i].href.indexOf("http://") === -1 && taga[i].href.indexOf("https://") === -1 && taga[i].href.indexOf("#") === -1 && taga[i].href !== "") {
 				taga[i].href += ".html";
 			}
 		}
@@ -212,7 +212,6 @@ function loadHeaderScroll() {
 	}, 500);
 }
 function headerScroll() {
-	//我一开始还以为多难呢，没想到几行代码轻松搞定
 	var header = document.getElementsByTagName("header")[0];
 	//又强行搭趟车（滑稽）
 	/*var bgimg = document.getElementsByClassName("background")[0];
@@ -232,4 +231,60 @@ function headerScroll() {
 		header.style.top = "0px";
 	}
 	lastScrollY = window.scrollY;
+}
+
+//Category
+var showSoonChecked = true;
+function showHideSoon() {
+	showSoonChecked = !showSoonChecked;
+	document.getElementById("showSoon").className = showSoonChecked ? "far fa-check-square" : "far fa-square";
+	var thumbnails = document.getElementsByClassName("thumbnail");
+	if (showSoonChecked)
+	{
+		for (var i = 0; i < thumbnails.length; i++)
+		{
+			if (thumbnails[i].dataset.soon === "" && (currentCategory == "全部" || thumbnails[i].dataset.category === currentCategory))
+			{
+				thumbnails[i].hidden = false;
+			}
+		}
+	}
+	else
+	{
+		for (var i = 0; i < thumbnails.length; i++)
+		{
+			if (thumbnails[i].dataset.soon === "")
+			{
+				thumbnails[i].hidden = true;
+			}
+		}
+	}
+}
+var currentCategory = "全部";
+function changeCategory(category) {
+	var thumbnails = document.getElementsByClassName("thumbnail");
+	if (category === "全部")
+	{
+		for (var i = 0; i < thumbnails.length; i++)
+		{
+			thumbnails[i].hidden = false;
+		}
+	}
+	else
+	{
+		for (var i = 0; i < thumbnails.length; i++)
+		{
+			thumbnails[i].hidden = true;
+		}
+		for (var i = 0; i < thumbnails.length; i++)
+		{
+			if (thumbnails[i].dataset.category === category)
+			{
+				thumbnails[i].hidden = false;
+			}
+		}
+	}
+	document.getElementsByClassName("nowCategory")[0].className = "category";
+	document.getElementById("category" + category).className = "nowCategory";
+	currentCategory = category;
 }
