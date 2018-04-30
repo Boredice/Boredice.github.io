@@ -267,7 +267,17 @@ function changeCategory(category) {
 	{
 		for (var i = 0; i < thumbnails.length; i++)
 		{
-			thumbnails[i].hidden = false;
+			if (thumbnails[i].dataset.soon === "")
+			{
+				if (showSoonChecked)
+				{
+					thumbnails[i].hidden = false;
+				}
+			}
+			else
+			{
+				thumbnails[i].hidden = false;
+			}
 		}
 	}
 	else
@@ -280,7 +290,17 @@ function changeCategory(category) {
 		{
 			if (thumbnails[i].dataset.category === category)
 			{
-				thumbnails[i].hidden = false;
+				if (thumbnails[i].dataset.soon === "")
+				{
+					if (showSoonChecked)
+					{
+						thumbnails[i].hidden = false;
+					}
+				}
+				else
+				{
+					thumbnails[i].hidden = false;
+				}
 			}
 		}
 	}
