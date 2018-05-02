@@ -43,65 +43,25 @@ var names = [
 	"李昊勋"
 ];
 var seats = [
-	"#",
-	"贾欣海",
-	"#",
-	"夏锦鹏",
-	"程子豪",
-	"#",
-	"*",
-	"吴冠谕",
-	"李纪伟",
-	"王馨妍",
-	"高怡沁",
-	"刘思萱",
-	"王雨彤",
-	"*",
-	"江振",
-	"刘思怡",
-	"徐冉",
-	"于铭哲",
-	"许欣蔚",
-	"戚繁延",
-	"*",
-	"业凡",
-	"钱锋",
-	"杜勇",
-	"朱宇航",
-	"徐沫瑶",
-	"孙云辰",
-	"*",
-	"黄陶欣",
-	"张波",
-	"邓卓",
-	"钱俊杰",
-	"丁文杰",
-	"祝晗",
-	"*",
-	"刘浩",
-	"陈航宇",
-	"蔡文杰",
-	"张俊杰",
-	"孙唯",
-	"郭雨璐",
-	"*",
-	"李昊勋",
-	"王思源",
-	"戴安瑞",
-	"樊冉冉",
-	"李琳",
-	"王靖"
+	"", "", "贾欣海", "", "刘浩", "", "---",
+	"王雨彤", "徐冉", "王馨妍", "高怡沁", "祝晗", "丁文杰", "---", 
+	"孙唯", "刘思怡", "刘思萱", "许欣蔚", "钱锋", "戚繁延", "---", 
+	"朱宇航", "钱俊杰", "杜勇", "徐沫瑶", "江振", "王靖", "---", 
+	"于铭哲", "邓卓", "蔡文杰", "张俊杰", "李昊勋", "郭雨璐", "---", 
+	"李琳", "张波", "孙云辰", "吴冠谕", "陈航宇", "李纪伟", "---", 
+	"程子豪", "戴安瑞", "樊冉冉", "王思源", "黄陶欣", "业凡", "---", 
+	"", "", "", "", "", "夏锦鹏"
 ];
 //添加学生
 for (var i = 0; i < seats.length; i++)
 {
-	if (seats[i] === "#")
+	if (seats[i] === "")
 	{
 		//占位符
 		document.getElementById("studentContainer").innerHTML +=
 			"<div class=\"student\" style=\"opacity: 0; animation: placeHolderStudentMove 1s; cursor: default; pointer-events: none;\"></div>";
 	}
-	else if (seats[i] === "*")
+	else if (seats[i] === "---")
 	{
 		//换行符
 		document.getElementById("studentContainer").innerHTML += "<br>";
@@ -141,6 +101,7 @@ function sortTopList()
 	//添加 张XX (0) 格式的学生到排行榜
 	for (var i = 0; i < names.length; i++)
 	{
+		console.log(document.getElementById(names[i] + "LikeCount"));
 		topList.push(names[i] + " " + document.getElementById(names[i] + "LikeCount").innerHTML);
 	}
 	//按分数排序
