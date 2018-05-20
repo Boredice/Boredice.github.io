@@ -349,15 +349,18 @@ header .navplaceholder {
 	border-radius: 8px;
 	padding-top: 20px;
 	padding-top: 0px;
-	border-bottom: 3px solid #CCC;
+	/*border-bottom: 3px solid #CCC;*/
 	box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
-	transition: all 0.3s ease;
+	transition: all 0.4s ease;
 	overflow: hidden;
 }
 .thumbnail:hover {
-	box-shadow: 0px 10px 32.5px rgba(0,0,0,0.2);
+	/*box-shadow: 0px 10px 32.5px rgba(0,0,0,0.2);*/
+	box-shadow: 0px 10px 96px rgba(0,0,0,0.2);
+	/*让阴影覆盖住其他元素*/
+	transform: translateZ(1px);
 	background-color: #FEFEFE;
-	border-bottom: 3px solid #00CDCD;
+	/*border-bottom: 3px solid #00CDCD;*/
 }
 .thumbnail .text_column {
 	width: 90%;
@@ -400,7 +403,7 @@ header .navplaceholder {
 	/*border-radius: 8px 8px 0px 0px;*/
 }
 .comingsoon-thumbnail-img {
-	filter: blur(6px);
+	filter: blur(4px);
 	transition: 0.5s all ease;
 }
 .comingsoon-thumbnail-img:hover {
