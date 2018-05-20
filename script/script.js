@@ -72,6 +72,17 @@ if (IEVersion() !== -1 && IEVersion() < 9) {
 	window.location.href = "bslow";
 }
 
+//Special Date
+function specialDate()
+{
+	var month = new Date().getMonth() + 1;
+	var date = new Date().getDate();
+	if (month === 5 && date === 19 && document.getElementById("homeMainTitle_Hi") !== undefined)
+	{
+		document.getElementById("homeMainTitle_Hi").innerHTML = "Love you, IcyFlamer!";
+	}
+}
+
 //Menu
 var ismenushowing = false;
 function showHideMenu()
