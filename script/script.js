@@ -77,7 +77,7 @@ function specialDate()
 {
 	var month = new Date().getMonth() + 1;
 	var date = new Date().getDate();
-	if (month === 5 && date === 19 && document.getElementById("homeMainTitle_Hi") !== undefined)
+	if (month === 5 && date === 20 && document.getElementById("homeMainTitle_Hi") !== undefined)
 	{
 		document.getElementById("homeMainTitle_Hi").innerHTML = "Love you, IcyFlamer!";
 	}
