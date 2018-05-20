@@ -80,6 +80,7 @@ function specialDate()
 	if (month === 5 && date === 20 && document.getElementById("homeMainTitle_Hi") !== undefined)
 	{
 		document.getElementById("homeMainTitle_Hi").innerHTML = "Love you, IcyFlamer!";
+		document.title = "Love you, IcyFlamer!";
 	}
 }
 
