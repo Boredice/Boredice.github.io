@@ -48,6 +48,13 @@
 		cursor: pointer;
 		user-select: none;
 	}
+	.showSoonLink:hover {
+		opacity: 1;
+	}
+	.showSoonLink:active {
+		opacity: 1;
+	}
+}
 </style>
 
 </head>
@@ -58,16 +65,16 @@
   <nav><a href=".." class="title">IcyFlame</a>
 	  <a class="navplaceholder">&nbsp;</a>
 	  <a class="menuBtn" href="javascript:showHideMenu();"><i class="fa fa-bars"></i></a>
-	  <a class="navtag" href="http://blog.icyflame.cn">BLOGS</a>
-	  <a class="nownavtag" href="all">ALL</a>
-	  <a class="navtag" href="..">HOME</a></nav>
+	  <a class="navtag" href="http://blog.icyflame.cn">博客</a>
+	  <a class="nownavtag" href="all">全部</a>
+	  <a class="navtag" href="..">主页</a></nav>
 </header>
 <div class="mainmenucover" onClick="javascript:showHideMenu();"></div>
 <div class="mainmenu">
-	<p style="color: #00CDCD; font-size: 28px; font-family: 'Montserrat Light'; margin: 25px auto 15px 15px;">IcyFlame</p>
-	<a class="menuitem" href="..">HOME</a>
-	<a class="menuitem" style="color: #00CDCD; border-left: 4px solid #00CDCD;" href="all">ALL</a>
-	<a class="menuitem" href="http://blog.icyflame.cn">BLOGS</a>
+	<p style="color: #00CDCD; font-size: 28px; font-family: 'Montserrat Light'; margin: 25px auto 15px 15px; cursor: default;">IcyFlame</p>
+	<a class="menuitem" href="..">主页</a>
+	<a class="menuitem" style="font-weight: normal; color: #00CDCD; border-left-color: #00CDCD;" href="all">内容</a>
+	<a class="menuitem" href="http://blog.icyflame.cn">博客</a>
 </div>
 
 <div class="container"> 
@@ -78,7 +85,7 @@
 	  <a class="category" onClick="changeCategory('软件');" id="category软件">软件</a>
 	  <a class="category" onClick="changeCategory('网页');" id="category网页">网页</a>
 	  <a class="category" onClick="changeCategory('字体');" id="category字体">字体</a>
-	  <a onClick="showHideSoon();" style="cursor: pointer; margin-left: 12px; user-select: none;
+	  <a class="showSoonLink" onClick="showHideSoon();" style="cursor: pointer; margin-left: 12px; user-select: none;
 " title="显示/隐藏未完成的内容（即模糊图片并有着禁止图标的内容）"><i class="far fa-check-square" style="color: #999;" id="showSoon"></i>&nbsp;<i class="fa fa-ban" style="color: #00CDCD;"></i></a><br>
 	
 	<div class="thumbnail" data-category="软件" data-soon="">
@@ -151,6 +158,14 @@
        <h4><i class="fa fa-ban"></i>&nbsp;CLock</h4>
        <p class="tag">时锁</p>
        <p class="text_column">这是一个时钟屏幕保护程序，名称取于Clock与Lock的组合，即将推出，敬请期待。</p>
+    </div>
+	  
+	<div class="thumbnail" data-category="网页">
+     <a href="article/sode">
+     <img src="images/thumbnails/Sode.jpg"></a>
+      <h4>Sode Online</h4>
+      <p class="tag">简码（网页版）</p>
+      <p class="text_column">这是一个基于QRCode.js的在线二维码生成器，提供了一个简单的API</p>
     </div>
 	  
     <div class="thumbnail" data-category="软件">

@@ -109,6 +109,7 @@ header {
 	box-shadow: 0px 0px 27.5px rgba(0,0,0,0.15);
 	box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
 	transition: all 0.3s ease;
+	overflow: hidden;
 }
 header:hover {
 	box-shadow: 0px 0px 37.5px rgba(0,0,0,0.2);
@@ -119,6 +120,15 @@ header .title {
 	font-size: 28px;
 	line-height: 15px;
 	animation: titleMove 1s;
+	transition: all 0.5s ease;
+}
+header .title:hover {
+	opacity: 1;
+	text-shadow: 4px 2px 5px rgba(0,205,205,0.2);
+}
+header .title:active {
+	opacity: 1;
+	text-shadow: 4px 2px 5px rgba(0,205,205,0.2);
 }
 @keyframes titleMove
 {
@@ -153,9 +163,11 @@ header .title {
 	box-shadow: 0px 0px 25px rgba(0,0,0,0.2);
 	height: 100%;
 	transition: 0.5s all ease;
+	overflow: hidden;
 }
 .mainmenu .menuitem {
-	font-family: "Montserrat Light";
+	font-family: "Microsoft Yahei";
+	font-weight: lighter;
 	width: 100%;
 	display: block;
 	height: 50px;
@@ -163,12 +175,24 @@ header .title {
 	padding-left: 15px;
 	color: #AAA;
 	font-size: 20px;
+	transition: ease all 0.2s;
+	border-left: 4px solid transparent;
+}
+.mainmenu .menuitem:hover {
+	opacity: 1;
+	background-color: rgba(0,0,0,0.03);
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.03);
+}
+.mainmenu .menuitem:active {
+	opacity: 1;
+	background-color: rgba(0,0,0,0.08);
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.06);
 }
 header .navtag {
-	font-family: "Montserrat Light";
+	font-family: "Microsoft Yahei";
+	font-weight: lighter;
 	display: inline-block;
 	float: right;
-	font-weight: lighter;
 	color: #AAA;
 	font-size: 18px;
 	margin-top: -26px;
@@ -191,16 +215,15 @@ header .navtag {
 	}
 }
 header .navtag:hover {
-	color: rgba(170,170,170,1.00);
 	opacity: 1;
 	background-color: rgba(0,0,0,0.03);
-	border-bottom: 3px solid rgba(170,170,170,0.5);
-	height: 62px;
+	height: 65px;
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.03);
 }
 header .navtag:active {
-	color: #AAA;
 	opacity: 1;
 	background-color: rgba(0,0,0,0.08);
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.06);
 }
 header .menuBtn {
 	font-family: "Montserrat Light";
@@ -221,16 +244,16 @@ header .menuBtn:hover {
 	color: rgba(170,170,170,1.00);
 	opacity: 1;
 	background-color: rgba(0,0,0,0.03);
-	border-bottom: 3px solid rgba(170,170,170,0.5);
-	height: 62px;
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.03);
 }
 header .menuBtn:active {
 	color: #AAA;
 	opacity: 1;
 	background-color: rgba(0,0,0,0.08);
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.06);
 }
 header .nownavtag {
-	font-family: "Montserrat Light";
+	font-family: "Microsoft Yahei";
 	display: inline-block;
 	float: right;
 	color: #00CDCD;
@@ -244,15 +267,14 @@ header .nownavtag {
 	animation: navtagMove 1s;
 }
 header .nownavtag:hover {
-	color: #00CDCD;
 	opacity: 1;
 	background-color: rgba(0,0,0,0.03);
-	height: 62px;
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.03);
 }
 header .nownavtag:active {
-	color: #00CDCD;
 	opacity: 1;
 	background-color: rgba(0,0,0,0.08);
+	box-shadow: 0px 0px 25px rgba(0,0,0,0.06);
 }
 header .navplaceholder {
 	width: 12%;
