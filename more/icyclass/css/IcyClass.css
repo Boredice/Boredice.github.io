@@ -62,6 +62,9 @@ header .title {
 	border-color: #00ABFF;
 	box-shadow: 0px 5px 20px rgba(0,0,0,0.15);
 }
+.student:active {
+	transform: scale(0.95);
+}
 @keyframes studentMove {
 	from {
 		opacity: 0;
