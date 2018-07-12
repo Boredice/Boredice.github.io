@@ -54,41 +54,19 @@ HTML {
 </body>
 <script src="QRCode.js/qrcode.min.js"></script>
 <script>
-function toUtf8(str) {    
-    var out, i, len, c;    
-    out = "";    
-    len = str.length;    
-    for(i = 0; i < len; i++) {    
-        c = str.charCodeAt(i);    
-        if ((c >= 0x0001) && (c <= 0x007F)) {    
-            out += str.charAt(i);    
-        } else if (c > 0x07FF) {    
-            out += String.fromCharCode(0xE0 | ((c >> 12) & 0x0F));    
-            out += String.fromCharCode(0x80 | ((c >>  6) & 0x3F));    
-            out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
-        } else {    
-            out += String.fromCharCode(0xC0 | ((c >>  6) & 0x1F));    
-            out += String.fromCharCode(0x80 | ((c >>  0) & 0x3F));    
-        }    
-    }    
-    return out;    
-}
 var search = window.location.search;
 if (search !== "" && search.indexOf("?content=") == 0 && search.length > 9)
 {
 	try
 	{
 		var content = search.substring(9);
-		content = unspac(content);
-		//content = content.replace(/\%hash%/gi, "#");
-		alert(content);
+		content = content.replace(/\%hash%/gi, "#");
 		var qrcode = new QRCode("qrcode");
 		qrcode.makeCode(content);
 		document.getElementById("content").innerHTML = content;
 	}
 	catch
 	{
-		alert("发生错误");
 		document.getElementById("qrcode").style.height = "0px";
 		document.getElementById("content").innerHTML = "无法生成二维码";
 	}

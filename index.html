@@ -71,7 +71,6 @@ body {
 		display: none;
 	}
 }
-
 @keyframes bgAnim {
  from {
  opacity: 0.5;
@@ -95,6 +94,7 @@ body {
 	line-height: 45px;
 	font-family: UbuntuL;
 	cursor: default;
+	margin-top: 25px;
 }
 .t_subtitle {
 	color: #A0A0A0;
@@ -116,15 +116,16 @@ body {
 	background-color: #00CDCD;
 	color: white;
 	box-shadow: 0px 2px 15px rgba(0,0,0,0.15);
-	text-shadow: 0px 0px 0px #FFF;
+	/*text-shadow: 0px 0px 0px #FFF;*/
 }
 hr {
 	width: 75%;
 	margin-top: 100px;
-	background-color: rgba(0,0,0,0.15);
+	background: linear-gradient(to right, transparent, rgba(0,0,0,0.1), transparent);
+	/*background-color: rgba(0,0,0,0.1);
+	border-radius: 1px;*/
 	height: 2px;
 	border: 0;
-	box-shadow: 0px 3px 15px rgba(0,0,0,0.15);
 }
 .profilepic {
 	height: 160px;
@@ -172,7 +173,7 @@ hr {
 }
 .gallery {
 	margin-top: 115px;
-	text-shadow: -1px 0px 2px white, 0px 1px 2px white, 1px 0px 2px white, 0px -1px 2px white;
+	/*text-shadow: -1px 0px 2px white, 0px 1px 2px white, 1px 0px 2px white, 0px -1px 2px white;*/
 }
 </style>
 </head>
@@ -181,7 +182,7 @@ hr {
 <!--打死我也不会告诉你这图是从http://im.qq.com/macqq/上盗的-->
 <img class="background" src="images/Background.jpg" width="100%">
 <img class="backgroundMobile" src="images/Mobile Background.jpg" width="100%">
-<header>
+<header style="box-shadow: 0px 0px 0px rgba(0,0,0,0); background-color: rgba(255,255,255,0.8);">
   <nav><a href="javascript:refresh()" class="title">IcyFlame</a>
 	<a class="navplaceholder">&nbsp;</a>
 	<a class="menuBtn" href="javascript:showHideMenu();"><i class="fa fa-bars"></i></a>
@@ -198,9 +199,9 @@ hr {
 </div>
 <div class="container">
   <div class="gallery">
-    <p class="t_title" style="margin-top: 20px;margin-bottom: -20px;font-size: 45px;" id="emoticons">o(^▽^)o</p>
+    <!--<p class="t_title" style="margin-top: 20px;margin-bottom: -20px;font-size: 45px;" id="emoticons">o(^▽^)o</p>-->
     <p class="t_title" id="homeMainTitle_Hi">Hi, IcyFlamer!</p>
-    <p class="t_subtitle">This is IcyFlame's personal homepage.</p>
+    <p class="t_subtitle">这里是 IcyFlame 的个人主页</p>
     <center>
       <div class="thumbnail"> <a href="javascript:alertNotice();" id="noticea"><img src="images/thumbnails/Notice.png"></a>
         <h2>公告</h2>
@@ -226,7 +227,7 @@ hr {
 		</td>
         <td width="250">
 		  <span style="color:#777777;font-size: 23px;font-weight:lighter">IcyFlame<br><br></span>
-		  <span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">嗯...介绍就免了吧？<br><br></span>
+		  <span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">嗯...不用介绍了吧？<br><br></span>
 		  <a href="https://github.com/icy-flame" target="_blank" class="link"><i class="fab fa-github" style="font-size: 22px;vertical-align: -3px;" title="Github"></i>&nbsp;Github</a>&nbsp;&nbsp;&nbsp;
 		  <a href="mailto:icy-flame@qq.com" class="link" title="电子邮箱"><i class="far fa-envelope" style="font-size: 19px;vertical-align: -1px;"></i>&nbsp;Email</a>&nbsp;&nbsp;&nbsp;
 		  <a href="https://www.zhihu.com/people/le-le-11-89-36" target="_blank" class="link">知乎</a><br>
@@ -245,7 +246,7 @@ hr {
     </footer>
   </div>
 </div>
-<script src="script/emoticons.js"></script>
+<!--<script src="script/emoticons.js"></script>-->
 <script>
 	window.onload = function(){loadHeaderScroll();};
 	voidDrag();
