@@ -6,7 +6,7 @@
 <link rel="shortcut icon" href="images/icons/right.ico">
 <noscript>
 <div class="tipbar">
-  <p>你似乎禁用了JavaScript脚本，这将会导致无法正常检测更新，请启用</p>
+  <p>你似乎禁用了JavaScript脚本，这将会导致无法检测更新，请启用</p>
   <a href="more/noscript" target="_blank">如何启用？</a></div>
 </noscript>
 <style>
@@ -128,7 +128,8 @@
 		right: 0;
 		bottom: 0;
 		transform: translate(-50%, -50%);
-		animation: containerMove 1s;
+		animation: containerMove 1s;
+
 	}
 	@keyframes containerMove
 	{
@@ -142,13 +143,14 @@
 			opacity: 1;
 			margin-top: 0px;
 		}
-	}
+	}
+
 </style>
 </head>
 <body>
 	<canvas id="bgparticle" hidden="true"></canvas>
 	<div class="container">
-		<p>目前本页面所有数据均为测试所用，并非真实版本</p>
+		<p style="color: #BBB">目前本页面所有数据均为测试所用，并非真实版本</p>
 		<img id="icon" src="images/icons/right.ico" draggable="false">
 		<span id="name" style="color: #7ECC33;"></span>
 		<p id="currentversion">当前版本&nbsp;</p>
@@ -206,17 +208,20 @@
 	}
 	var name = GetQueryString("name")
 	var currentVersion = GetQueryString("version");
-	if (name !== null && name !== "" && currentVersion !== null && currentVersion !== "")
+	if (name !== null && name !== "null" && name !== "" && currentVersion !== null && currentVersion !== "null" && currentVersion !== "")
 	{
 		var nameWithLatestVersion = "";
 		var index = -1;
 		for (var i = 0; i < nameWithLatestVersions.length; i++)
 		{
-			if (nameWithLatestVersions[i].indexOf(name) === 0)
+			if (nameWithLatestVersions[i].indexOf(name.toLowerCase()) === 0)
 			{
-				index = i;
-				nameWithLatestVersion = nameWithLatestVersions[i];
-				break;
+				if (nameWithLatestVersions[i].substr(name.length).indexOf(" ") === 0)
+				{
+					index = i;
+					nameWithLatestVersion = nameWithLatestVersions[i];
+					break;
+				}
 			}
 		}
 		if (nameWithLatestVersion == "")
@@ -244,7 +249,7 @@
 				document.getElementById("updatestatus").innerHTML = "有新版本可供更新";
 				document.getElementById("download").hidden = false;
 				document.getElementById("download").onclick = function(){
-					window.location.href = "http://icyflame.cn/files/" + realNames[index] + ".zip";
+					window.location.href = "https://icyflame.cn/files/" + realNames[index] + ".zip";
 				};
 			}
 		}

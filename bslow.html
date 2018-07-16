@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <link rel="shortcut icon" href="images/icons/erroricon.ico">
-<title>Browser Low</title>
+<title>浏览器版本过低</title>
 <style>
 body {
 	background-color: #FBFBFB;
@@ -28,36 +28,29 @@ body {
 	border: 0;
 	display: inline-block;
 	margin: 20px 5px 20px 5px;
-	width: 190px;
-	padding: 10px 15px 10px 15px;
+	width: 110px;
+	padding: 12px 15px;
 	border-radius: 10px;
-	border-bottom: 5px solid #00BBBB;
 	background-color: #00CFCF;
 	color: white;
 	transition: all 0.2s linear;
 	font-size: 18px;
-	box-shadow: 0px 5px 20px rgba(0,205,205,0.6);
 	cursor: pointer;
-	pointer-events: auto;
 }
 .button:hover {
 	color: white;
 	background-color: rgba(0,207,207,0.9);
 	color: rgba(255,255,255,0.9);
-	border-bottom: 5px solid #00C5C5;
-
 }
 .button:active {
-	margin-top: 23px;
 	color: rgba(255,255,255,0.8);
-	border-bottom: 2px solid #00CDCD;
 	background-color: rgba(0,207,207,0.8);
 }
 </style>
 </head>
 <body>
     <p class="title">Low Version</p>
-    <p class="text" id="txt_iev">你的浏览器版本过低<br>将无法正常访问IcyFlame<br>请升级Internet Explorer 11<br>或下载Google Chrome</p>
-    <div class="button" onClick="window.history.back();">知道了，返回上一页</div>
+    <p class="text" id="txt_iev">你的浏览器版本过低<br>将无法正常访问 IcyFlame<br>请升级到 Internet Explorer 11<br>或使用 Google Chrome</p>
+    <div class="button" onClick="window.history.back();">返回上一页</div>
 </body>
 </html>
