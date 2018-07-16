@@ -124,11 +124,11 @@ header .title {
 }
 header .title:hover {
 	opacity: 1;
-	text-shadow: 4px 2px 5px rgba(0,205,205,0.2);
+	text-shadow: 2px 2px 5px rgba(0,205,205,0.2);
 }
 header .title:active {
 	opacity: 1;
-	text-shadow: 4px 2px 5px rgba(0,205,205,0.2);
+	text-shadow: 2px 2px 5px rgba(0,205,205,0.2);
 }
 @keyframes titleMove
 {

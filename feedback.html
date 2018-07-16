@@ -67,6 +67,18 @@ HTML {
 	margin-left: auto;
 	margin-right: auto;
 	background-color: #FFFFFF;
+	animation: containerMove 1s;
+}
+@keyframes containerMove
+{
+	from {
+		opacity: 0;
+		margin-top: -20px;
+	}
+	to {
+		opacity: 1;
+		margin-top: 0px;
+	}
 }
 body {
 	background-color: #FFFFFF;
@@ -86,24 +98,18 @@ a:active {
 /*Navigate bar (Header)*/
 header {
 	font-family: "Montserrat Light";
-	width: 100%;
+	width: 94%;
 	height: 39px;
-	position: fixed;
+	position: absolute;
 	z-index: 1;
 	left: 0px;
 	padding-left: 6%;
 	padding-top: 26px;
-	background-color: rgba(255,255,255,0.8);
 	background-color: white;
 	user-select: none;
 	top: 0px;
-	/*box-shadow: 0px 0px 27.5px rgba(0,0,0,0.15);*/
-	box-shadow: 0px 0px 15px rgba(0,0,0,0.15);
+	border-bottom: 2px solid #F2F2F2;
 	transition: all 0.3s ease;
-	overflow: hidden;
-}
-header:hover {
-	box-shadow: 0px 0px 37.5px rgba(0,0,0,0.2);
 }
 header .title {
 	font-family: "Montserrat Light";
@@ -115,11 +121,11 @@ header .title {
 }
 header .title:hover {
 	opacity: 1;
-	text-shadow: 4px 2px 5px rgba(0,205,205,0.2);
+	text-shadow: 2px 2px 5px rgba(0,205,205,0.2);
 }
 header .title:active {
 	opacity: 1;
-	text-shadow: 4px 2px 5px rgba(0,205,205,0.2);
+	text-shadow: 2px 2px 5px rgba(0,205,205,0.2);
 }
 @keyframes titleMove {
  from {
@@ -134,11 +140,14 @@ header .title:active {
 </style>
 </head>
 <body>
+<header>
+  <a href=".." class="title">IcyFlame</a>
+  <span style="margin-left: 4px; vertical-align: 1px; font-size: 18px; color: silver;">反馈</span>
+</header>
 <div class="container">
-  <header style="box-shadow: 0px 0px 0px rgba(0,0,0,0); background-color: rgba(255,255,255,0.8);"> <a href=".." class="title">IcyFlame<span style="margin-left: 8px; vertical-align: 1px; font-size: 18px; color: silver;">反馈</span></a> </header>
-  <div style="height: 70px"></div>
+  <div style="height: 60px"></div>
   <!--PC和WAP自适应版畅言-->
-  <div id="SOHUCS" ></div>
+  <div id="SOHUCS"></div>
   <script type="text/javascript"> 
 (function(){ 
 var appid = 'cytvnplzp'; 
@@ -148,7 +157,6 @@ if (width < 960) {
 window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script> 
 </div>
 <script>
-	window.onload = function(){loadHeaderScroll();};
 	checkDebug();
 </script>
 </body>
