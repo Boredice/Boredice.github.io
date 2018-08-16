@@ -1,52 +1,56 @@
 ﻿<!doctype html>
-<html><head>
+<html>
+<head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nullfile</title>
+<title>Sode</title>
 <link rel="shortcut icon" href="../images/icons/icon.ico">
 <link href="../css/contentIntro.css" rel="stylesheet" type="text/css">
-<script src="../script/script.js"></script>
+<script src="../scripts/script.js"></script>
 <style>
 .background {
-	background-image: url(images/bgimages/white.png);
+	background-image: url(images/bgimages/green.png);
 }
 .title {
-	color: silver;
+	color: mediumaquamarine;
 }
 .subtitle {
-	color: silver;
+	color: mediumaquamarine;
 }
 .version {
-	color: silver;
+	color: mediumaquamarine;
 }
 h2 {
-	color: silver;
-	border: 1.3px solid silver;
+	color: mediumaquamarine;
+	border: 1.3px solid mediumaquamarine;
 }
 .btn {
-	color: silver;
-	border: 2px solid silver;
+	color: mediumaquamarine;
+	border: 2px solid mediumaquamarine;
 }
 .btn:hover {
-	background-color: silver;
+	background-color: mediumaquamarine;
 }
 </style>
 </head>
 <body>
 <div class="background">
-<p class="title">Nullfile</p>
-<p class="subtitle">生成损坏的文件</p>
-<p class="version">1.9.1</p>
-<a href="../files/Nullfile.zip">
+<p class="title">Sode</p>
+<p class="subtitle">基于ZXing的二维码工具</p>
+<p class="version">1.11.3</p>
+<a href="../files/Sode.zip">
  <div class="btn">下载</div>
 </a>
 </div>
 <div class="container">
   <div class="text">
     <h2>功能</h2>
-    <p>这是一个生成损坏文件的工具。（需.NetFramework3.5及以上，Win7及以上自带）</p>
-    <img src="images/screenshots/nullfile-1.png" style="max-width: 412px" width="100%" alt=""/>
-    <p>功能就不用过多介绍了吧，你可以用这个工具生成损坏文件以骗人。</p>
+    <p>这是一个基于ZXing.Net的二维码&条码工具，支持大多数码制。（需.NetFramework4.0及以上，Win8及以上自带）<br>如.Net版本为3.5，可以下载 <a href="../files/SodeForNet3.5.zip" style="color: mediumaquamarine">Sode for .Net 3.5</a></p>
+    <img src="images/screenshots/sode-1.png" style="max-width: 546px" width="100%" alt=""/>
+    <p>Sode有三个模块：写码、读码和文码。</p>
+    <p>写码：生成一个二维码/条码，支持更改码制、前/背景色、大小、边距、容错，支持添加图标、更改图标形状和大小，也支持更改码点样式。</p>
+    <p>读码：读取一个二维码/条码，可以拖动图片扫描、选择图片、截取屏幕、以及从剪贴板获取图片和摄像识别，在ZXing原有基础上增加了二值化纠错。</p>
+    <p>文码：生成一个由文字组成的二维码，支持更改前/背景文字。</p>
     <h2>评论</h2>
 <!--PC和WAP自适应版畅言-->
 <div id="SOHUCS" ></div> 
@@ -57,6 +61,7 @@ var conf = 'prod_53773fc601d8de4e59ad0e645e725f2e';
 var width = window.innerWidth || document.documentElement.clientWidth; 
 if (width < 960) { 
 window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("https://changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+
   </div>
 </div>
 </body>

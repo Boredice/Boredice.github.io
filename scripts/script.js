@@ -124,7 +124,7 @@ function updateCursorLight(ev) {
 //Update & Debug
 String.prototype.startsWith = function(str){var reg = new RegExp("^" + str);return reg.test(this);};
 String.prototype.endsWith = function(str){var reg = new RegExp(str + "$");return reg.test(this);};
-var updatedate = "";
+var updatedate = "9.1";
 if (updatedate !== "") {
 	window.location.href = "update?date=" + updatedate;
 }
@@ -147,7 +147,7 @@ function checkDebug() {
 }
 
 //Notice Board
-var notice = "挖的坑真多，现在正在慢慢填坑";
+var notice = "";
 if (notice.length === 0) {
 	notice = "这里空空如也";
 }

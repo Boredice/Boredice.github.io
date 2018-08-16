@@ -1,8 +1,8 @@
 ﻿<!doctype html>
-<!--IcyFlame Website Of Github Pages-->
+<!--IcyFlame 个人网站 - Github Pages-->
 <html>
 <head>
-<script src="script/script.js"></script>
+<script src="scripts/script.js"></script>
 <noscript>
 <div class="tipbar">
   <p>你似乎禁用了JavaScript脚本，这将会导致本页面异常，请启用（本页面特别安全）(^_^)</p>
@@ -74,10 +74,19 @@
 	<div style="height: 70px"></div>
 	<br><a class="nowCategory" onClick="changeCategory('全部');" id="category全部">全部</a>
 	  <a class="category" onClick="changeCategory('软件');" id="category软件">软件</a>
+	  <a class="category" onClick="changeCategory('安卓');" id="category安卓">安卓</a>
 	  <a class="category" onClick="changeCategory('字体');" id="category字体">字体</a>
 	  <a class="showSoonLink" onClick="showHideSoon();" style="cursor: pointer; margin-left: 12px; user-select: none;
 " title="显示/隐藏未完成的内容"><i class="far fa-check-square" style="color: #999;" id="showSoon"></i>&nbsp;<i class="fa fa-ban" style="color: #00CDCD;"></i></a><br>
 	
+	<div class="thumbnail" data-category="安卓" data-soon="">
+      <a href="javascript:soonAlert('Topit')">
+      <img src="images/thumbnails/Random.jpg" class="comingsoon-thumbnail-img"></a>
+       <h4><i class="fa fa-ban"></i>&nbsp;Unknown</h4>
+       <p class="tag">未知</p>
+       <p class="text_column">随机工具，有随机数、掷骰子、抛硬币、随机文字四个功能。（第一个安卓 App 😊）</p>
+    </div>
+
 	<div class="thumbnail" data-category="软件" data-soon="">
       <a href="javascript:soonAlert('Topit')">
       <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
@@ -113,9 +122,9 @@
 	<div class="thumbnail" data-category="软件" data-soon="">
       <a href="javascript:soonAlert('X Unknown')">
       <img src="images/thumbnails/Random.jpg" class="comingsoon-thumbnail-img"></a>
-       <h4><i class="fa fa-ban"></i>&nbsp;X Unknown (新版)</h4>
-       <p class="tag">未知X</p>
-       <p class="text_column">随机工具，用来替代 Random 的（MMP 代码被误删），有更多功能，如扔硬币、掷骰子等。</p>
+       <h4><i class="fa fa-ban"></i>&nbsp;Unknown</h4>
+       <p class="tag">未知</p>
+       <p class="text_column">随机工具，用来替代 Random 的（代码被误删），有更多功能，如扔硬币、掷骰子等。</p>
     </div>
 	
 	<div class="thumbnail" data-category="软件" data-soon="">
@@ -167,7 +176,7 @@
     </div>
 	  
     <div class="thumbnail" data-category="软件">
-     <a href="article/sode">
+     <a href="archives/sode">
      <img src="images/thumbnails/Sode.jpg"></a>
       <h4>Sode</h4>
       <p class="tag">简码</p>
@@ -175,7 +184,7 @@
     </div>
     
     <div class="thumbnail" data-category="软件">
-     <a href="article/nullfile">
+     <a href="archives/nullfile">
      <img src="images/thumbnails/Nullfile.jpg"></a>
       <h4>Nullfile</h4>
       <p class="tag">空文</p>
@@ -183,7 +192,7 @@
     </div>
     
     <div class="thumbnail" data-category="软件">
-     <a href="article/sext">
+     <a href="archives/sext">
      <img src="images/thumbnails/Sext.jpg"></a>
       <h4>Sext</h4>
       <p class="tag">简文</p>
@@ -191,7 +200,7 @@
     </div>
     
     <div class="thumbnail" data-category="软件">
-     <a href="article/error">
+     <a href="archives/error">
      <img src="images/thumbnails/Error.jpg"></a>
       <h4>Error</h4>
       <p class="tag">简误</p>
@@ -199,7 +208,7 @@
     </div>
     
     <div class="thumbnail" data-category="软件">
-     <a href="article/color">
+     <a href="archives/color">
      <img src="images/thumbnails/Color.jpg"></a>
       <h4>Color</h4>
       <p class="tag">简色</p>
@@ -207,7 +216,7 @@
     </div>
     
     <div class="thumbnail" data-category="软件">
-     <a href="article/titans">
+     <a href="archives/titans">
      <img src="images/thumbnails/Titans.jpg"></a>
       <h4>Titans</h4>
       <p class="tag">简数</p>
@@ -215,7 +224,7 @@
     </div>
     
     <div class="thumbnail" data-category="软件">
-     <a href="article/piano">
+     <a href="archives/piano">
      <img src="images/thumbnails/Piano.jpg"></a>
       <h4>Piano</h4>
       <p class="tag">简音</p>
@@ -223,7 +232,7 @@
     </div>
     
     <div class="thumbnail" data-category="软件">
-     <a href="article/random">
+     <a href="archives/random">
      <img src="images/thumbnails/Random.jpg"></a>
       <h4>Random</h4>
       <p class="tag">简变</p>
@@ -231,7 +240,7 @@
     </div>
 	  
     <div class="thumbnail" data-category="字体">
-     <a href="article/flatround">
+     <a href="archives/flatround">
      <img src="images/thumbnails/Flat Round.jpg"></a>
       <h4>Flat Round</h4>
       <p class="tag">悦圆</p>
@@ -243,7 +252,7 @@
 	  <i class="fab fa-github"></i>&nbsp;IcyFlame
   </footer>
 </div>
-<script src="script/particle.js"></script>
+<script src="scripts/particle.js"></script>
 <script>
 	window.onload = function(){loadHeaderScroll();};
 	voidDrag();
