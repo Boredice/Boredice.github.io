@@ -14,7 +14,7 @@ function getBrowser() {
 	//Opera和Edge就不管了
 	var browser = "Unknown";
 	var version = "Unknown";
-	var ua =navigator.userAgent.toLowerCase();
+	var ua = navigator.userAgent.toLowerCase();
 	if (IEVersion() !== -1){
     	browser = "Internet Exlorer";
 		version = IEVersion();
@@ -124,7 +124,7 @@ function updateCursorLight(ev) {
 //Update & Debug
 String.prototype.startsWith = function(str){var reg = new RegExp("^" + str);return reg.test(this);};
 String.prototype.endsWith = function(str){var reg = new RegExp(str + "$");return reg.test(this);};
-var updatedate = "9.1";
+var updatedate = "";
 if (updatedate !== "") {
 	window.location.href = "update?date=" + updatedate;
 }
