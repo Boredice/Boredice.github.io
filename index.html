@@ -103,7 +103,6 @@ body {
 	font-size: 19px;
 	font-weight: lighter;
 	cursor: default;
-	transform:skew(-5deg);
 }
 .link {
 	border-radius: 24px;
@@ -205,16 +204,19 @@ hr {
     <p class="t_title" id="homeMainTitle_Hi">Hi, IcyFlamer!</p>
     <p class="t_subtitle">这里是 IcyFlame 的个人主页</p>
     <center>
-      <div class="thumbnail"> <a href="javascript:alertNotice();" id="noticea"><img src="images/thumbnails/Notice.png"></a>
+	  <div class="thumbnail" style="padding-top: 20px; height: 125px;"><a href="javascript:alertNotice();" id="noticea"><!--<img src="images/thumbnails/Notice.png">-->
+		<span style="font-family: 'Segoe MDL2 Assets'; color: #00CDCD; font-size: 64px;"></span></a>
         <h2>公告</h2>
       </div>
       <div class="thumbnail" style="display: none"><a href="more/activity"><img src="images/thumbnails/More.png"></a>
         <h2>活动</h2>
       </div>
-      <div class="thumbnail"><a href="feedback"><img src="images/thumbnails/More.png"></a>
+	  <div class="thumbnail" style="padding-top: 25px; height: 120px; text-align: center"><a href="feedback"><!--<img src="images/thumbnails/More.png">-->
+		<span style="font-family: 'Segoe MDL2 Assets'; color: #00CDCD; font-size: 55px;"></span></a>
         <h2>反馈</h2>
       </div>
-      <div class="thumbnail"><a href="#about"><img src="images/thumbnails/About.png"></a>
+	  <div class="thumbnail" style="padding-top: 25px; height: 120px; text-align: center"><a href="#about"><!--<img src="images/thumbnails/About.png">-->
+		<span style="font-family: 'Segoe MDL2 Assets'; color: #00CDCD; font-size: 55px;"></span></a>
         <h2>关于</h2>
       </div>
     </center>
