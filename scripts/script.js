@@ -105,22 +105,6 @@ function showHideMenu()
 	ismenushowing = !ismenushowing;
 }
 
-//Cursor Light
-function loadCursorLight() {
-	var body = document.getElementsByTagName("body")[0];
-	var cursorlight = document.createElement("div");
-	cursorlight.className = "cursorlight";
-	body.appendChild(cursorlight);
-	document.onmousemove = function (ev) {
-		updateCursorLight(ev);
-	};
-}
-function updateCursorLight(ev) {
-	var cursorlight = document.getElementsByClassName("cursorlight")[0];
-	cursorlight.style.left = ev.clientX - 1 + "px";
-	cursorlight.style.top = ev.clientY - 1 + "px";
-}
-
 //Update & Debug
 String.prototype.startsWith = function(str){var reg = new RegExp("^" + str);return reg.test(this);};
 String.prototype.endsWith = function(str){var reg = new RegExp(str + "$");return reg.test(this);};

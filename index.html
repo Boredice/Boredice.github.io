@@ -83,38 +83,33 @@ body {
  filter: blur(0px);
 }
 }
-@font-face {
-	font-family: UbuntuL;
-	src: url('fonts/Ubuntu/Ubuntu Light.woff');
-}
 .t_title {
-	color: #00CDCD;
+	color: #0083ee;
 	text-align: center;
-	font-size: 53px;
+	font-size: 48px;
 	line-height: 45px;
-	font-family: UbuntuL;
+	font-family: Ubuntu;
+	font-weight: normal;
 	cursor: default;
 	margin-top: 25px;
-	transform:skew(-5deg);
+	/*transform:skew(-5deg);*/
 }
 .t_subtitle {
-	color: #A0A0A0;
 	text-align: center;
 	font-size: 19px;
-	font-weight: lighter;
 	cursor: default;
 }
 .link {
-	border-radius: 24px;
-	color: #00CDCD;
+	border-radius: 50px;
+	color: #0083ee;
 	transition: all 0.3s ease;
 	line-height: 30px;
 }
 .link:hover {
 	opacity: 1;
 	padding: 6px 11px;
-	border-radius: 12px;
-	background-color: #00CDCD;
+	border-radius: 50px;
+	background-color: #0083ee;
 	color: white;
 	box-shadow: 0px 2px 15px rgba(0,0,0,0.15);
 	/*text-shadow: 0px 0px 0px #FFF;*/
@@ -156,11 +151,11 @@ hr {
 	display: inline-block;
 	height: 175px;
 	width: 175px;
-	color: silver;
+	color: #666;
 	background-color: rgba(255,255,255,0.5);
 }
 .thumbnail:hover {
-	color: #00CDCD;
+	color: #0083ee;
 	background-color: rgba(255,255,255,0.8);
 }
 .thumbnail:active {
@@ -193,8 +188,8 @@ hr {
 </header>
 <div class="mainmenucover" onClick="javascript:showHideMenu();"></div>
 <div class="mainmenu">
-	<p style="color: #00CDCD; font-size: 28px; font-family: 'Montserrat Light'; margin: 25px auto 15px 15px; cursor: default;">IcyFlame</p>
-	<a class="menuitem" style="font-weight: normal; color: #00CDCD; border-left-color: #00CDCD;" href="..">主页</a>
+	<p style="color: #0083ee; font-size: 28px; font-family: 'Montserrat Light'; margin: 25px auto 15px 15px; cursor: default;">IcyFlame</p>
+	<a class="menuitem" style="font-weight: normal; color: #0083ee; border-left-color: #0083ee;" href="..">主页</a>
 	<a class="menuitem" href="all">全部</a>
 	<a class="menuitem" href="https://blog.icyflame.cn">博客</a>
 </div>
@@ -205,18 +200,18 @@ hr {
     <p class="t_subtitle">这里是 IcyFlame 的个人主页</p>
     <center>
 	  <div class="thumbnail" style="padding-top: 20px; height: 125px;"><a href="javascript:alertNotice();" id="noticea"><!--<img src="images/thumbnails/Notice.png">-->
-		<span style="font-family: 'Segoe MDL2 Assets'; color: #00CDCD; font-size: 64px;"></span></a>
+		<span style="font-family: 'Segoe MDL2 Assets'; color: #0083ee; font-size: 64px;"></span></a>
         <h2>公告</h2>
       </div>
       <div class="thumbnail" style="display: none"><a href="more/activity"><img src="images/thumbnails/More.png"></a>
         <h2>活动</h2>
       </div>
 	  <div class="thumbnail" style="padding-top: 25px; height: 120px; text-align: center"><a href="feedback"><!--<img src="images/thumbnails/More.png">-->
-		<span style="font-family: 'Segoe MDL2 Assets'; color: #00CDCD; font-size: 55px;"></span></a>
+		<span style="font-family: 'Segoe MDL2 Assets'; color: #0083ee; font-size: 55px;"></span></a>
         <h2>反馈</h2>
       </div>
 	  <div class="thumbnail" style="padding-top: 25px; height: 120px; text-align: center"><a href="#about"><!--<img src="images/thumbnails/About.png">-->
-		<span style="font-family: 'Segoe MDL2 Assets'; color: #00CDCD; font-size: 55px;"></span></a>
+		<span style="font-family: 'Segoe MDL2 Assets'; color: #0083ee; font-size: 55px;"></span></a>
         <h2>关于</h2>
       </div>
     </center>
@@ -230,8 +225,8 @@ hr {
           </div>
 		</td>
         <td width="250">
-		  <span style="color:#777777;font-size: 23px;font-weight:lighter">IcyFlame<br><br></span>
-		  <span style="color: #888888;font-size: 15px;line-height: 30px;font-weight:lighter">嗯...不用介绍了吧？<br><br></span>
+		  <span style="color:#333;font-size: 23px;">IcyFlame<br><br></span>
+		  <span style="color: #333;font-size: 15px;line-height: 30px;">嗯...不用介绍了吧？<br><br></span>
 		  <a href="https://github.com/icy-flame" target="_blank" class="link"><i class="fab fa-github" style="font-size: 22px;vertical-align: -3px;" title="Github"></i>&nbsp;Github</a>&nbsp;&nbsp;&nbsp;
 		  <a href="mailto:icy-flame@qq.com" class="link" title="电子邮箱"><i class="far fa-envelope" style="font-size: 19px;vertical-align: -1px;"></i>&nbsp;Email</a><br>
 		  <a href="https://www.zhihu.com/people/icy-flame" target="_blank" class="link">知乎</a>&nbsp;&nbsp;&nbsp;
@@ -239,7 +234,7 @@ hr {
 		  <a href="https://music.163.com/#/user/home?id=454283866" target="_blank" class="link">网易云音乐</a></td>
       </tr>
     </table>
-    <footer style="color: #AAA;text-align: center;line-height: 28px;">
+    <footer style="color: #333;text-align: center;line-height: 28px;">
       <p style="margin-top: 65px;">&nbsp;有Bug&amp;建议？<a href="feedback" target="_blank" class="link">反馈一下</a>吧！</p>
       <p>&nbsp;此网站<a href="https://github.com/icy-flame/icy-flame.github.io" target="_blank" class="link">在Github上的项目</a></p>
       <p>部分页面内粒子效果基于<a href="https://www.zhihu.com/question/38812154/answer/120854993" target="_blank" class="link">知乎一回答</a></p>

@@ -3,13 +3,13 @@
 	width: 10px;
 	height: 10px;
 	background-color: rgba(0,0,0,0.00);
-	border-radius: 4px;
+	border-radius: 50px;
 }
 ::-webkit-scrollbar-track {
-	border-radius: 4px;
+	border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb {
-	border-radius: 4px;
+	border-radius: 50px;
 	background-color: rgba(0,0,0,0.2);
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -25,24 +25,10 @@ HTML {
 	scrollbar-shadow-color: #D9D9D9;
 }
 
-/*Cursor Light Effect*/
-.cursorlight {
-	width: 0px;
-	height: 0px;
-	border-radius: 1px;
-	box-shadow: 0px 0px 75px 15px white;
-	background: white;
-	position: fixed;
-	z-index: 9999;
-	pointer-events: none;
-	opacity: 0.5;
-}
-
 /*Selection text*/
 ::selection {
-	color: #00CDCD;
-	background: #E9F2FF;
-	animation: selectColor 1s;
+    background:rgb(0, 131, 238, 0.15); 
+    color:rgb(0, 131, 238);
 }
 
 /*Hyper link*/
@@ -120,7 +106,7 @@ header:hover {
 }
 header .title {
 	font-family: "Montserrat Light";
-	color: #00CDCD;
+	color: #0083ee;
 	font-size: 26px;
 	line-height: 15px;
 	/*animation: titleMove 1s;*/
@@ -171,7 +157,6 @@ header .title:active {
 }
 .mainmenu .menuitem {
 	font-family: "Microsoft Yahei";
-	font-weight: lighter;
 	width: 100%;
 	display: block;
 	height: 50px;
@@ -194,10 +179,9 @@ header .title:active {
 }
 header .navtag {
 	font-family: "Segoe MDL2 Assets";
-	font-weight: lighter;
 	display: inline-block;
 	float: right;
-	color: #AAA;
+	color: #888;
 	font-size: 20px;
 	margin-top: -26px;
 	height: 65px;
@@ -221,18 +205,15 @@ header .navtag:hover {
 	opacity: 1;
 	background-color: rgba(0,0,0,0.03);
 	height: 65px;
-	box-shadow: 0px 0px 25px rgba(0,0,0,0.03);
 }
 header .navtag:active {
 	opacity: 1;
 	background-color: rgba(0,0,0,0.08);
-	box-shadow: 0px 0px 25px rgba(0,0,0,0.06);
 }
 header .menuBtn {
 	font-family: "Montserrat Light";
 	display: none;
 	float: right;
-	font-weight: lighter;
 	color: #AAA;
 	font-size: 21px;
 	margin-top: -26px;
@@ -247,37 +228,33 @@ header .menuBtn:hover {
 	color: rgba(170,170,170,1.00);
 	opacity: 1;
 	background-color: rgba(0,0,0,0.03);
-	box-shadow: 0px 0px 25px rgba(0,0,0,0.03);
 }
 header .menuBtn:active {
 	color: #AAA;
 	opacity: 1;
 	background-color: rgba(0,0,0,0.08);
-	box-shadow: 0px 0px 25px rgba(0,0,0,0.06);
 }
 header .nownavtag {
 	font-family: "Segoe MDL2 Assets";
 	display: inline-block;
 	float: right;
-	color: #888;
+	color: #0083ee;
 	font-size: 24px;
 	margin-top: -26px;
 	height: 63px;
 	padding: 0px 17.5px;
 	line-height: 69px;
 	transition: ease all 0.2s;
-	border-bottom: 2px solid #888;
+	border-bottom: 2px solid #0083ee;
 	/*animation: navtagMove 1s;*/
 }
 header .nownavtag:hover {
 	opacity: 1;
-	background-color: rgba(0,0,0,0.03);
-	box-shadow: 0px 0px 25px rgba(0,0,0,0.03);
+	background-color: rgba(0, 131, 238, 0.04);
 }
 header .nownavtag:active {
 	opacity: 1;
-	background-color: rgba(0,0,0,0.08);
-	box-shadow: 0px 0px 25px rgba(0,0,0,0.06);
+	background-color: rgba(0, 131, 238, 0.1);
 }
 header .navplaceholder {
 	width: 12%;
@@ -293,7 +270,7 @@ header .navplaceholder {
 	color: orange;
 	padding: 1px 15px;
 	margin: 75px auto -75px auto;
-	border-radius: 20px;
+	border-radius: 50px;
 	cursor: default;
 	text-align: center;
 	user-select: none;
@@ -371,7 +348,7 @@ header .navplaceholder {
 	padding-bottom: 20px;
 	margin-left: 1%;
 	margin-right: 1%;
-	border-radius: 8px;
+	border-radius: 12px;
 	padding-top: 20px;
 	padding-top: 0px;
 	/*border-bottom: 3px solid #CCC;*/
@@ -385,7 +362,7 @@ header .navplaceholder {
 	/*让阴影覆盖住其他元素*/
 	transform: translateZ(1px);
 	background-color: #FEFEFE;
-	/*border-bottom: 3px solid #00CDCD;*/
+	/*border-bottom: 3px solid #0083ee;*/
 }
 .thumbnail .text_column {
 	width: 90%;
@@ -400,7 +377,7 @@ header .navplaceholder {
 	font-weight: 400;
 	margin-top: 5px;
 	margin-bottom: 5px;
-	color: #00CDCD;
+	color: #0083ee;
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
@@ -409,7 +386,7 @@ header .navplaceholder {
 	font-weight: 400;
 	margin-top: 49px;
 	margin-bottom: 7px;
-	color: #00CDCD;
+	color: #0083ee;
 	text-align: left;
 	padding-left: 20px;
 	padding-right: 20px;
