@@ -161,8 +161,6 @@ header .title:active {
 	font-size: 18px;
 	transition: ease all 0.2s;
 	border-left: 4px solid transparent;
-	border-top-left-radius: 50px;
-	border-bottom-left-radius: 50px;
 }
 .mainmenu .menuitem:hover {
 	opacity: 1;
