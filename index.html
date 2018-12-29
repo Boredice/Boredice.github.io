@@ -41,48 +41,6 @@
 <link rel="stylesheet" href="css/homepage.css">
 <link rel="stylesheet" href="font-awesome/css/fontawesome-all.min.css">
 <style>
-body {
-	background-color: white;
-}
-.background {
-	opacity: 1;
-	z-index: -1;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	animation: bgAnim 1s;
-	transition: all 0.75s ease;
-	height: 100%;
-}
-.backgroundMobile {
-	opacity: 1;
-	z-index: -1;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	animation: bgAnim 1s;
-	display: none;
-}
-@media (min-width: 0px) and (max-width: 687px) {
-	.backgroundMobile {
-		display: block;
-	}
-	.background {
-		display: none;
-	}
-}
-@keyframes bgAnim {
- from {
- opacity: 0.5;
- bottom: -25px;
- filter: blur(12px);
-}
- to {
- opacity: 1;
- bottom: 0px;
- filter: blur(0px);
-}
-}
 .t_title {
 	color: #0083ee;
 	text-align: center;
@@ -111,7 +69,7 @@ body {
 	border-radius: 50px;
 	background-color: #0083ee;
 	color: white;
-	box-shadow: 0px 2px 15px rgba(0,0,0,0.15);
+	box-shadow: 0px 2px 8px rgba(0,131,238,0.3);
 	/*text-shadow: 0px 0px 0px #FFF;*/
 }
 hr {
@@ -174,10 +132,6 @@ hr {
 </style>
 </head>
 <body>
-<!--这俩背景图的自适应到现在都弄不好。。-->
-<!--打死我也不会告诉你这图是从im.qq.com/macqq上盗的-->
-<img class="background" src="images/Background.jpg" width="100%">
-<img class="backgroundMobile" src="images/Mobile Background.jpg" width="100%">
 <header style="box-shadow: 0px 0px 0px rgba(0,0,0,0); background-color: rgba(255,255,255,0.8);">
   <nav><a href="javascript:refresh()" class="title">IcyFlame</a>
 	<a class="navplaceholder">&nbsp;</a>
@@ -188,16 +142,14 @@ hr {
 </header>
 <div class="mainmenucover" onClick="javascript:showHideMenu();"></div>
 <div class="mainmenu">
-	<p style="color: #0083ee; font-size: 28px; font-family: 'Montserrat Light'; margin: 25px auto 15px 15px; cursor: default;">IcyFlame</p>
 	<a class="menuitem" style="font-weight: normal; color: #0083ee; border-left-color: #0083ee;" href="..">主页</a>
 	<a class="menuitem" href="all">全部</a>
 	<a class="menuitem" href="https://blog.icyflame.cn">博客</a>
 </div>
 <div class="container">
   <div class="gallery">
-    <!--<p class="t_title" style="margin-top: 20px;margin-bottom: -20px;font-size: 45px;" id="emoticons">o(^▽^)o</p>-->
     <p class="t_title" id="homeMainTitle_Hi">Hi, IcyFlamer!</p>
-    <p class="t_subtitle">这里是 IcyFlame 的个人主页</p>
+    <p class="t_subtitle">这里是 <span style="font-family: 'Montserrat Light'">IcyFlame</span> 的个人主页</p>
     <center>
 	  <div class="thumbnail" style="padding-top: 20px; height: 125px;"><a href="javascript:alertNotice();" id="noticea"><!--<img src="images/thumbnails/Notice.png">-->
 		<span style="font-family: 'Segoe MDL2 Assets'; color: #0083ee; font-size: 64px;"></span></a>
@@ -239,17 +191,15 @@ hr {
       <p>&nbsp;此网站<a href="https://github.com/icy-flame/icy-flame.github.io" target="_blank" class="link">在Github上的项目</a></p>
       <p>部分页面内粒子效果基于<a href="https://www.zhihu.com/question/38812154/answer/120854993" target="_blank" class="link">知乎一回答</a></p>
       <p>使用了<a href="https://changyan.kuaizhan.com" target="_blank" class="link">搜狐畅言</a>评论系统</p>
-      <p>建于2017.6.17（五下期末考试）</p>
+      <p>建于2017.6.17</p>
 	  <p>Powered by <a href="https://pages.github.com/" target="_blank" class="link">Github Pages</a></p>
     </footer>
   </div>
 </div>
-<!--<script src="scripts/emoticons.js"></script>-->
 <script>
 	window.onload = function(){loadHeaderScroll();};
 	voidDrag();
 	checkDebug();
-	loadCursorLight();
 	specialDate();
 </script>
 </body>

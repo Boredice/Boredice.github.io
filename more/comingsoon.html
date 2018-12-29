@@ -15,8 +15,8 @@ body {
 	background-color: #FBFBFB;
 }
 ::selection {
-	color: #00CDCD;
-	background: #E9F2FF;
+    background:rgb(0, 131, 238, 0.15); 
+    color:rgb(0, 131, 238);
 }
 ::-webkit-scrollbar {
    width: 8px;
@@ -67,51 +67,47 @@ HTML {
 	font-weight: lighter;
 	transition: all 0.1s linear;
 	text-align: center;
-	color: #00CDCD;
+	color: #0083ee;
 	font-size: 70px;
 	cursor: default;
 	margin: 30px 0px;
 }
 .text {
 	line-height: 25px;
-	font-weight: lighter;
 	text-align: center;
-	color: #00CDCD;
+	color: #0083ee;
 	font-size: 24px;
 	cursor: default;
 }
 .button {
 	display: inline-block;
 	margin: 20px 5px 20px 5px;
-	width: 80px;
+	width: 72px;
 	padding: 10px 15px 10px 15px;
 	border-radius: 10px;
-	border-bottom: 5px solid #00BBBB;
-	background-color: #00CFCF;
+	border-bottom: 5px solid #0171ce;
+	background-color: #0088f7;
 	color: white;
 	transition: all 0.2s linear;
 	font-size: 18px;
-	box-shadow: 0px 5px 20px rgba(0,205,205,0.6);
+	box-shadow: 0px 5px 12px rgba(0,131,238,0.5);
 	cursor: pointer;
 	-webkit-user-select: none;
 }
 .button:hover {
-	color: white;
-	background-color: rgba(0,207,207,0.9);
+	background-color: rgba(0,131,238,0.7);
 	color: rgba(255,255,255,0.9);
-	border-bottom: 5px solid #00C5C5;
-
+	border-bottom-color: rgba(0,131,238,0.9);
 }
 .button:active {
 	margin-top: 23px;
 	color: rgba(255,255,255,0.8);
-	border-bottom: 2px solid #00CDCD;
-	background-color: rgba(0,207,207,0.8);
+	border-bottom: 2px solid #0171ce;
+	background-color: #0088f7;
 }
 </style>
 </head>
 <body>
-<canvas id="bgparticle" hidden="true"></canvas>
 <div class="container">
   <p class="title">Coming Soon</p>
   <p class="text">该内容即将到来</p>
@@ -119,7 +115,6 @@ HTML {
   <a href="javascript:window.history.back();" draggable="false">
   <div class="button" align="center">返回</div>
   </a>
-  <script src="../scripts/particle.js"></script>
 </div>
 </body>
 </html>

@@ -88,8 +88,8 @@ img:active {
 	opacity: 0.45;
 }
 ::selection {
-	color: #00CDCD;
-	background: #E9F2FF;
+    background:rgb(0, 131, 238, 0.15); 
+    color:rgb(0, 131, 238);
 }
 ::-webkit-scrollbar {
    width: 8px;

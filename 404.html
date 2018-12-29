@@ -14,8 +14,8 @@
 		background-color: #FBFBFB;
 	}
 	::selection {
-		color: #00CDCD;
-		background: #E9F2FF;
+		background:rgb(0, 131, 238, 0.15); 
+   		color:rgb(0, 131, 238);
 	}
 	::-webkit-scrollbar {
 	   width: 8px;
@@ -61,9 +61,8 @@
 		}
 	}
 	.text {
-		font-weight: lighter;
 		transition: all 0.1s linear;
-		color: #00CDCD;
+		color: #0083ee;
 		font-size: 28px;
 		font-family: 'Microsoft YaHei';
 		cursor: default;
@@ -74,31 +73,29 @@
 		width: 90px;
 		padding: 10px 15px 10px 15px;
 		border-radius: 10px;
-		border-bottom: 5px solid #00BBBB;
-		background-color: #00CFCF;
+		border-bottom: 5px solid #0171ce;
+		background-color: #0088f7;
 		color: white;
 		transition: all 0.2s linear;
 		font-size: 18px;
-		box-shadow: 0px 5px 20px rgba(0,205,205,0.6);
+		box-shadow: 0px 5px 12px rgba(0,131,238,0.5);
 		cursor: pointer;
 		-webkit-user-select: none;
 	}
 	.button:hover {
-		color: white;
-		background-color: rgba(0,207,207,0.9);
+		background-color: rgba(0,131,238,0.7);
 		color: rgba(255,255,255,0.9);
-		border-bottom: 5px solid #00C5C5;
-	
+		border-bottom-color: rgba(0,131,238,0.9);
 	}
 	.button:active {
 		margin-top: 8px;
 		color: rgba(255,255,255,0.8);
-		border-bottom: 2px solid #00CDCD;
-		background-color: rgba(0,207,207,0.8);
+		border-bottom: 2px solid #0171ce;
+		background-color: #0088f7;
 	}
 	.title {
 		font-size: 120px;
-		color: #00CDCD;
+		color: #0083ee;
 		margin: 0px auto -25px;
 		font-weight: lighter;
 		font-family: 'Microsoft YaHei';
@@ -107,7 +104,7 @@
 		display: inline-block;
 		vertical-align: -65px;
 		border-radius: 50px;
-		border: 5px solid #00CDCD;
+		border: 5px solid #0083ee;
 		width: 80px;
 		height: 80px;
 		margin: auto 10px;
@@ -115,7 +112,7 @@
 	.title .span1 .span2 {
 		display: inline-block;
 		border-radius: 50px;
-		border: 5px solid #00CDCD;
+		border: 5px solid #0083ee;
 		margin-top: calc(22.5% - 5px);
 		width: 55%;
 		height: 55%;
@@ -124,7 +121,7 @@
 		display: inline-block;
         vertical-align: 100px;
 		border-radius: 50px;
-		border: 5px solid #00CDCD;
+		border: 5px solid #0083ee;
 		margin-top: calc(39% - 5px);
 		width: 22%;
 		height: 22%;
@@ -132,11 +129,9 @@
 </style>
 </head>
 <body>
-<canvas id="bgparticle" hidden="true"></canvas>
  <div class="container">
   <p class="title">4<span class="span1"><span class="span2"><span class="span3"></span></span></span>4</p>
   <p class="text">页面找不到啦</p>
-  <a href="https://icyflame.cn" draggable="false"><div class="button">回到主页</div></a></div>
-  <script type="text/javascript" src="https://icyflame.cn/scripts/particle.js"></script>
+  <a href="https://icyflame.cn" draggable="false"><div class="button">返回主页</div></a></div>
 </body>
 </html>

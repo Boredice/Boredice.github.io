@@ -82,6 +82,16 @@ function specialDate()
 		document.getElementById("homeMainTitle_Hi").innerHTML = "Love you, IcyFlamer!";
 		document.title = "Love you, IcyFlamer!";
 	}
+	if (month === 12 && date === 25 && document.getElementById("homeMainTitle_Hi") !== undefined)
+	{
+		document.getElementById("homeMainTitle_Hi").innerHTML = "Merry Christmas, <br>IcyFlamer!";
+		document.title = "Merry Christmas, IcyFlamer!";
+	}
+	if (month === 1 && date === 1 && document.getElementById("homeMainTitle_Hi") !== undefined)
+	{
+		document.getElementById("homeMainTitle_Hi").innerHTML = "Happy New Year, <br>IcyFlamer!";
+		document.title = "Happy New Year, IcyFlamer!";
+	}
 }
 
 //Menu
@@ -92,13 +102,13 @@ function showHideMenu()
 	var menu = document.getElementsByClassName("mainmenu")[0];
 	if (!ismenushowing)
 	{
-		menu.style.left = "0px";
+		menu.style.right = "0px";
 		cover.style.opacity = "1";
 		cover.style.pointerEvents = "auto";
 	}
 	else
 	{
-		menu.style.left = "-225px";
+		menu.style.right = "-225px";
 		cover.style.opacity = "0";
 		cover.style.pointerEvents = "none";
 	}
@@ -131,12 +141,12 @@ function checkDebug() {
 }
 
 //Notice Board
-var notice = "";
+var notice = "喜迎 2019！\n我这一年其实写了很多小程序，但都没有发布在网站上，元旦假期将会一一补上 ^_^";
 if (notice.length === 0) {
 	notice = "这里空空如也";
 }
 function alertNotice() {
-	blurAlert("公告板 NOTICE BOARD\n\n" + notice);
+	blurAlert(notice);
 }
 
 //Functions

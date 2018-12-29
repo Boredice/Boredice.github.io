@@ -21,28 +21,44 @@
 	.category {
 		color: #999;
 		font-size: 15px;
-		border-radius: 50px;
+		border-radius: 0px;
 		margin: 0px 0px;
-		transition: 0.3s ease all;
+		transition: 0.2s ease all;
 		cursor: pointer;
 		padding: 5px 8px;
-		user-select: none;
+    user-select: none;
+    border-bottom: 2px solid transparent;
 	}
 	.category:hover {
-		background-color: #0083ee;
-		color: white;
-	}
+    border-radius: 12px 12px 0px 0px;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.05);
+  }
+  .category:active {
+    border-radius: 12px 12px 0px 0px;
+    opacity: 1;
+    background-color: rgba(0,0,0,0.1);
+  }
 	.nowCategory {
-		color: white;
-		background-color: #0083ee;
+		color: #0083ee;
+		border-bottom: 2px solid #0083ee;
 		font-size: 15px;
-		border-radius: 50px;
 		margin: 0px 0px;
 		padding: 5px 8px;
 		transition: 0.3s ease all;
 		cursor: pointer;
 		user-select: none;
-	}
+  }
+  .nowCategory:hover {
+    border-radius: 12px 12px 0px 0px;
+    opacity: 1;
+    background-color: rgba(0, 131, 238, 0.05);
+  }
+  .nowCategory:active {
+    border-radius: 12px 12px 0px 0px;
+    opacity: 1;
+    background-color: rgba(0, 131, 238, 0.1);
+  }
 	.showSoonLink:hover {
 		opacity: 1;
 	}
@@ -52,7 +68,6 @@
 </style>
 </head>
 <body>
-<canvas id="bgparticle" hidden="true"></canvas>
 <header style="box-shadow: 0px 0px 0px rgba(0,0,0,0); background-color: rgba(255,255,255,0.8);">
   <nav><a href=".." class="title">IcyFlame</a>
 	  <a class="navplaceholder">&nbsp;</a>
@@ -63,7 +78,6 @@
 </header>
 <div class="mainmenucover" onClick="javascript:showHideMenu();"></div>
 <div class="mainmenu">
-	<p style="color: #0083ee; font-size: 28px; font-family: 'Montserrat Light'; margin: 25px auto 15px 15px; cursor: default;">IcyFlame</p>
 	<a class="menuitem" href="..">主页</a>
 	<a class="menuitem" style="font-weight: normal; color: #0083ee; border-left-color: #0083ee;" href="all">全部</a>
 	<a class="menuitem" href="https://blog.icyflame.cn">博客</a>
@@ -72,169 +86,169 @@
   <div class="gallery">
 	<div style="height: 70px"></div>
 	<br><a class="nowCategory" onClick="changeCategory('全部');" id="category全部">全部</a>
-	  <a class="category" onClick="changeCategory('软件');" id="category软件">软件</a>
-	  <a class="category" onClick="changeCategory('安卓');" id="category安卓">安卓</a>
+	  <a class="category" onClick="changeCategory('Windows');" id="categoryWindows">Windows</a>
+	  <a class="category" onClick="changeCategory('Android');" id="categoryAndroid">Android</a>
 	  <a class="category" onClick="changeCategory('字体');" id="category字体">字体</a>
 	  <a class="showSoonLink" onClick="showHideSoon();" style="cursor: pointer; margin-left: 12px; user-select: none;
 " title="显示/隐藏未完成的内容"><i class="far fa-check-square" style="color: #999;" id="showSoon"></i>&nbsp;<i class="fa fa-ban" style="color: #0083ee;"></i></a><br>
 	
-	<div class="thumbnail" data-category="安卓">
-      <a href="archives/unknown">
-      <img src="images/thumbnails/Random.jpg"></a>
-       <h4>Unknown</h4>
-       <p class="tag">未知</p>
+	<div class="thumbnail" data-category="Android">
+      <a href="archives/unknown" class="aa">
+      <img src="images/thumbnails/Random.jpg">
+       <h4>Unknown</h4></a>
+       <hr>
        <p class="text_column">Android 随机工具，有随机数字、列表、硬币、骰子、纸牌、颜色六个功能。</p>
     </div>
 
-	<div class="thumbnail" data-category="软件">
+	<div class="thumbnail" data-category="Windows">
       <a href="archives/topit">
-      <img src="images/thumbnails/More.png"></a>
-       <h4>Topit</h4>
-       <p class="tag">顶一个</p>
+      <img src="images/thumbnails/More.png">
+       <h4>Topit</h4></a>
+       <hr>
        <p class="text_column">窗口置顶小工具。</p>
     </div>
 	  
-	<div class="thumbnail" data-category="软件" data-soon="">
+	<div class="thumbnail" data-category="Windows" data-soon="">
       <a href="javascript:soonAlert('Clipboard+')">
-      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
-       <h4><i class="fa fa-ban"></i>&nbsp;Clipboard+</h4>
-       <p class="tag">剪贴板+</p>
+      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img">
+       <h4><i class="fa fa-ban"></i>&nbsp;Clipboard+</h4></a>
+       <hr>
        <p class="text_column">增强你的剪贴板。</p>
     </div>
 	  
-	<div class="thumbnail" data-category="软件" data-soon="">
+	<div class="thumbnail" data-category="Windows" data-soon="">
       <a href="javascript:soonAlert('File+')">
-      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
-       <h4><i class="fa fa-ban"></i>&nbsp;File Date Modifier</h4>
-       <p class="tag">文件日期修改器</p>
+      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img">
+       <h4><i class="fa fa-ban"></i>&nbsp;File Date Modifier</h4></a>
+       <hr>
        <p class="text_column">修改文件/文件夹的创建日期、修改日期和访问日期的工具。</p>
     </div>
 	  
-	<div class="thumbnail" data-category="软件" data-soon="">
+	<div class="thumbnail" data-category="Windows" data-soon="">
       <a href="javascript:soonAlert('Sext 新版')">
-      <img src="images/thumbnails/Sext.jpg" class="comingsoon-thumbnail-img"></a>
-       <h4><i class="fa fa-ban"></i>&nbsp;Sext (新版)</h4>
-       <p class="tag">简文</p>
+      <img src="images/thumbnails/Sext.jpg" class="comingsoon-thumbnail-img">
+       <h4><i class="fa fa-ban"></i>&nbsp;Sext (新版)</h4></a>
+       <hr>
        <p class="text_column">新版 Sext，会有更多花样文本、字符串处理以及更多关于文本的功能。</p>
     </div>
 	
-	<div class="thumbnail" data-category="软件" data-soon="">
+	<div class="thumbnail" data-category="Windows" data-soon="">
       <a href="javascript:soonAlert('WeChat Jump Cheater')">
-      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
-       <h4><i class="fa fa-ban"></i>&nbsp;WeChat Jump Cheater</h4> 
-       <p class="tag">微信跳一跳外挂</p>
+      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img">
+       <h4><i class="fa fa-ban"></i>&nbsp;WeChat Jump Cheater</h4></a>
+       <hr>
        <p class="text_column">这个别作弊作得太过，我自己用被跳一跳警告过一次 2333</p>
     </div>
 	  
-	<div class="thumbnail" data-category="软件" data-soon="">
+	<div class="thumbnail" data-category="Windows" data-soon="">
       <a href="javascript:soonAlert('JumpToJump')">
-      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
-       <h4><i class="fa fa-ban"></i>&nbsp;JumpToJump</h4>
-       <p class="tag">跳至</p>
-       <p class="text_column">PC 端 2D 版微信跳一跳。</p>
+      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img">
+       <h4><i class="fa fa-ban"></i>&nbsp;JumpToJump</h4></a>
+       <hr>
+       <p class="text_column">Windows 端 2D 版微信跳一跳。</p>
     </div>
 	
-	<div class="thumbnail" data-category="软件" data-soon="">
+	<div class="thumbnail" data-category="Windows" data-soon="">
       <a href="javascript:soonAlert('BackTime')">
-      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
-       <h4><i class="fa fa-ban"></i>&nbsp;BackTime</h4>
-       <p class="tag">简时</p>
+      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img">
+       <h4><i class="fa fa-ban"></i>&nbsp;BackTime</h4></a>
+       <hr>
        <p class="text_column">这是一个桌面时钟，直接在你的桌面壁纸上绘制时间。</p>
     </div>
 
-    <div class="thumbnail" data-category="软件" data-soon="">
+    <div class="thumbnail" data-category="Windows" data-soon="">
      <a href="javascript:soonAlert('Findow')">
-     <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
-      <h4><i class="fa fa-ban"></i>&nbsp;Winkit</h4>
-      <p class="tag">简窗</p>
+     <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img">
+      <h4><i class="fa fa-ban"></i>&nbsp;Winkit</h4></a>
+      <hr>
       <p class="text_column">这是一个管理窗体的工具，可以获取和更改窗体的信息，如大小、位置、是否置顶等。</p>
     </div>
     
-	<div class="thumbnail" data-category="软件" data-soon="">
+	<div class="thumbnail" data-category="Windows" data-soon="">
       <a href="javascript:soonAlert('CLock')">
-      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img"></a>
-       <h4><i class="fa fa-ban"></i>&nbsp;CLock</h4>
-       <p class="tag">简锁</p>
+      <img src="images/thumbnails/More.png" class="comingsoon-thumbnail-img">
+       <h4><i class="fa fa-ban"></i>&nbsp;CLock</h4></a>
+       <hr>
        <p class="text_column">这是一个屏幕保护程序，仿 Win8+ 锁屏界面，在屏保上显示时间。</p>
     </div>
 	  
-	<div class="thumbnail" data-category="软件">
+	<div class="thumbnail" data-category="Windows">
      <a href="archives/xuler">
-     <img src="images/thumbnails/Xuler.png"></a>
-      <h4>Xuler</h4>
-      <p class="tag">简尺</p>
+     <img src="images/thumbnails/Xuler.png">
+      <h4>Xuler</h4></a>
+      <hr>
       <p class="text_column">这是一个测量坐标及角度等的工具。</p>
     </div>
 	  
-    <div class="thumbnail" data-category="软件">
+    <div class="thumbnail" data-category="Windows">
      <a href="archives/sode">
-     <img src="images/thumbnails/Sode.jpg"></a>
-      <h4>Sode</h4>
-      <p class="tag">简码</p>
+     <img src="images/thumbnails/Sode.jpg">
+      <h4>Sode</h4></a>
+      <hr>
       <p class="text_column">这是一个基于 ZXing 的二维码&条码工具，支持写码、读码和文码，支持多种码制。</p>
     </div>
     
-    <div class="thumbnail" data-category="软件">
+    <div class="thumbnail" data-category="Windows">
      <a href="archives/nullfile">
-     <img src="images/thumbnails/Nullfile.jpg"></a>
-      <h4>Nullfile</h4>
-      <p class="tag">空文</p>
+     <img src="images/thumbnails/Nullfile.jpg">
+      <h4>Nullfile</h4></a>
+      <hr>
       <p class="text_column">这是一个生成损坏文件的工具，可以使用这个工具来生成指定大小的损坏文件（没啥用）。</p>
     </div>
     
-    <div class="thumbnail" data-category="软件">
+    <div class="thumbnail" data-category="Windows">
      <a href="archives/sext">
-     <img src="images/thumbnails/Sext.jpg"></a>
-      <h4>Sext</h4>
-      <p class="tag">简文</p>
+     <img src="images/thumbnails/Sext.jpg">
+      <h4>Sext</h4></a>
+      <hr>
       <p class="text_column">这是一个别样的文本工具，可以将文本转换成小型大写字母、颠倒、气泡、上标、全角、点阵字等各种奇葩的字符。</p>
     </div>
     
-    <div class="thumbnail" data-category="软件">
+    <div class="thumbnail" data-category="Windows">
      <a href="archives/error">
-     <img src="images/thumbnails/Error.jpg"></a>
-      <h4>Error</h4>
-      <p class="tag">简误</p>
+     <img src="images/thumbnails/Error.jpg">
+      <h4>Error</h4></a>
+      <hr>
       <p class="text_column">这是一个整人程序，你可以用它制造出电脑死机、键盘失灵、蓝屏、闪屏、黑屏等各种假象。</p>
     </div>
     
-    <div class="thumbnail" data-category="软件">
+    <div class="thumbnail" data-category="Windows">
      <a href="archives/color">
-     <img src="images/thumbnails/Color.jpg"></a>
-      <h4>Color</h4>
-      <p class="tag">简色</p>
+     <img src="images/thumbnails/Color.jpg">
+      <h4>Color</h4></a>
+      <hr>
       <p class="text_column">这是一个取色器，提供取色、放大镜、色值转换、选取颜色等功能。</p>
     </div>
     
-    <div class="thumbnail" data-category="软件">
+    <div class="thumbnail" data-category="Windows">
      <a href="archives/titans">
-     <img src="images/thumbnails/Titans.jpg"></a>
-      <h4>Titans</h4>
-      <p class="tag">简数</p>
+     <img src="images/thumbnails/Titans.jpg">
+      <h4>Titans</h4></a>
+      <hr>
       <p class="text_column">这是一个文本公式计算器，支持大多数函数与运算，并提供了诸多方便的功能。</p>
     </div>
     
-    <div class="thumbnail" data-category="软件">
+    <div class="thumbnail" data-category="Windows">
      <a href="archives/piano">
-     <img src="images/thumbnails/Piano.jpg"></a>
-      <h4>Piano</h4>
-      <p class="tag">简音</p>
+     <img src="images/thumbnails/Piano.jpg">
+      <h4>Piano</h4></a>
+      <hr>
       <p class="text_column">这是一个钢琴弹奏程序（没啥用）。</p>
     </div>
     
-    <div class="thumbnail" data-category="软件">
+    <div class="thumbnail" data-category="Windows">
      <a href="archives/random">
-     <img src="images/thumbnails/Random.jpg"></a>
-      <h4>Random</h4>
-      <p class="tag">简变</p>
+     <img src="images/thumbnails/Random.jpg">
+      <h4>Random</h4></a>
+      <hr>
       <p class="text_column">这是一个随机小工具，支持随机数和随机字符串，可以自定义随机区间和小数位数以及自定义文本内容。</p>
     </div>
 	  
     <div class="thumbnail" data-category="字体">
      <a href="archives/flatround">
-     <img src="images/thumbnails/Flat Round.jpg"></a>
-      <h4>Flat Round</h4>
-      <p class="tag">悦圆</p>
+     <img src="images/thumbnails/Flat Round.jpg">
+      <h4>Flat Round</h4></a>
+      <hr>
       <p class="text_column">这是一个英文字体，字符由环形和圆角矩形构成，支持常见的符号和大部分拉丁字母。</p>
 	</div>
   </div>
@@ -243,12 +257,10 @@
 	  <i class="fab fa-github"></i>&nbsp;IcyFlame
   </footer>
 </div>
-<script src="scripts/particle.js"></script>
 <script>
 	window.onload = function(){loadHeaderScroll();};
 	voidDrag();
 	checkDebug();
-	loadCursorLight();
 	showHideSoon();
 </script>
 </body>
