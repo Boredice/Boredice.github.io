@@ -73,7 +73,8 @@ body {
 	font-family: "Ubuntu", "Microsoft Yahei";
 	margin: 0;
 	margin-top: 15px;
-	background-color: #F9F9F9;
+	background-color: #FBFBFB;
+	background-image: url('../images/noise.png');
 	transition: all 0.4s ease;
 }
 
@@ -107,14 +108,14 @@ header .title {
 	/*animation: titleMove 1s;*/
 	transition: all 0.5s ease;
 }
-header .title:hover {
+/*header .title:hover {
 	opacity: 1;
 	text-shadow: 2px 2px 5px rgba(0,205,205,0.2);
 }
 header .title:active {
 	opacity: 1;
 	text-shadow: 2px 2px 5px rgba(0,205,205,0.2);
-}
+}*/
 /*@keyframes titleMove
 {
 	from {

@@ -79,18 +79,18 @@ function specialDate()
 	var date = new Date().getDate();
 	if (month === 5 && date === 20 && document.getElementById("homeMainTitle_Hi") !== undefined)
 	{
-		document.getElementById("homeMainTitle_Hi").innerHTML = "Love you, IcyFlamer!";
-		document.title = "Love you, IcyFlamer!";
+		document.getElementById("homeMainTitle_Hi").innerHTML = "Love you, icyflamer!";
+		/*document.title = "Love you, icyflamer!";*/
 	}
 	if (month === 12 && date === 25 && document.getElementById("homeMainTitle_Hi") !== undefined)
 	{
-		document.getElementById("homeMainTitle_Hi").innerHTML = "Merry Christmas, <br>IcyFlamer!";
-		document.title = "Merry Christmas, IcyFlamer!";
+		document.getElementById("homeMainTitle_Hi").innerHTML = "Merry Christmas, <br>icyflamer!";
+		/*document.title = "Merry Christmas, icyflamer!";*/
 	}
 	if (month === 1 && date === 1 && document.getElementById("homeMainTitle_Hi") !== undefined)
 	{
-		document.getElementById("homeMainTitle_Hi").innerHTML = "Happy New Year, <br>IcyFlamer!";
-		document.title = "Happy New Year, IcyFlamer!";
+		document.getElementById("homeMainTitle_Hi").innerHTML = "Happy New Year, <br>icyflamer!";
+		/*document.title = "Happy New Year, icyflamer!";*/
 	}
 }
 
@@ -191,7 +191,7 @@ function voidDrag() {
 	};
 }
 function setTitle(bool) {
-	document.title = bool ? "Hi, IcyFlamer!" : "IcyFlame";
+	document.title = bool ? "Hi, icyflamer!" : "icyflame";
 	document.getElementsByTagName("link")[0].setAttribute("href", bool ? "images/icons/icon.ico" : "images/icons/voidicon.ico");
 }*/
 
