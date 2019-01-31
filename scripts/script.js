@@ -79,18 +79,18 @@ function specialDate()
 	var date = new Date().getDate();
 	if (month === 5 && date === 20 && document.getElementById("homeMainTitle_Hi") !== undefined)
 	{
-		document.getElementById("homeMainTitle_Hi").innerHTML = "Love you, icyflamer!";
-		/*document.title = "Love you, icyflamer!";*/
+		document.getElementById("homeMainTitle_Hi").innerHTML = "Love you, Icyflamer!";
+		/*document.title = "Love you, Icyflamer!";*/
 	}
 	if (month === 12 && date === 25 && document.getElementById("homeMainTitle_Hi") !== undefined)
 	{
-		document.getElementById("homeMainTitle_Hi").innerHTML = "Merry Christmas, <br>icyflamer!";
-		/*document.title = "Merry Christmas, icyflamer!";*/
+		document.getElementById("homeMainTitle_Hi").innerHTML = "Merry Christmas, <br>Icyflamer!";
+		/*document.title = "Merry Christmas, Icyflamer!";*/
 	}
 	if (month === 1 && date === 1 && document.getElementById("homeMainTitle_Hi") !== undefined)
 	{
-		document.getElementById("homeMainTitle_Hi").innerHTML = "Happy New Year, <br>icyflamer!";
-		/*document.title = "Happy New Year, icyflamer!";*/
+		document.getElementById("homeMainTitle_Hi").innerHTML = "Happy New Year, <br>Icyflamer!";
+		/*document.title = "Happy New Year, Icyflamer!";*/
 	}
 }
 
@@ -102,15 +102,19 @@ function showHideMenu()
 	var menu = document.getElementsByClassName("mainmenu")[0];
 	if (!ismenushowing)
 	{
-		menu.style.right = "0px";
-		cover.style.opacity = "1";
-		cover.style.pointerEvents = "auto";
+		menu.style.height = "144px";
+		menu.style.width = "108px";
+		menu.style.opacity = "1";
+		menu.style.boxShadow = "0px 0px 25px rgba(0,0,0,0.2)";
+		cover.style.display = "block";
 	}
 	else
 	{
-		menu.style.right = "-225px";
-		cover.style.opacity = "0";
-		cover.style.pointerEvents = "none";
+		menu.style.height = "0px";
+		menu.style.width = "60px";
+		menu.style.opacity = "0";
+		menu.style.boxShadow = "0px 0px 0px rgba(0,0,0,0)";
+		cover.style.display = "none";
 	}
 	ismenushowing = !ismenushowing;
 }
@@ -191,7 +195,7 @@ function voidDrag() {
 	};
 }
 function setTitle(bool) {
-	document.title = bool ? "Hi, icyflamer!" : "icyflame";
+	document.title = bool ? "Hi, Icyflamer!" : "Icyflame";
 	document.getElementsByTagName("link")[0].setAttribute("href", bool ? "images/icons/icon.ico" : "images/icons/voidicon.ico");
 }*/
 
@@ -250,6 +254,10 @@ function headerScroll() {
 	{
 		//往下滚动，隐藏导航栏（加个165表示在页面顶部滚动不隐藏）
 		header.style.top = "-80px";
+		if (ismenushowing)
+		{
+			showHideMenu();
+		}
 	}
 	else if (window.scrollY - lastScrollY < 0)
 	{
@@ -263,7 +271,7 @@ function headerScroll() {
 var showSoonChecked = true;
 function showHideSoon() {
 	showSoonChecked = !showSoonChecked;
-	document.getElementById("showSoon").className = showSoonChecked ? "far fa-check-square" : "far fa-square";
+	document.getElementById("showSoon").textContent = showSoonChecked ? "" : "";
 	var thumbnails = document.getElementsByClassName("thumbnail");
 	if (showSoonChecked)
 	{

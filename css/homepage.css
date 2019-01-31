@@ -27,7 +27,7 @@ HTML {
 
 /*Selection text*/
 ::selection {
-    background:rgb(0, 131, 238, 0.15); 
+    background:rgba(0, 131, 238, 0.15); 
     color:rgb(0, 131, 238);
 }
 
@@ -53,12 +53,12 @@ img {
 @font-face {
 	font-family: Ubuntu;
 	font-weight: normal;
-	src: url('../fonts/Ubuntu/Ubuntu.woff');
+	src: local('Ubuntu'), url('../fonts/Ubuntu/Ubuntu.woff');
 }
 @font-face {
 	font-family: Ubuntu;
 	font-weight: bold;
-	src: url('../fonts/Ubuntu/Ubuntu Bold.woff');
+	src: local('Ubuntu'), url('../fonts/Ubuntu/Ubuntu Bold.woff');
 }
 @font-face {
 	font-family: "Montserrat Light";
@@ -66,7 +66,7 @@ img {
 }
 @font-face {
 	font-family: "Segoe MDL2 Assets";
-	src: url('../fonts/segmdl2.ttf');
+	src: local('Segoe MDL2 Assets'), url('../fonts/segmdl2.ttf');
 }
 /*Body*/
 body {
@@ -128,40 +128,37 @@ header .title:active {
 	}
 }*/
 .mainmenucover {
+	display: none;
 	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
 	height: 100%;
 	z-index: 2;
-	background-color: rgba(0,0,0,0.05);
-	opacity: 0;
-	pointer-events: none;
-	transition: 0.5s all ease;
 }
 .mainmenu {
 	position: fixed;
-	top: 0px;
-	right: -225px;
+	top: 65px;
+	right: 24px;
 	z-index: 3;
 	background-color: white;
-	width: 128px;
-	border-bottom-left-radius: 12px;
-	box-shadow: 0px 0px 25px rgba(0,0,0,0.2);
-	transition: 0.5s all ease;
+	height: 0px;
+	width: 60px;
+	opacity: 0;
+	border-radius: 12px;
+	border-top-right-radius: 0px;
+	transition: 0.4s all ease;
 	overflow: hidden;
 }
 .mainmenu .menuitem {
-	font-family: "Microsoft Yahei";
+	text-align: center;
 	width: 100%;
 	display: block;
 	height: 48px;
 	line-height: 48px;
-	padding-left: 15px;
-	color: #AAA;
+	color: #666;
 	font-size: 18px;
 	transition: ease all 0.2s;
-	border-left: 4px solid transparent;
 }
 .mainmenu .menuitem:hover {
 	opacity: 1;
@@ -172,14 +169,13 @@ header .title:active {
 	background-color: rgba(0,0,0,0.08);
 }
 header .navtag {
-	font-family: "Segoe MDL2 Assets";
 	display: inline-block;
 	float: right;
-	color: #888;
-	font-size: 20px;
+	color: #666;
+	font-size: 18px;
 	margin-top: -26px;
 	height: 65px;
-	padding: 0px 17.5px;
+	padding: 0px 15px;
 	line-height: 69px;
 	transition: ease all 0.2s;
 	/*animation: navtagMove 1s;*/
@@ -205,11 +201,11 @@ header .navtag:active {
 	background-color: rgba(0,0,0,0.08);
 }
 header .menuBtn {
-	font-family: "Montserrat Light";
+	font-family: "Segoe MDL2 Assets";
 	display: none;
 	float: right;
 	color: #AAA;
-	font-size: 21px;
+	font-size: 26px;
 	margin-top: -26px;
 	height: 65px;
 	padding: 0px 17.5px;
@@ -229,26 +225,35 @@ header .menuBtn:active {
 	background-color: rgba(0,0,0,0.08);
 }
 header .nownavtag {
-	font-family: "Segoe MDL2 Assets";
 	display: inline-block;
 	float: right;
-	color: #0083ee;
-	font-size: 24px;
+	color: black;
+	font-size: 18px;
 	margin-top: -26px;
-	height: 63px;
-	padding: 0px 17.5px;
+	height: 65px;
+	padding: 0px 15px;
 	line-height: 69px;
 	transition: ease all 0.2s;
-	border-bottom: 2px solid #0083ee;
+	/*border-bottom: 3px solid #0083ee;*/
 	/*animation: navtagMove 1s;*/
 }
 header .nownavtag:hover {
 	opacity: 1;
 	background-color: rgba(0, 131, 238, 0.04);
+	color: #0083ee;
 }
 header .nownavtag:active {
 	opacity: 1;
 	background-color: rgba(0, 131, 238, 0.1);
+	color: #0083ee;
+}
+header .nownavtag .bottomLine {
+	width: 32px;
+	height: 3px;
+	margin-top: -12px;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: #0083ee;
 }
 header .navplaceholder {
 	width: 12%;
@@ -315,7 +320,7 @@ header .navplaceholder {
 {
 	from {
 		opacity: 0;
-		margin-top: -20px;
+		margin-top: -24px;
 	}
 	to {
 		opacity: 1;
@@ -361,7 +366,7 @@ header .navplaceholder {
 	margin-top: 12px;
 	margin-bottom: 0px;
 	height: 2px;
-	background: linear-gradient(to right, rgba(0,0,0,0.1), rgba(0,0,0,0.1), transparent);
+	background-color: rgba(0,0,0,0.1);
 	border: 0;
 }
 .thumbnail .text_column {
@@ -432,58 +437,32 @@ header .navplaceholder {
 @media (max-width: 320px) {
 header .navtag {
 	display: none;
-	width: 0px;
-	margin: 0px;
-	padding: 0px;
-	height: 0px;
 }
 header .nownavtag {
 	display: none;
-	width: 0px;
-	margin: 0px;
-	padding: 0px;
-	height: 0px;
 }
 header .menuBtn {
 	display: inline-block;
-	margin-top: -26px;
-	height: 65px;
-	padding: 0px 17.5px;
 }
 .aboutTable {
 	width: 100%;
 }
 .profileTable {
 	display: none;
-	width: 0px;
-	margin: 0px;
-	padding: 0px;
-	height: 0px;
 }
 .thumbnail {
 	width: 100%;
 }
 }
-@media (min-width: 321px) and (max-width: 400px) {
+@media (min-width: 321px) and (max-width: 420px) {
 	header .navtag {
 		display: none;
-		width: 0px;
-		margin: 0px;
-		padding: 0px;
-		height: 0px;
 	}
 	header .nownavtag {
 		display: none;
-		width: 0px;
-		margin: 0px;
-		padding: 0px;
-		height: 0px;
 	}
 	header .menuBtn {
 		display: inline-block;
-		margin-top: -26px;
-		height: 65px;
-		padding: 0px 17.5px;
 	}
 }
 /*1 column*/
@@ -493,10 +472,6 @@ header .menuBtn {
 }
 .profileTable {
 	display: none;
-	width: 0px;
-	margin: 0px;
-	padding: 0px;
-	height: 0px;
 }
 .thumbnail {
 	width: 100%;
