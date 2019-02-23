@@ -106,26 +106,38 @@ hr {
 .thumbnail {
 	float: none;
 	display: inline-block;
-	height: 175px;
+	padding-top: 16px;
+	height: 108px;
 	width: 175px;
-	color: #666;
-	background-color: rgba(255,255,255,0.5);
 }
-.thumbnail:hover {
-	color: #0083ee;
-	background-color: rgba(255,255,255,0.8);
-}
-.thumbnail:active {
-	background-color: white;
-}
-.thumbnail h2 {
-	text-align: center;
-	margin-top: 15px;
+.thumbnail p {
+	margin-top: -6px;
 	cursor: default;
-	color: inherit;
+	color: #AAA;
+}
+.thumbnail hr {
+	height: 1px;
+	background: #dadce0;
+	width: 100%;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+.thumbnail h4 {
+	text-align: left;
+	margin-top: 0px;
+}
+.thumbnail img {
+	float: left;
+	width: 36px;
+	height: 36px;
+}
+.thumbnail .text_column {
+	margin-top: -6px;
+	color: #666;
+	cursor: pointer;
 }
 .gallery {
-	margin-top: 115px;
+	margin-top: 64px;
 	/*text-shadow: -1px 0px 2px white, 0px 1px 2px white, 1px 0px 2px white, 0px -1px 2px white;*/
 }
 </style>
@@ -133,7 +145,6 @@ hr {
 <body>
 <header style="box-shadow: 0px 0px 0px rgba(0,0,0,0); background-color: rgba(255,255,255,0.8);">
   <nav><a href="javascript:refresh()" class="title"><img src="images/logo.png" height="32" style="margin-top: -6px;"/></a>
-	<a class="navplaceholder">&nbsp;</a>
 	<a class="menuBtn" href="javascript:showHideMenu();"></a>
 	<a class="navtag" href="https://blog.icyflame.cn">博客</a>
 	<a class="navtag" href="all">全部</a>
@@ -150,23 +161,15 @@ hr {
     <p class="t_title" id="homeMainTitle_Hi">Hi, Icyflamer!</p>
     <p class="t_subtitle">这里是 <span style="font-family: 'Montserrat Light'">Icyflame</span> 的个人主页</p>
     <center>
-	  <div class="thumbnail" style="padding-top: 20px; height: 125px;"><a href="javascript:alertNotice();" id="noticea"><!--<img src="images/thumbnails/Notice.png">-->
-		<span style="font-family: 'Segoe MDL2 Assets'; color: #0083ee; font-size: 64px;"></span></a>
-        <h2>公告</h2>
-      </div>
-      <div class="thumbnail" style="display: none"><a href="more/activity"><img src="images/thumbnails/More.png"></a>
-        <h2>活动</h2>
-      </div>
-	  <div class="thumbnail" style="padding-top: 25px; height: 120px; text-align: center"><a href="feedback"><!--<img src="images/thumbnails/More.png">-->
-		<span style="font-family: 'Segoe MDL2 Assets'; color: #0083ee; font-size: 55px;"></span></a>
-        <h2>反馈</h2>
-      </div>
-	  <div class="thumbnail" style="padding-top: 25px; height: 120px; text-align: center"><a href="#about"><!--<img src="images/thumbnails/About.png">-->
-		<span style="font-family: 'Segoe MDL2 Assets'; color: #0083ee; font-size: 55px;"></span></a>
-        <h2>关于</h2>
-      </div>
+		<div class="thumbnail"><p>推荐</p><hr>
+			<a href="p/picolor"><img src="images/thumbnails/Picolor.png">
+			<h4>Picolor</h4><p class="text_column">高颜值取色器</p></a>
+		</div>
+		<div class="thumbnail"><p>推荐</p><hr>
+			<a href="p/unknown"><img src="images/thumbnails/Random.jpg">
+			<h4>Unknown</h4><p class="text_column">安卓随机工具</p></a>
+		</div>
     </center>
-    <a name="about"></a>
     <hr>
     <table width="500" align="center" style="margin-top: 70px;" class="aboutTable">
       <tr>

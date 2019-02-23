@@ -132,7 +132,7 @@ if (window.location.href.startsWith("file:///")) {
 }
 function checkDebug() {
 	if (debug) {
-		console.warn("You are in debugging mode.\r\nThere has been a little change.");
+		console.warn("You are in debugging mode.");
 		var taga = document.getElementsByTagName("a");
 		for (var i = 0; i < taga.length; i++) {
 			if (taga[i].href.endsWith("/")) {
@@ -145,7 +145,7 @@ function checkDebug() {
 }
 
 //Notice Board
-var notice = "喜迎 2019！\n我这一年其实写了很多小程序，但都没有发布在网站上，元旦假期将会一一补上 ^_^";
+var notice = "";
 if (notice.length === 0) {
 	notice = "这里空空如也";
 }
@@ -202,7 +202,6 @@ function setTitle(bool) {
 //Console Log
 if (!debug) {
 	console.log("　　　　　　　　　　　　　　　　　　　　　　　龖\r\n　龖　　　　　　　　　　　　　　　龖龖龖龖龖　龖\r\n　龖　　　　　　　　　　　　　　　龖　　　　　龖\r\n　龖　　　　　　　　　　　　　　　龖　　　　　龖\r\n　龖　　　　龖龖龖　龖　　　　龖　龖　　　　　龖　　　龖龖龖　　　龖　龖龖　　龖龖龖　　　龖龖龖\r\n　龖　　　龖　　　　　龖　　　龖　龖龖龖龖龖　龖　　　　　　龖　　龖龖　　龖龖　　龖　　龖　　　龖\r\n　龖　　　龖　　　　　龖　　龖　　龖　　　　　龖　　　龖龖龖龖　　龖　　　龖　　　龖　　龖龖龖龖龖\r\n　龖　　　龖　　　　　　龖　龖　　龖　　　　　龖　　龖　　　龖　　龖　　　龖　　　龖　　龖\r\n　龖　　　龖　　　　　　龖龖　　　龖　　　　　龖　　龖　　龖龖　　龖　　　龖　　　龖　　龖\r\n　龖　　　　龖龖龖　　　龖龖　　　龖　　　　　龖　　龖龖龖　龖　　龖　　　龖　　　龖　　　龖龖龖\r\n　　　　　　　　　　　　龖\r\n　　　　　　　　　　　　龖\r\n　　　　　　　　　　龖龖");
-	console.log("哈哈，竟然有人看我代码了嘛，给你个彩蛋吧！（请将控制台调宽）");
 }
 
 //Show/Hide Header On Scroll

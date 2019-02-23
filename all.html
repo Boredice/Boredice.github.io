@@ -71,13 +71,15 @@
 	}
 	.showSoonLink:active {
 		opacity: 1;
-	}
+  }
+  .gallery {
+    margin-top: 16px;
+  }
 </style>
 </head>
 <body>
 <header style="box-shadow: 0px 0px 0px rgba(0,0,0,0); background-color: rgba(255,255,255,0.8);">
   <nav><a href=".." class="title"><img src="images/logo.png" height="32" style="margin-top: -6px;"/></a>
-	  <a class="navplaceholder">&nbsp;</a>
 	  <a class="menuBtn" href="javascript:showHideMenu();"></a>
 	  <a class="navtag" href="https://blog.icyflame.cn">博客</a>
 	  <a class="nownavtag" href="all">全部<div class="bottomLine"></div></a>
@@ -91,16 +93,23 @@
 </div>
 <div class="container"> 
   <div class="gallery">
-	<div style="height: 70px"></div>
 	<br><a class="nowCategory" onClick="changeCategory('全部');" id="category全部">全部</a>
 	  <a class="category" onClick="changeCategory('Windows');" id="categoryWindows">Windows</a>
 	  <a class="category" onClick="changeCategory('Android');" id="categoryAndroid">Android</a>
 	  <a class="category" onClick="changeCategory('字体');" id="category字体">字体</a>
 	  <a class="showSoonLink" onClick="showHideSoon();" style="cursor: pointer; margin-left: 12px; user-select: none;
 " title="显示/隐藏未完成的内容"><span style="color: #666" id="showSoon"></span>&nbsp;<span style="color: #0083ee"></span></a><br>
-	
+  
+  <div class="thumbnail" data-category="Windows">
+    <a href="p/picolor">
+    <img src="images/thumbnails/Picolor.png">
+     <h4>Picolor</h4></a>
+     <hr>
+     <p class="text_column">颜色工具，有调色、屏幕取色、图片取色、色库(收藏夹)等功能。</p>
+  </div>
+
 	<div class="thumbnail" data-category="Android">
-      <a href="archives/unknown" class="aa">
+      <a href="p/unknown">
       <img src="images/thumbnails/Random.jpg">
        <h4>Unknown</h4></a>
        <hr>
@@ -108,7 +117,7 @@
     </div>
 
 	<div class="thumbnail" data-category="Windows">
-      <a href="archives/topit">
+      <a href="p/topit">
       <img src="images/thumbnails/More.png">
        <h4>Topit</h4></a>
        <hr>
@@ -180,7 +189,7 @@
     </div>
 	  
 	<div class="thumbnail" data-category="Windows">
-     <a href="archives/xuler">
+     <a href="p/xuler">
      <img src="images/thumbnails/Xuler.png">
       <h4>Xuler</h4></a>
       <hr>
@@ -188,7 +197,7 @@
     </div>
 	  
     <div class="thumbnail" data-category="Windows">
-     <a href="archives/sode">
+     <a href="p/sode">
      <img src="images/thumbnails/Sode.jpg">
       <h4>Sode</h4></a>
       <hr>
@@ -196,7 +205,7 @@
     </div>
     
     <div class="thumbnail" data-category="Windows">
-     <a href="archives/nullfile">
+     <a href="p/nullfile">
      <img src="images/thumbnails/Nullfile.jpg">
       <h4>Nullfile</h4></a>
       <hr>
@@ -204,7 +213,7 @@
     </div>
     
     <div class="thumbnail" data-category="Windows">
-     <a href="archives/sext">
+     <a href="p/sext">
      <img src="images/thumbnails/Sext.jpg">
       <h4>Sext</h4></a>
       <hr>
@@ -212,7 +221,7 @@
     </div>
     
     <div class="thumbnail" data-category="Windows">
-     <a href="archives/error">
+     <a href="p/error">
      <img src="images/thumbnails/Error.jpg">
       <h4>Error</h4></a>
       <hr>
@@ -220,15 +229,15 @@
     </div>
     
     <div class="thumbnail" data-category="Windows">
-     <a href="archives/color">
+     <a href="p/color">
      <img src="images/thumbnails/Color.jpg">
       <h4>Color</h4></a>
       <hr>
-      <p class="text_column">这是一个取色器，提供取色、放大镜、色值转换、选取颜色等功能。</p>
+      <p class="text_column">这是一个取色器，提供取色、放大镜、色值转换、选取颜色等功能。(推荐使用新版：Picolor)</p>
     </div>
     
     <div class="thumbnail" data-category="Windows">
-     <a href="archives/titans">
+     <a href="p/titans">
      <img src="images/thumbnails/Titans.jpg">
       <h4>Titans</h4></a>
       <hr>
@@ -236,7 +245,7 @@
     </div>
     
     <div class="thumbnail" data-category="Windows">
-     <a href="archives/piano">
+     <a href="p/piano">
      <img src="images/thumbnails/Piano.jpg">
       <h4>Piano</h4></a>
       <hr>
@@ -244,7 +253,7 @@
     </div>
     
     <div class="thumbnail" data-category="Windows">
-     <a href="archives/random">
+     <a href="p/random">
      <img src="images/thumbnails/Random.jpg">
       <h4>Random</h4></a>
       <hr>
@@ -252,7 +261,7 @@
     </div>
 	  
     <div class="thumbnail" data-category="字体">
-     <a href="archives/flatround">
+     <a href="p/flatround">
      <img src="images/thumbnails/Flat Round.jpg">
       <h4>Flat Round</h4></a>
       <hr>
