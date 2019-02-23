@@ -204,68 +204,6 @@ if (!debug) {
 	console.log("　　　　　　　　　　　　　　　　　　　　　　　龖\r\n　龖　　　　　　　　　　　　　　　龖龖龖龖龖　龖\r\n　龖　　　　　　　　　　　　　　　龖　　　　　龖\r\n　龖　　　　　　　　　　　　　　　龖　　　　　龖\r\n　龖　　　　龖龖龖　龖　　　　龖　龖　　　　　龖　　　龖龖龖　　　龖　龖龖　　龖龖龖　　　龖龖龖\r\n　龖　　　龖　　　　　龖　　　龖　龖龖龖龖龖　龖　　　　　　龖　　龖龖　　龖龖　　龖　　龖　　　龖\r\n　龖　　　龖　　　　　龖　　龖　　龖　　　　　龖　　　龖龖龖龖　　龖　　　龖　　　龖　　龖龖龖龖龖\r\n　龖　　　龖　　　　　　龖　龖　　龖　　　　　龖　　龖　　　龖　　龖　　　龖　　　龖　　龖\r\n　龖　　　龖　　　　　　龖龖　　　龖　　　　　龖　　龖　　龖龖　　龖　　　龖　　　龖　　龖\r\n　龖　　　　龖龖龖　　　龖龖　　　龖　　　　　龖　　龖龖龖　龖　　龖　　　龖　　　龖　　　龖龖龖\r\n　　　　　　　　　　　　龖\r\n　　　　　　　　　　　　龖\r\n　　　　　　　　　　龖龖");
 }
 
-//Show/Hide Header On Scroll
-var lastScrollY = 0;
-function loadHeaderScroll() {
-	//强行搭趟车（滑稽）
-	/*if (getBrowser()[0] === "Safari")
-	{
-		document.getElementsByTagName("header")[0].style.backgroundColor = "rgba(255,255,255,0.6)";
-		document.getElementsByTagName("header")[0].style.backdropFilter = "blur(5px)";
-	}*/
-	//延时，一开始的动画以及浏览器问题会导致滚动条起伏
-	setTimeout(function() {
-		var header = document.getElementsByTagName("header")[0];
-		if (window.scrollY < 50)
-		{
-			header.style.boxShadow = "0px 0px 0px rgba(0,0,0,0)";
-			header.style.backgroundColor = "rgba(255,255,255,0.8)";
-		}
-		else
-		{
-			header.style.boxShadow = "";
-			header.style.backgroundColor = "";
-		}
-		window.onscroll = function() {
-			headerScroll();
-		};
-	}, 500);
-}
-function headerScroll() {
-	var header = document.getElementsByTagName("header")[0];
-	//又强行搭趟车（滑稽）
-	/*var bgimg = document.getElementsByClassName("background")[0];
-	if (bgimg !== undefined)
-	{
-		bgimg.style.bottom = 50 - window.scrollY / 8 + "px";
-	}*/
-	if (window.scrollY < 50)
-	{
-		header.style.boxShadow = "0px 0px 0px rgba(0,0,0,0)";
-		header.style.backgroundColor = "rgba(255,255,255,0.8)";
-	}
-	else
-	{
-		header.style.boxShadow = "";
-		header.style.backgroundColor = "";
-	}
-	if (window.scrollY - lastScrollY > 0 && window.scrollY > 165)
-	{
-		//往下滚动，隐藏导航栏（加个165表示在页面顶部滚动不隐藏）
-		header.style.top = "-80px";
-		if (ismenushowing)
-		{
-			showHideMenu();
-		}
-	}
-	else if (window.scrollY - lastScrollY < 0)
-	{
-		//往上滚动，显示导航栏
-		header.style.top = "0px";
-	}
-	lastScrollY = window.scrollY;
-}
-
 //Category
 var showSoonChecked = true;
 function showHideSoon() {
