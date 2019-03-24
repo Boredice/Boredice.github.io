@@ -165,7 +165,6 @@ header .title:active {
 	background-color: rgba(0,0,0,0.08);
 }
 header .navtag {
-	display: inline-block;
 	float: right;
 	color: #666;
 	font-size: 18px;
@@ -221,7 +220,6 @@ header .menuBtn:active {
 	background-color: rgba(0,0,0,0.08);
 }
 header .nownavtag {
-	display: inline-block;
 	float: right;
 	color: black;
 	font-size: 18px;
@@ -247,8 +245,8 @@ header .nownavtag .bottomLine {
 	width: 32px;
 	height: 3px;
 	margin-top: -12px;
-	margin-left: auto;
-	margin-right: auto;
+	margin-left: 2px;
+	margin-right: 2px;
 	background-color: #0083ee;
 }
 header .navplaceholder {
