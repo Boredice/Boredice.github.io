@@ -5,6 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Icyflame 404</title>
 <link rel="shortcut icon" href="https://icyflame.cn/images/icons/erroricon.ico">
+<script>
+		var url = window.location.href.split('/');
+		if (url[3] === "article" || url[3] === "articles" || url[3] === "intros")
+		{
+			url[3] = "p";
+			window.location.href = url.join('/');
+		}
+	</script>
 <style>
 	body {
 		margin: 0;
@@ -134,12 +142,4 @@
   <p class="text">页面找不到啦</p>
   <a href="https://icyflame.cn" draggable="false"><div class="button">返回主页</div></a></div>
 </body>
-<script>
-	var url = window.location.href.split('/');
-	if (url[3] === "article" || url[3] === "articles" || url[3] === "intros")
-	{
-		url[3] = "p";
-		window.location.href = url.join('/');
-	}
-</script>
 </html>
