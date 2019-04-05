@@ -183,6 +183,15 @@ h2 {
 hr {
 	border: 1px solid #BBB;
 }
+a {
+	color: #9b60e1;
+}
+.a-img {
+	display: inline-block;
+	font-size: 20px;
+	padding: 4px 12px;
+	margin-bottom: 8px;
+}
 </style>
 </head>
 <body>
@@ -195,14 +204,34 @@ hr {
   </a>
 </div>
 <div class="container">
-	  <a href="unknown-android" style="color: #9b60e1"><i class="fab fa-android" style="padding-right: 6px;"></i>&nbsp;Android 版本点这里</a>
+	  <a href="unknown-android"><i class="fab fa-android" style="padding-right: 6px;"></i>&nbsp;Android 版本点这里</a>
     <h2>介绍</h2>
-    <p>随机工具，有随机数字、列表、硬币、骰子、颜色五个功能。</p>
+		<p>随机工具，有随机数字、列表、硬币、骰子、颜色五个功能。</p>
+		<a href="javascript:changeImage(1)" class="a-img" id="a1" style="border-bottom:2px solid #9b60e1;">1</a>&nbsp;
+		<a href="javascript:changeImage(2)" class="a-img" id="a2">2</a>&nbsp;
+		<a href="javascript:changeImage(3)" class="a-img" id="a3">3</a>&nbsp;
+		<a href="javascript:changeImage(4)" class="a-img" id="a4">4</a>&nbsp;
+		<a href="javascript:changeImage(5)" class="a-img" id="a5">5</a><br>
+		<img id="image" src="images/screenshots/unknown-1.gif">
+		<h2>介绍</h2>
     <a name="comment"></a>
     <h2>评论</h2>
 <!--PC和WAP自适应版畅言-->
 <div id="SOHUCS" ></div> 
 <script type="text/javascript"> 
+function changeImage(number)
+{
+	document.getElementById("image").src = "images/screenshots/unknown-" + number + ".gif";
+	for (var i = 1; i <= 5; i++)
+	{
+		if (i === number)
+		{
+			document.getElementById("a" + number).style.borderBottom = "2px solid #9b60e1";
+			continue;
+		}
+		document.getElementById("a" + i).style.borderBottom = "0";
+	}
+}
 (function(){ 
 var appid = 'cytvnplzp'; 
 var conf = 'prod_53773fc601d8de4e59ad0e645e725f2e'; 
