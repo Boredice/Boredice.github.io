@@ -51,26 +51,13 @@ img {
 
 /*Web font using*/
 @font-face {
-	font-family: Ubuntu;
-	font-weight: normal;
-	src: local('Ubuntu'), url('../fonts/Ubuntu/Ubuntu.woff');
-}
-@font-face {
-	font-family: Ubuntu;
-	font-weight: bold;
-	src: local('Ubuntu'), url('../fonts/Ubuntu/Ubuntu Bold.woff');
-}
-@font-face {
-	font-family: "Montserrat Light";
-	src: url('../fonts/Montserrat Light Min.woff');
-}
-@font-face {
 	font-family: "Segoe MDL2 Assets";
 	src: local('Segoe MDL2 Assets'), url('../fonts/segmdl2.ttf');
 }
+
 /*Body*/
 body {
-	font-family: "Ubuntu", "Microsoft Yahei";
+	font-family: "Microsoft Yahei", sans-serif;
 	margin: 0;
 	margin-top: 15px;
 	background-color: #f8f8f8;
@@ -79,7 +66,6 @@ body {
 
 /*Navigate bar (Header)*/
 header {
-	font-family: "Montserrat Light";
 	height: 39px;
 	padding-left: 6%;
 	margin-top: -15px;
