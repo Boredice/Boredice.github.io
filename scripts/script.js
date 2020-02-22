@@ -122,7 +122,7 @@ function showHideMenu()
 //Update & Debug
 String.prototype.startsWith = function(str){var reg = new RegExp("^" + str);return reg.test(this);};
 String.prototype.endsWith = function(str){var reg = new RegExp(str + "$");return reg.test(this);};
-var updatedate = "";
+var updatedate = "13.32";
 if (updatedate !== "") {
 	window.location.href = "update?date=" + updatedate;
 }
